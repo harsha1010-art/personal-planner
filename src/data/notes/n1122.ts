@@ -1,0 +1,68 @@
+import type { TopicNote } from './types'
+
+export const note: TopicNote = {
+  day: '2026-11-22',
+  summary: 'Pottery periods, sculpture schools, miniature and folk paintings, and crafts with geographical indications: what to recognise and where it comes from.',
+  minutes: 18,
+  hero: { file: 'Madhubani painting by Bhuvana Meenakshi.jpg', credit: 'Bhuvana Meenakshi', license: 'CC BY-SA 3.0' },
+  heroAlt: 'A Madhubani painting',
+  blocks: [
+    { t: 'h', text: 'Pottery through time' },
+    { t: 'table', caption: 'Pottery dates archaeological sites, which is why UPSC uses it.', head: ['Ware', 'Period', 'Linked with'], rows: [
+      ['Ochre Coloured Pottery (OCP)', 'c. 2000-1500 BCE', 'Doab; copper hoards'],
+      ['Black and Red Ware (BRW)', 'c. 1450-1200 BCE, later too', 'Chalcolithic, Megaliths'],
+      ['Painted Grey Ware (PGW)', 'c. 1000-600 BCE', 'Later Vedic'],
+      ['Northern Black Polished Ware (NBPW)', 'c. 700-200 BCE', 'Second urbanisation, Mauryan'],
+      ['Red Ware', 'Harappan and later', 'Very common'],
+    ] },
+    { t: 'h', text: 'Sculpture' },
+    { t: 'list', items: [
+      '**Harappan:** Dancing Girl (bronze), Priest-King (steatite), bearded man and terracotta figurines.',
+      '**Mauryan:** Sarnath capital, Didarganj Yakshi, Dhauli elephant.',
+      '**Kushana:** Gandhara, Mathura and Amaravati (see Post-Mauryan India).',
+      '**Gupta:** Sarnath Buddha, Sultanganj bronze Buddha, Udayagiri Varaha.',
+      '**Medieval:** Chola bronzes made by the lost-wax method, especially **Nataraja**, who dances in the Ananda Tandava pose inside a ring of flames. The Pala school in Bihar and Bengal made stone and bronze images.',
+    ] },
+    { t: 'note', kind: 'exam', title: 'Know the symbolism of Nataraja', text: 'Upper right hand: damaru (creation). Upper left: fire (destruction). Lower right: abhaya mudra (protection). Raised foot: release, and the other foot crushes Apasmara (ignorance).' },
+
+    { t: 'h', text: 'Painting' },
+    { t: 'p', text: 'Mural painting comes first (see Ancient Art), then miniature painting on palm leaf and later on paper.' },
+    { t: 'table', head: ['School', 'Region', 'Features'], rows: [
+      ['Pala', 'Bengal, Bihar', 'Palm-leaf Buddhist texts'],
+      ['Western Indian (Apabhramsa)', 'Gujarat, Rajasthan', 'Jain texts; large eyes, angular lines'],
+      ['Mughal', 'Delhi, Agra', 'Realism, court life. Akbar: Hamzanama. Jahangir: nature, portraits. Mansur'],
+      ['Deccani', 'Bijapur, Golconda', 'Rich colours; Ragamala'],
+      ['Rajasthani', 'Mewar, Bundi, Kishangarh, Marwar', 'Kishangarh\'s **Bani Thani**; Ragamala themes'],
+      ['Pahari', 'Basohli, Kangra', 'Basohli bold colours; Kangra soft and lyrical, Krishna themes'],
+      ['Company School', 'British India', 'European style, watercolour'],
+      ['Bengal School', 'Early 1900s', 'Abanindranath Tagore: Bharat Mata; E.B. Havell'],
+    ] },
+    { t: 'table', caption: 'Folk paintings. Link them to the state.', head: ['Style', 'State', 'Features'], rows: [
+      ['Madhubani (Mithila)', 'Bihar', 'Double-line borders, natural colours; GI tag'],
+      ['Warli', 'Maharashtra', 'White geometric figures on mud walls'],
+      ['Pattachitra', 'Odisha, Bengal', 'Cloth scrolls; Jagannath themes'],
+      ['Kalamkari', 'Andhra Pradesh', 'Pen work (Srikalahasti); block print (Machilipatnam)'],
+      ['Phad', 'Rajasthan', 'Scroll paintings of folk deities'],
+      ['Pithora', 'Gujarat, MP', 'Rathwa and Bhil rituals'],
+      ['Gond', 'MP', 'Dots and lines; animals'],
+      ['Thangka', 'Sikkim, Ladakh', 'Buddhist cloth painting'],
+      ['Cheriyal', 'Telangana', 'Narrative scrolls'],
+    ] },
+
+    { t: 'h', text: 'Handicrafts' },
+    { t: 'compare', columns: [
+      { title: 'Textiles', items: ['Banarasi: UP', 'Kanjeevaram: Tamil Nadu', 'Pashmina: Kashmir', 'Paithani: Maharashtra', 'Chanderi: MP', 'Phulkari: Punjab', 'Chikankari: Lucknow', 'Ikat: Pochampally, Sambalpuri'] },
+      { title: 'Metal and stone', items: ['Bidriware: Bidar, Karnataka', 'Dhokra: Bastar, lost-wax', 'Meenakari: Rajasthan', 'Pietra dura: Agra', 'Blue pottery: Jaipur'] },
+      { title: 'Wood and toys', items: ['Channapatna toys: Karnataka', 'Kondapalli toys: AP', 'Sandalwood: Mysuru', 'Walnut carving: Kashmir'] },
+    ] },
+    { t: 'note', kind: 'recent', title: 'Geographical indications', text: 'GI tags are given under the **Geographical Indications of Goods Act, 1999**, by the registry in Chennai. **PM Vishwakarma** supports traditional artisans. National Handloom Day is 7 August, commemorating the Swadeshi Movement of 1905, as Prelims 2023 asked.' },
+    { t: 'note', kind: 'mains', title: 'Use in GS I', text: 'Craft and folk art connect to livelihoods, heritage protection and globalisation. Use GI tags and Vishwakarma as examples.' },
+    { t: 'h3', text: 'Quick recall' },
+    { t: 'list', items: ['PGW: Later Vedic. NBPW: Mauryan.', 'Bani Thani: Kishangarh. Kangra: Pahari.', 'Warli: Maharashtra. Bidri: Karnataka. Dhokra: Bastar.'] },
+  ],
+  sources: [
+    { label: 'Nitin Singhania, Indian Art and Culture, Ch 1-3' },
+    { label: 'UPSC Civil Services Prelims 2023, GS Paper I, Q83', url: 'https://www.upsc.gov.in/examinations/previous-question-papers' },
+    { label: 'Geographical Indications Registry', url: 'https://ipindia.gov.in/' },
+  ],
+}

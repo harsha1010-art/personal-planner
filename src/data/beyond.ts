@@ -147,6 +147,10 @@ const SUBJECT_DEFAULTS: Record<string, ReferItem[]> = {
   'Current Affairs': [{ what: 'One daily and one monthly compilation', where: 'Your choice, per your plan', why: 'Current affairs cannot be pre-written here. Use issue cards.' }],
   CSAT: [PYQ],
   Mixed: [PYQ],
+  'Sociology Optional': [
+    { what: 'Sociology past papers', where: 'UPSC previous question papers', why: 'This optional is judged on written answers, so use real questions to set your depth.', url: 'https://www.upsc.gov.in/examinations/previous-question-papers' },
+    { what: 'Standard reference', where: 'Haralambos and Holborn; Ritzer for thinkers', why: 'For depth on thinkers and critics beyond these notes.' },
+  ],
 }
 
 export function beyondFor(key: string, subject: string): Beyond {

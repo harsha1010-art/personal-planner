@@ -78,12 +78,12 @@ export function Today() {
 
   return (
     <div style={{ '--subject': color } as React.CSSProperties}>
-      <section className="grid overflow-hidden rounded-[24px] bg-[var(--subject)] text-white md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]">
+      <section className={`grid overflow-hidden rounded-[24px] bg-[var(--subject)] text-white ${note?.hero ? 'md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]' : ''}`}>
         <div className="p-6 sm:p-9">
           <div className="text-[15px] font-semibold">
             {isToday ? 'Today' : formatDate(day.date, 'long')}, day {index + 1} of {days.length}
           </div>
-          <h1 className="mt-3 text-[42px] sm:text-[60px]">{day.topic}</h1>
+          <h1 className={`mt-3 ${day.topic.length > 60 ? 'text-[32px] sm:text-[44px]' : 'text-[42px] sm:text-[60px]'}`}>{day.topic}</h1>
           <p className="mt-4 max-w-[54ch] text-[17px] leading-snug">{note?.summary ?? day.read}</p>
           <div className="mt-6 flex flex-wrap items-center gap-3">
             {note ? (

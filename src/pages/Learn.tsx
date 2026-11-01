@@ -138,11 +138,11 @@ export function Topic() {
         <div className="h-full bg-[var(--subject)]" style={{ width: `${progress}%` }} />
       </div>
 
-      <header className="-mx-4 -mt-7 grid overflow-hidden bg-[var(--subject)] text-white sm:mx-0 sm:mt-0 sm:rounded-[24px] md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
+      <header className={`-mx-4 -mt-7 grid overflow-hidden bg-[var(--subject)] text-white sm:mx-0 sm:mt-0 sm:rounded-[24px] ${note.hero ? 'md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]' : ''}`}>
         <div className="flex flex-col justify-between gap-8 p-6 sm:p-9">
           <div>
             <Link to="/learn" className="text-[14.5px] font-semibold underline underline-offset-4">{meta.subject}</Link>
-            <h1 className="mt-3 text-[40px] sm:text-[56px]">{meta.title}</h1>
+            <h1 className={`mt-3 ${meta.title.length > 60 ? 'text-[30px] sm:text-[42px]' : 'text-[40px] sm:text-[56px]'}`}>{meta.title}</h1>
             <p className="mt-4 max-w-[52ch] text-[17.5px] leading-snug">{note.summary}</p>
           </div>
           <div className="flex flex-wrap gap-x-5 gap-y-1 text-[14.5px] font-semibold">

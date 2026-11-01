@@ -1,0 +1,67 @@
+import type { TopicNote } from './types'
+
+export const note: TopicNote = {
+  day: '2026-11-24',
+  summary: 'Languages and scripts, the main literary works, the faiths of India beyond those already covered, and the cultural institutions UPSC names.',
+  minutes: 14,
+  blocks: [
+    { t: 'h', text: 'Languages and scripts' },
+    { t: 'table', head: ['Family', 'Examples', 'Share or note'], rows: [
+      ['Indo-Aryan', 'Hindi, Bengali, Marathi, Gujarati, Punjabi', 'Largest group'],
+      ['Dravidian', 'Tamil, Telugu, Kannada, Malayalam', 'South India'],
+      ['Austroasiatic', 'Santali, Khasi, Mundari', 'Central and north-east'],
+      ['Sino-Tibetan', 'Bodo, Manipuri (Meitei)', 'Himalaya, north-east'],
+    ] },
+    { t: 'p', text: '**Eighth Schedule** has **22 languages**. Sindhi was added in 1967, Konkani, Manipuri and Nepali in 1992, and Bodo, Dogri, Maithili and Santali in 2004. Eleven languages have **classical status**: Tamil (2004), Sanskrit (2005), Kannada and Telugu (2008), Malayalam (2013), Odia (2014), then Marathi, Pali, Prakrit, Assamese and Bengali (2024).' },
+    { t: 'table', head: ['Script', 'Note'], rows: [
+      ['Brahmi', 'Left to right. Root of most Indian scripts. Ashoka'],
+      ['Kharoshthi', 'Right to left. North-west'],
+      ['Devanagari', 'Hindi, Sanskrit, Marathi'],
+      ['Ol Chiki', 'Santali; Pandit Raghunath Murmu'],
+      ['Modi', 'Older Marathi'],
+    ] },
+
+    { t: 'h', text: 'Literature' },
+    { t: 'table', head: ['Work', 'Author', 'Language', 'Note'], rows: [
+      ['Ashtadhyayi', 'Panini', 'Sanskrit', 'Grammar'],
+      ['Arthashastra', 'Kautilya', 'Sanskrit', 'Statecraft'],
+      ['Rajatarangini', 'Kalhana', 'Sanskrit', 'History of Kashmir, 12th century'],
+      ['Gita Govinda', 'Jayadeva', 'Sanskrit', 'Krishna and Radha'],
+      ['Prithvirajaraso', 'Chand Bardai', 'Apabhramsha', 'Prithviraj'],
+      ['Kavirajamarga', 'Amoghavarsha or Sri Vijaya', 'Kannada', 'Earliest Kannada poetics'],
+      ['Vikramarjuna Vijaya', 'Pampa', 'Kannada', 'Pampa Bharata'],
+      ['Padmavat', 'Malik Muhammad Jayasi', 'Awadhi', 'Sufi epic'],
+      ['Ain-i-Akbari', 'Abul Fazl', 'Persian', 'Akbar\'s reign'],
+    ] },
+    { t: 'note', kind: 'exam', title: 'Why Kannada texts matter for you', text: 'Your optional and language choice aside, Karnataka features often in art and culture questions. Pampa, Ranna and Ponna are called the **three gems** of old Kannada literature.' },
+
+    { t: 'h', text: 'Other religions' },
+    { t: 'table', caption: 'Buddhism, Jainism, Bhakti and Sufism have separate topics.', head: ['Religion', 'Key points'], rows: [
+      ['Sikhism', 'Guru Nanak founder; Guru Granth Sahib compiled by Guru Arjan; Khalsa by Guru Gobind Singh, 1699'],
+      ['Zoroastrianism', 'Parsis came to Sanjan, Gujarat; Avesta'],
+      ['Christianity', 'St Thomas tradition in Kerala; Syrian Christians'],
+      ['Judaism', 'Cochin and Bene Israel communities'],
+      ['Tribal faiths', 'Sarna in Jharkhand; Donyi-Polo in Arunachal'],
+    ] },
+
+    { t: 'h', text: 'Cultural institutions' },
+    { t: 'table', head: ['Institution', 'Founded', 'Role'], rows: [
+      ['Asiatic Society of Bengal', '1784, William Jones', 'Indology'],
+      ['Archaeological Survey of India', '1861, Cunningham', 'Monuments; under Ministry of Culture'],
+      ['Sangeet Natak Akademi', '1952', 'Performing arts'],
+      ['Lalit Kala Akademi', '1954', 'Visual arts'],
+      ['Sahitya Akademi', '1954', 'Literature'],
+      ['National School of Drama', '1959', 'Theatre'],
+      ['CCRT', '1979', 'Cultural education'],
+      ['INTACH', '1984', 'Heritage conservation; NGO'],
+    ] },
+    { t: 'note', kind: 'trap', title: 'Recent fact checks', text: 'Facts such as classical language status and UNESCO lists change. Prelims 2019 and later show that UPSC uses very recent decisions. Check the Ministry of Culture and PIB within six months of the exam.' },
+    { t: 'h3', text: 'Quick recall' },
+    { t: 'list', items: ['22 scheduled languages; 11 classical languages.', 'Rajatarangini: Kalhana. Gita Govinda: Jayadeva.', 'Pampa, Ranna, Ponna: the three gems.', '1952 Sangeet Natak; 1954 Sahitya and Lalit Kala.'] },
+  ],
+  sources: [
+    { label: 'Nitin Singhania, Indian Art and Culture, Ch 11-13, 22' },
+    { label: 'PIB: Classical languages decision, October 2024', url: 'https://pib.gov.in/' },
+    { label: 'Ministry of Culture', url: 'https://indiaculture.gov.in/' },
+  ],
+}

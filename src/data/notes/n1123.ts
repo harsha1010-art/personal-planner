@@ -1,0 +1,58 @@
+import type { TopicNote } from './types'
+
+export const note: TopicNote = {
+  day: '2026-11-23',
+  summary: 'The classical dances and their states, the two systems of music, and folk theatre and puppet forms from each region.',
+  minutes: 16,
+  hero: { file: 'Bharata Natyam Performance DS.jpg', credit: 'Augustus Binu', license: 'CC BY-SA 3.0' },
+  heroAlt: 'A Bharatanatyam dancer in performance',
+  blocks: [
+    { t: 'h', text: 'Classical dance' },
+    { t: 'p', text: 'The Sangeet Natak Akademi recognises eight classical forms. The base text is Bharata\'s **Natyashastra**. The Ministry of Culture also includes Chhau. Know each form\'s state and one defining feature.' },
+    { t: 'table', head: ['Dance', 'State', 'Defining features', 'Names'], rows: [
+      ['Bharatanatyam', 'Tamil Nadu', 'Temple tradition (Sadir); Alarippu to Tillana', 'Rukmini Devi Arundale, E. Krishna Iyer'],
+      ['Kathak', 'North India', 'Footwork, spins (chakkar); Mughal court influence. Lucknow, Jaipur, Banaras gharanas', 'Birju Maharaj'],
+      ['Kathakali', 'Kerala', 'Dance-drama; male actors; green Pacha make-up', 'Vallathol founded Kalamandalam'],
+      ['Mohiniyattam', 'Kerala', 'Solo female; gentle', 'Vallathol helped revive it'],
+      ['Kuchipudi', 'Andhra Pradesh', 'Dance on brass plate (Tarangam)', 'Vempati Chinna Satyam'],
+      ['Odissi', 'Odisha', 'Tribhanga posture; Mahari tradition', 'Kelucharan Mohapatra'],
+      ['Manipuri', 'Manipur', 'Ras Lila; soft moves; no ghungroo; Pung Cholom', 'Tagore promoted it'],
+      ['Sattriya', 'Assam', 'Sankardev\'s Satras; recognised in 2000', 'Ankiya Naat link'],
+    ] },
+    { t: 'note', kind: 'trap', title: 'Common mix-ups', text: 'Kathakali is a dance-drama with male actors, and Mohiniyattam is a solo female form, though both are from Kerala. Sattriya is from Assam, and was the last to be recognised. Chhau is a folk-martial form on UNESCO\'s list, and it is not one of the eight.' },
+
+    { t: 'h', text: 'Music' },
+    { t: 'compare', columns: [
+      { title: 'Hindustani', items: ['North India; Persian influence', 'Gharanas', 'Forms: Dhrupad, Khayal, Thumri, Tappa, Ghazal', 'Tansen (Akbar\'s court)', 'Instruments: sitar, sarod, tabla'] },
+      { title: 'Carnatic', items: ['South India; devotional', 'Fixed compositions', 'Trinity: **Tyagaraja, Muthuswami Dikshitar, Shyama Shastri**', 'Purandaradasa is called its father', 'Instruments: veena, mridangam'] },
+    ] },
+    { t: 'p', text: 'Prelims 2026 asked which Carnatic raga corresponds to Hindustani **Bilawal**: **Dheera Shankarabharanam**. **Vishnu Digambar Paluskar** set up the first Gandharva Mahavidyalaya at Lahore in 1901 (Prelims 2025). **V.N. Bhatkhande** classified ragas into ten **thaats**. **Amir Khusrau** is credited, by tradition, with Khayal and the tabla-sitar link, though scholars doubt this.' },
+
+    { t: 'h', text: 'Folk dance, theatre and puppetry' },
+    { t: 'table', head: ['Form', 'Region', 'Type'], rows: [
+      ['Garba, Dandiya', 'Gujarat', 'Folk dance (Garba joined UNESCO\'s list in 2023)'],
+      ['Bihu', 'Assam', 'Folk dance'],
+      ['Lavani', 'Maharashtra', 'Folk dance'],
+      ['Ghoomar, Kalbelia', 'Rajasthan', 'Folk dance; Kalbelia is on UNESCO\'s list'],
+      ['Yakshagana', 'Karnataka', 'Folk theatre'],
+      ['Tamasha', 'Maharashtra', 'Folk theatre'],
+      ['Nautanki', 'UP', 'Folk theatre'],
+      ['Bhavai', 'Gujarat', 'Folk theatre'],
+      ['Jatra', 'Bengal, Odisha', 'Folk theatre'],
+      ['Koodiyattam', 'Kerala', 'Sanskrit theatre; UNESCO'],
+      ['Ramman', 'Uttarakhand', 'Ritual theatre; UNESCO'],
+      ['Tholu Bommalata', 'Andhra Pradesh', 'Shadow puppets'],
+      ['Kathputli', 'Rajasthan', 'String puppets'],
+      ['Togalu Gombeyaata', 'Karnataka', 'Shadow puppets'],
+    ] },
+    { t: 'note', kind: 'exam', title: 'UNESCO intangible heritage', text: 'Vedic chanting, Kumbh Mela (Prelims 2019 tested a question about it), Ramlila, Chhau, Kalbelia, Yoga, Nowruz, Durga Puja in Kolkata (2021) and Garba (2023) are on the list. Check the latest additions before the exam.' },
+    { t: 'h3', text: 'Quick recall' },
+    { t: 'list', items: ['Eight classical forms: Bharatanatyam, Kathak, Kathakali, Mohiniyattam, Kuchipudi, Odissi, Manipuri, Sattriya.', 'Trinity of Carnatic music. Bhatkhande: thaats.', 'Yakshagana: Karnataka. Koodiyattam: Kerala.'] },
+  ],
+  sources: [
+    { label: 'Nitin Singhania, Indian Art and Culture, Ch 5-8, 10' },
+    { label: 'Sangeet Natak Akademi', url: 'https://sangeetnatak.gov.in/' },
+    { label: 'UNESCO: Intangible Cultural Heritage of India', url: 'https://ich.unesco.org/en/state/india-IN' },
+    { label: 'UPSC Civil Services Prelims 2025 and 2026, GS Paper I', url: 'https://www.upsc.gov.in/examinations/previous-question-papers' },
+  ],
+}
