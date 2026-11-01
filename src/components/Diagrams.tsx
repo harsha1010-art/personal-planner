@@ -1,3 +1,5 @@
+import type { DiagramId } from '../data/notes/types'
+
 // Hand-drawn explanatory diagrams. They show how things are laid out, and are not to scale.
 const TEXT = { fontSize: 15, fontWeight: 600, fill: 'currentColor' } as const
 const SMALL = { fontSize: 13, fill: 'currentColor', opacity: 0.8 } as const
@@ -99,8 +101,58 @@ function VedicTexts() {
   )
 }
 
-export function Diagram({ id }: { id: 'harappan-city' | 'stupa' | 'vedic-texts' }) {
+function TempleStyles() {
+  const base = 300
+  return (
+    <svg viewBox="0 0 720 390" className="w-full" role="img" aria-label="Three temple styles compared. Nagara has a curved shikhara, Dravida a stepped pyramidal vimana and a gopuram at the entrance, and Vesara combines the two.">
+      <rect x="1" y="1" width="718" height="388" rx="14" fill="var(--tint)" />
+      <path d={`M100 ${base} L100 200 Q104 96 130 62 Q156 96 160 200 L160 ${base} Z`} fill="var(--subject)" />
+      <circle cx="130" cy="58" r="10" fill="currentColor" />
+      <rect x="50" y="240" width="50" height="60" fill="var(--subject)" opacity="0.55" />
+      <text x="110" y="330" textAnchor="middle" fontSize="18" fontWeight="700" fill="currentColor">Nagara</text>
+      <text x="110" y="350" textAnchor="middle" {...SMALL}>North India</text>
+      <text x="110" y="368" textAnchor="middle" {...SMALL}>Curved shikhara, amalaka</text>
+
+      {[0, 1, 2, 3, 4].map((i) => <rect key={i} x={318 + i * 9} y={262 - i * 40} width={104 - i * 18} height="38" fill="var(--subject)" opacity={0.95 - i * 0.08} />)}
+      <rect x="360" y="82" width="20" height="20" rx="10" fill="currentColor" />
+      <rect x="250" y="215" width="52" height="85" fill="var(--subject)" opacity="0.55" />
+      <rect x="258" y="190" width="36" height="25" fill="var(--subject)" opacity="0.4" />
+      <line x1="240" y1={base} x2="430" y2={base} stroke="currentColor" strokeWidth="3" />
+      <text x="340" y="330" textAnchor="middle" fontSize="18" fontWeight="700" fill="currentColor">Dravida</text>
+      <text x="340" y="350" textAnchor="middle" {...SMALL}>South India</text>
+      <text x="340" y="368" textAnchor="middle" {...SMALL}>Stepped vimana, gopuram gate</text>
+
+      {[0, 1, 2].map((i) => <rect key={i} x={538 + i * 14} y={258 - i * 44} width={104 - i * 28} height="42" rx="6" fill="var(--subject)" opacity={0.95 - i * 0.12} />)}
+      <path d="M566 170 Q590 104 614 170 Z" fill="var(--subject)" />
+      <circle cx="590" cy="132" r="8" fill="currentColor" />
+      <text x="590" y="330" textAnchor="middle" fontSize="18" fontWeight="700" fill="currentColor">Vesara</text>
+      <text x="590" y="350" textAnchor="middle" {...SMALL}>Deccan</text>
+      <text x="590" y="368" textAnchor="middle" {...SMALL}>Mix of both, later Chalukya</text>
+      <text x="24" y="34" {...TEXT}>Three temple styles</text>
+    </svg>
+  )
+}
+
+function Chaitya() {
+  return (
+    <svg viewBox="0 0 720 300" className="w-full" role="img" aria-label="Plan of a chaitya hall: an entrance leading to a long nave lined with pillars, ending in a rounded apse with a stupa for worship. A narrow aisle runs around for circumambulation.">
+      <rect x="1" y="1" width="718" height="298" rx="14" fill="var(--tint)" />
+      <path d="M90 70 L520 70 A80 80 0 0 1 520 230 L90 230 Z" fill="var(--subject)" opacity="0.18" stroke="var(--subject)" strokeWidth="4" />
+      {[...Array(9).keys()].map((i) => <g key={i}><circle cx={130 + i * 46} cy="105" r="7" fill="var(--subject)" /><circle cx={130 + i * 46} cy="195" r="7" fill="var(--subject)" /></g>)}
+      <circle cx="540" cy="150" r="30" fill="var(--subject)" />
+      <text x="50" y="155" textAnchor="middle" {...TEXT}>Entry</text>
+      <text x="300" y="155" textAnchor="middle" {...TEXT}>Nave</text>
+      <text x="540" y="155" textAnchor="middle" fontSize="13" fontWeight="700" fill="#fff">Stupa</text>
+      <text x="300" y="56" textAnchor="middle" {...SMALL}>Rows of pillars, with a narrow aisle behind them</text>
+      <text x="300" y="262" textAnchor="middle" {...SMALL}>A horseshoe-shaped chaitya window lights the hall. Karle has the finest example.</text>
+    </svg>
+  )
+}
+
+export function Diagram({ id }: { id: DiagramId }) {
   if (id === 'harappan-city') return <HarappanCity />
   if (id === 'stupa') return <Stupa />
+  if (id === 'temple-styles') return <TempleStyles />
+  if (id === 'chaitya') return <Chaitya />
   return <VedicTexts />
 }

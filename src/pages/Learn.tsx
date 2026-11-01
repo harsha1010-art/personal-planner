@@ -1,13 +1,26 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { BeyondPanel } from '../components/BeyondPanel'
 import { NoteBlock, slug } from '../components/NoteBlocks'
 import { PageHead } from '../components/Shell'
 import { mainsForDay, questionsForDay } from '../data/bank'
+import { beyondFor } from '../data/beyond'
 import { noteForDay, notes } from '../data/notes'
 import { pictureLink, pictureUrl } from '../data/notes/types'
+import { extraByKey } from '../lib/extras'
 import { dayByDate, days, formatDate, isoToday, subjectOf } from '../lib/plan'
 import { update, useStore } from '../lib/store'
-import { learningDays, subjectColor, subjectsInOrder, topicsOf } from '../lib/subjects'
+import { subjectColor, subjectsInOrder, topicsOf, totalTopics } from '../lib/subjects'
+
+const BEYOND = 'Beyond this page'
+const isDate = (key: string) => /^\d{4}-/.test(key)
+
+export function topicMeta(key: string) {
+  const day = dayByDate(key)
+  if (day) return { title: day.topic, subject: subjectOf(day), label: formatDate(key) }
+  const extra = extraByKey.get(key)
+  return { title: extra?.title ?? key, subject: extra?.subject ?? 'Mixed', label: extra?.when ?? '' }
+}
 
 export function Learn() {
   const checks = useStore((s) => s.checks)
@@ -17,8 +30,8 @@ export function Learn() {
   return (
     <>
       <PageHead title="Learn">
-        Every syllabus topic, in the order of your plan. <span className="num font-semibold text-ink">{notes.length}</span> of{' '}
-        <span className="num font-semibold text-ink">{learningDays.length}</span> topics have full notes so far. The rest are listed so you can see what is still to come.
+        Every syllabus topic, in the order of your plan, plus Sociology, languages and Essay. <span className="num font-semibold text-ink">{notes.length}</span> of{' '}
+        <span className="num font-semibold text-ink">{totalTopics}</span> topics have full notes so far. The rest are listed so you can see what is still to come.
       </PageHead>
       <div className="mb-9 flex flex-wrap gap-1.5" role="group" aria-label="Filter by subject">
         {['All', ...subjectsInOrder].map((s) => (
@@ -38,29 +51,30 @@ export function Learn() {
           <section key={subject} className="mb-12" style={{ '--subject': subjectColor(subject) } as React.CSSProperties}>
             <h2 className="mb-4 text-[28px]"><span className="text-[var(--subject)]">/</span> {subject}</h2>
             <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {topics.map((d) => {
-                const note = noteForDay(d.date)
-                const read = checks[`read:${d.date}`]
+              {topics.map((t) => {
+                const note = noteForDay(t.key)
+                const read = checks[`read:${t.key}`]
+                const when = isDate(t.when) ? formatDate(t.when) : t.when
                 const body = (
                   <>
-                    {note ? (
+                    {note?.hero ? (
                       <img src={pictureUrl(note.hero, 640)} alt="" loading="lazy" className="h-40 w-full bg-tint object-cover" />
                     ) : (
-                      <div className="h-3 bg-[var(--subject)] opacity-25" />
+                      <div className={`h-3 bg-[var(--subject)] ${note ? '' : 'opacity-25'}`} />
                     )}
                     <div className="p-4">
                       <div className="text-[13px] font-semibold text-faint">
-                        {formatDate(d.date)}{note ? `, ${note.minutes} min read` : ', notes not written yet'}
+                        {when}{note ? `, ${note.minutes} min read` : ', notes not written yet'}
                       </div>
-                      <h3 className="mt-1 text-[20px] leading-tight">{d.topic}</h3>
+                      <h3 className="mt-1 text-[20px] leading-tight">{t.title}</h3>
                       {read && <div className="mt-1.5 text-[13.5px] font-semibold text-good">Read</div>}
                     </div>
                   </>
                 )
                 return (
-                  <li key={d.date}>
+                  <li key={t.key}>
                     {note ? (
-                      <Link to={`/learn/${d.date}`} className="block h-full overflow-hidden rounded-[18px] border-[1.5px] border-rule transition-colors hover:border-ink">{body}</Link>
+                      <Link to={`/learn/${t.key}`} className="block h-full overflow-hidden rounded-[18px] border-[1.5px] border-rule transition-colors hover:border-ink">{body}</Link>
                     ) : (
                       <div className="h-full overflow-hidden rounded-[18px] border-[1.5px] border-dashed border-rule">{body}</div>
                     )}
@@ -77,13 +91,13 @@ export function Learn() {
 
 export function Topic() {
   const { date = '' } = useParams()
-  const day = dayByDate(date)
   const note = noteForDay(date)
+  const meta = topicMeta(date)
   const read = useStore((s) => s.checks[`read:${date}`])
   const [progress, setProgress] = useState(0)
   const [active, setActive] = useState('')
 
-  const headings = note?.blocks.flatMap((b) => (b.t === 'h' ? [b.text] : [])) ?? []
+  const headings = [...(note?.blocks.flatMap((b) => (b.t === 'h' ? [b.text] : [])) ?? []), BEYOND]
 
   useEffect(() => {
     const onScroll = () => {
@@ -102,21 +116,21 @@ export function Topic() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [date])
 
-  if (!day || !note) {
+  if (!note) {
     return (
       <>
-        <PageHead title={day?.topic ?? 'Topic not found'}>Notes for this topic are not written yet.</PageHead>
+        <PageHead title={meta.title}>Notes for this topic are not written yet.</PageHead>
         <Link className="btn" to="/learn">All topics</Link>
       </>
     )
   }
 
-  const subject = subjectOf(day)
-  const color = subjectColor(subject)
+  const color = subjectColor(meta.subject)
   const qCount = questionsForDay(date).length
   const mainsCount = mainsForDay(date).length
-  const index = days.indexOf(day)
-  const nextNote = notes.filter((n) => n.day > date).sort((a, b) => a.day.localeCompare(b.day))[0]
+  const planDay = dayByDate(date)
+  const ordered = [...notes].sort((a, b) => a.day.localeCompare(b.day))
+  const nextNote = ordered[ordered.findIndex((n) => n.day === date) + 1]
 
   return (
     <div style={{ '--subject': color } as React.CSSProperties}>
@@ -127,20 +141,22 @@ export function Topic() {
       <header className="-mx-4 -mt-7 grid overflow-hidden bg-[var(--subject)] text-white sm:mx-0 sm:mt-0 sm:rounded-[24px] md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
         <div className="flex flex-col justify-between gap-8 p-6 sm:p-9">
           <div>
-            <Link to="/learn" className="text-[14.5px] font-semibold underline underline-offset-4">{subject}</Link>
-            <h1 className="mt-3 text-[40px] sm:text-[56px]">{day.topic}</h1>
+            <Link to="/learn" className="text-[14.5px] font-semibold underline underline-offset-4">{meta.subject}</Link>
+            <h1 className="mt-3 text-[40px] sm:text-[56px]">{meta.title}</h1>
             <p className="mt-4 max-w-[52ch] text-[17.5px] leading-snug">{note.summary}</p>
           </div>
           <div className="flex flex-wrap gap-x-5 gap-y-1 text-[14.5px] font-semibold">
             <span>{note.minutes} min read</span>
-            <span>Plan day {index + 1}, {formatDate(date)}</span>
+            <span>{planDay ? `Plan day ${days.indexOf(planDay) + 1}, ${meta.label}` : meta.label}</span>
             {date === isoToday() && <span>Today</span>}
           </div>
         </div>
-        <a href={pictureLink(note.hero)} target="_blank" rel="noreferrer" className="relative block min-h-[240px]" aria-label={`Image source: ${note.hero.credit}, ${note.hero.license}`}>
-          <img src={pictureUrl(note.hero)} alt={note.heroAlt} className="absolute inset-0 h-full w-full object-cover" />
-          <span className="absolute bottom-2 right-2 rounded-full bg-black/70 px-2.5 py-0.5 text-[11.5px] text-white">{note.hero.credit}, {note.hero.license}</span>
-        </a>
+        {note.hero && (
+          <a href={pictureLink(note.hero)} target="_blank" rel="noreferrer" className="relative block min-h-[240px]" aria-label={`Image source: ${note.hero.credit}, ${note.hero.license}`}>
+            <img src={pictureUrl(note.hero)} alt={note.heroAlt ?? ''} className="absolute inset-0 h-full w-full object-cover" />
+            <span className="absolute bottom-2 right-2 rounded-full bg-black/70 px-2.5 py-0.5 text-[11.5px] text-white">{note.hero.credit}, {note.hero.license}</span>
+          </a>
+        )}
       </header>
 
       <div className="mt-10 grid gap-10 lg:grid-cols-[230px_minmax(0,720px)] lg:justify-center">
@@ -165,6 +181,10 @@ export function Topic() {
 
         <article className="notes min-w-0">
           {note.blocks.map((block, i) => <NoteBlock key={i} block={block} />)}
+
+          <NoteBlock block={{ t: 'h', text: BEYOND }} />
+          <p className="mb-4 !text-[16px] text-soft">These notes aim to be enough for this topic. Use the items below only for what notes cannot do: maps, official wording and the latest news.</p>
+          <div className="not-prose"><BeyondPanel beyond={beyondFor(date, meta.subject)} /></div>
 
           <section className="mt-14 rounded-[20px] bg-tint p-6">
             <h2 className="text-[26px]">Now test it</h2>
@@ -199,7 +219,7 @@ export function Topic() {
           {nextNote && (
             <Link to={`/learn/${nextNote.day}`} className="mt-10 block rounded-[20px] border-[1.5px] border-ink p-5 hover:bg-ink hover:text-paper">
               <div className="text-[13.5px] font-semibold opacity-70">Next topic</div>
-              <div className="display mt-0.5 text-[24px]">{dayByDate(nextNote.day)?.topic}</div>
+              <div className="display mt-0.5 text-[24px]">{topicMeta(nextNote.day).title}</div>
             </Link>
           )}
         </article>

@@ -1,5 +1,6 @@
 import { questions, questionsForDay } from '../data/bank'
 import { openMistakes } from './analysis'
+import { isLearningDay } from './subjects'
 import { dayByDate, days, formatDate, subjectOf, weeks } from './plan'
 import { getState } from './store'
 import type { Question } from './types'
@@ -37,7 +38,15 @@ export function buildSet(id: string): TestSet | null {
   if (type === 'day') {
     const day = dayByDate(value)
     if (!day) return null
-    return { id, title: day.topic, subject: subjectOf(day), questions: seededShuffle(questionsForDay(value), id), target: 30 }
+    const own = questionsForDay(value)
+    if (own.length > 0 || isLearningDay(day)) {
+      return { id, title: day.topic, subject: subjectOf(day), questions: seededShuffle(own, id), target: 30 }
+    }
+    // Revision, test and mock days draw from what is already written for that subject.
+    const subject = subjectOf(day)
+    const pool = subject === 'Mixed' ? questions : subjectQuestions(subject)
+    const target = Number(day.output.match(/(\d+)[^\d]*(MCQs|questions|PYQs)/)?.[1]) || (/mock/i.test(day.topic) ? 100 : 30)
+    return { id, title: day.topic, subject, questions: seededShuffle(pool, id).slice(0, target), target }
   }
   if (type === 'week') {
     const week = weeks[Number(value)]

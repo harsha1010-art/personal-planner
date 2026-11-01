@@ -5,6 +5,8 @@ export interface Picture {
   license: string
 }
 
+export type DiagramId = 'harappan-city' | 'stupa' | 'vedic-texts' | 'temple-styles' | 'chaitya'
+
 export type NoteKind = 'exam' | 'trap' | 'mains' | 'recent'
 
 export type Block =
@@ -19,15 +21,15 @@ export type Block =
   | { t: 'compare'; caption?: string; columns: { title: string; items: string[] }[] }
   | { t: 'strata'; caption?: string; layers: { title: string; sub: string }[] }
   | { t: 'wheel'; caption?: string; center: string; spokes: string[] }
-  | { t: 'svg'; id: 'harappan-city' | 'stupa' | 'vedic-texts'; caption: string }
+  | { t: 'svg'; id: DiagramId; caption: string }
   | { t: 'note'; kind: NoteKind; title: string; text: string }
 
 export interface TopicNote {
   day: string
   summary: string
   minutes: number
-  hero: Picture
-  heroAlt: string
+  hero?: Picture
+  heroAlt?: string
   blocks: Block[]
   sources: { label: string; url?: string }[]
 }

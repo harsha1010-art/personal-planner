@@ -2,7 +2,8 @@ import { useState } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
 import { PageHead } from '../components/Shell'
 import { mainsById, mainsQuestions } from '../data/bank'
-import { dayByDate, formatDate } from '../lib/plan'
+import { formatDate } from '../lib/plan'
+import { topicMeta } from './Learn'
 import { update, useStore } from '../lib/store'
 
 export const RUBRIC: [string, string][] = [
@@ -38,7 +39,7 @@ export function Mains() {
       {days.map((date) => (
         <section key={date} className="mb-8">
           <h2 className="mb-3 text-[24px]">
-            <span className="num mr-2 text-[14px] font-normal text-soft">{formatDate(date)}</span>{dayByDate(date)?.topic}
+            <span className="num mr-2 text-[14px] font-normal text-soft">{topicMeta(date).label}</span>{topicMeta(date).title}
           </h2>
           <ul className="divide-y divide-rule">
             {mainsQuestions.filter((m) => m.day === date).map((m) => {

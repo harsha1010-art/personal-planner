@@ -1,10 +1,15 @@
 import { Link, useParams } from 'react-router-dom'
-import { mainsForDay, questionsForDay } from '../data/bank'
-import { noteForDay } from '../data/notes'
+import { BeyondPanel } from '../components/BeyondPanel'
+import { mainsForDay } from '../data/bank'
+import { beyondFor } from '../data/beyond'
+import { noteForDay, notes } from '../data/notes'
 import { pictureUrl } from '../data/notes/types'
 import { addDays, currentDay, dayByDate, days, formatDate, isoToday, subjectOf, weekOf, weeks } from '../lib/plan'
 import { update, useStore } from '../lib/store'
-import { subjectColor } from '../lib/subjects'
+import { extraByKey } from '../lib/extras'
+import { languageFocus, sociologyFor } from '../lib/schedule'
+import { buildSet } from '../lib/sets'
+import { isLearningDay, subjectColor } from '../lib/subjects'
 import type { DayRecord, DayStatus } from '../lib/types'
 
 const STATUSES: DayStatus[] = ['Not started', 'In progress', 'Partial', 'Done', 'Skipped']
@@ -58,7 +63,9 @@ export function Today() {
   const subject = subjectOf(day)
   const color = subjectColor(subject)
   const note = noteForDay(day.date)
-  const questions = questionsForDay(day.date)
+  const questions = buildSet(`day:${day.date}`)?.questions ?? []
+  const learning = isLearningDay(day)
+  const relatedNotes = learning ? [] : notes.filter((n) => dayByDate(n.day) && subjectOf(dayByDate(n.day)!) === subject)
   const mains = mainsForDay(day.date)
   const setId = `day:${day.date}`
   const latest = [...attempts].reverse().find((a) => a.setId === setId)
@@ -67,6 +74,7 @@ export function Today() {
   const weekDays = week >= 0 ? days.filter((d) => d.date >= weeks[week].from && d.date <= weeks[week].to) : []
   const due = revisionsDue(allDays, checks, isoToday())
   const read = checks[`read:${day.date}`]
+  const sociology = sociologyFor(day.date)
 
   return (
     <div style={{ '--subject': color } as React.CSSProperties}>
@@ -93,24 +101,30 @@ export function Today() {
             </select>
           </div>
         </div>
-        {note && (
+        {note?.hero && (
           <div className="relative min-h-[220px]">
-            <img src={pictureUrl(note.hero)} alt={note.heroAlt} className="absolute inset-0 h-full w-full object-cover" />
+            <img src={pictureUrl(note.hero)} alt={note.heroAlt ?? ''} className="absolute inset-0 h-full w-full object-cover" />
           </div>
         )}
       </section>
 
       <section aria-label="Today's work" className="mt-5 grid gap-4 md:grid-cols-3">
-        <Step n={1} title="Learn" done={!!read} detail={note ? 'Read the notes, then close the page and recall the main points.' : `Notes for this day are not written yet. Plan says: ${day.read}`}>
+        <Step n={1} title="Learn" done={!!read} detail={note ? 'Read the notes, then close the page and recall the main points.' : relatedNotes.length ? `Revision day. ${relatedNotes.length} notes to revise so far.` : learning ? `Notes for this day are not written yet. Plan says: ${day.read}` : `Plan says: ${day.read}`}>
           {note && <Link className="btn" to={`/learn/${day.date}`}>{read ? 'Read again' : 'Read notes'}</Link>}
+          {relatedNotes.slice(0, 4).map((n) => <Link key={n.day} className="text-[14px] font-semibold underline underline-offset-4" to={`/learn/${n.day}`}>{dayByDate(n.day)?.topic}</Link>)}
         </Step>
-        <Step n={2} title="Test" done={!!latest} detail={questions.length ? `${questions.length} Prelims questions. Answers appear only after you submit.` : `Questions for this day are not written yet. Plan says: ${day.output}`}>
+        <Step n={2} title="Test" done={!!latest} detail={questions.length ? `${questions.length} Prelims questions${learning ? '' : ' from what is written so far'}. Answers appear only after you submit.` : `Questions for this day are not written yet. Plan says: ${day.output}`}>
           {questions.length > 0 && <Link className="btn" to={`/test/${setId}`}>{latest ? 'Attempt again' : 'Start test'}</Link>}
           {latest && <Link className="btn" to={`/result/${latest.id}`}>Last result</Link>}
         </Step>
         <Step n={3} title="Write" done={mains.length > 0 && mainsDone === mains.length} detail={mains.length ? `${mainsDone} of ${mains.length} Mains answers written. The model answer opens after you submit.` : 'Mains questions for this day are not written yet.'}>
           {mains.length > 0 && <Link className="btn" to={`/mains?day=${day.date}`}>Write answers</Link>}
         </Step>
+      </section>
+
+      <section className="mt-10" aria-label="Beyond this site">
+        <h2 className="mb-3 text-[26px]">Beyond this site today</h2>
+        <BeyondPanel beyond={beyondFor(day.date, subject)} />
       </section>
 
       <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1fr)_340px]">
@@ -180,9 +194,16 @@ export function Today() {
             )}
           </div>
           <div className="card">
-            <h2 className="text-[20px]">Sociology and language</h2>
-            <p className="mt-1.5 text-[14.5px]">{day.optional}</p>
-            {day.sociologyFocus && <p className="mt-1.5 text-[13.5px] text-soft">{day.sociologyFocus}</p>}
+            <h2 className="text-[20px]">Sociology</h2>
+            <p className="mt-1.5 text-[14.5px] font-semibold">{sociology.title}</p>
+            <p className="mt-1 text-[13.5px] text-soft">{sociology.focus} Aim for about 8-10 hours a week at first.</p>
+            {noteForDay(sociology.key) ? <Link className="mt-2 inline-block text-[14px] font-semibold underline underline-offset-4" to={`/learn/${sociology.key}`}>Read this topic</Link> : <p className="mt-1.5 text-[13.5px] text-faint">Notes for this topic are not written yet.</p>}
+            <h2 className="mt-5 text-[20px]">Kannada and English</h2>
+            <p className="mt-1.5 text-[14.5px]">{languageFocus(day.date)}</p>
+            <p className="mt-1 text-[13.5px] text-soft">Two sessions a week, 30-40 minutes each.</p>
+            <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-[14px] font-semibold">
+              {['lang-kannada', 'lang-english', 'essay'].filter((k) => noteForDay(k)).map((k) => <Link key={k} className="underline underline-offset-4" to={`/learn/${k}`}>{extraByKey.get(k)?.title.split(' (')[0]}</Link>)}
+            </div>
           </div>
           <div className="card">
             <h2 className="text-[20px]">Current affairs</h2>

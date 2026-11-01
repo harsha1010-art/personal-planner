@@ -1,5 +1,6 @@
 import { PageHead, PlannerTabs } from '../components/Shell'
 import { guide } from '../lib/plan'
+import { weeklyLoad } from '../lib/schedule'
 import { update, useStore } from '../lib/store'
 
 function Table({ rows }: { rows: Record<string, string>[] }) {
@@ -48,6 +49,17 @@ export function Guide() {
             </div>
           ))}
         </dl>
+      </Section>
+      <Section title="Your weekly load">
+        <dl className="divide-y divide-rule">
+          {weeklyLoad.map(([label, text]) => (
+            <div key={label} className="grid gap-x-4 py-2 sm:grid-cols-[170px_minmax(0,1fr)]">
+              <dt className="font-medium">{label}</dt>
+              <dd className="text-soft">{text}</dd>
+            </div>
+          ))}
+        </dl>
+        <p className="mt-2 text-[14px] text-soft">Do not leave Sociology until after May 2027: it carries 500 marks. Your first reading target is the end of January.</p>
       </Section>
       <Section title="How to study"><Table rows={guide.howToStudy} /></Section>
       <Section title="Weekly routine"><Table rows={guide.routine} /></Section>

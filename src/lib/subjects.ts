@@ -1,3 +1,4 @@
+import { extraTopics } from './extras'
 import { days, subjectOf, type Day } from './plan'
 
 /** Each subject's block colour, always paired with white text at a passing contrast. */
@@ -23,6 +24,8 @@ const COLORS: Record<string, string> = {
   Infrastructure: '#4d5660',
   'Current Affairs': '#b3261e',
   CSAT: '#245f9e',
+  'Sociology Optional': '#8a2f6b',
+  'Languages and Essay': '#1d6f8a',
 }
 
 export const subjectColor = (subject: string) => COLORS[subject] ?? '#14130f'
@@ -33,5 +36,20 @@ const REVISION = /revision|PYQ|buffer|mock|test|audit|repair|consolidation|rapid
 export const isLearningDay = (d: Day) => !REVISION.test(d.topic) && subjectOf(d) !== 'Mixed'
 
 export const learningDays = days.filter(isLearningDay)
-export const subjectsInOrder = [...new Set(learningDays.map(subjectOf))]
-export const topicsOf = (subject: string) => learningDays.filter((d) => subjectOf(d) === subject)
+
+export interface TopicEntry {
+  key: string
+  title: string
+  when: string
+}
+
+export const subjectsInOrder = [
+  ...new Set([...learningDays.map(subjectOf), ...extraTopics.map((t) => t.subject)]),
+]
+
+export const topicsOf = (subject: string): TopicEntry[] => [
+  ...learningDays.filter((d) => subjectOf(d) === subject).map((d) => ({ key: d.date, title: d.topic, when: d.date })),
+  ...extraTopics.filter((t) => t.subject === subject).map((t) => ({ key: t.key, title: t.title, when: t.when })),
+]
+
+export const totalTopics = learningDays.length + extraTopics.length

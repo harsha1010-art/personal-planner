@@ -39,8 +39,8 @@ export interface Question {
 export interface MainsQuestion {
   id: string
   day: string
-  marks: 10 | 15
-  words: 150 | 250
+  marks: number
+  words: number
   directive: string
   question: string
   mustCover: string[]
