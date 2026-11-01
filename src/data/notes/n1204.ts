@@ -1,0 +1,138 @@
+import type { TopicNote } from './types'
+
+export const note: TopicNote = {
+  day: '2026-12-04',
+  summary: 'India\'s social sector: health policy, financing and outcomes; school and higher education under NEP 2020; skills and human development; and the surveys you need to tell apart.',
+  minutes: 24,
+  blocks: [
+    { t: 'h', text: 'The big picture' },
+    { t: 'p', text: 'GS II asks about "issues relating to development and management of social sector or services relating to health, education, human resources". The core idea comes from **Amartya Sen\'s capability approach**: development means widening what people can do and be. Healthy, educated and skilled people also power growth, so spending here is an investment, not only welfare.' },
+    { t: 'p', text: 'India has made real gains in access and survival. The harder problems now are **quality, financing and inequality**. A child may be enrolled but unable to read, and a family may have insurance but still pay heavily for medicine.' },
+    { t: 'compare', caption: 'Human development, UNDP Human Development Report 2025 (the latest I could confirm; uses 2023 data)', columns: [
+      { title: 'India', items: ['HDI value **0.685**', 'Rank **130 of 193**', 'Medium human development', 'Rank was 133 for 2022'] },
+      { title: 'What it hides', items: ['Inequality lowers the HDI score by **30.7%**', 'Gaps by state, caste and gender', 'Women\'s income is far below men\'s', 'HDI has three dimensions: health, education, income'] },
+    ] },
+
+    { t: 'h', text: 'Health' },
+    { t: 'p', text: '**Constitution:** "public health and hospitals" is on the **State List**. **Article 47** directs the state to improve nutrition and public health, and courts have read health into **Article 21** (*Paschim Banga Khet Mazdoor Samity*, 1996). There is no general statutory right to health at the national level, though Rajasthan passed a state law in 2023.' },
+    { t: 'timeline', caption: 'Health policy milestones', items: [
+      { when: '1946', what: '**Bhore Committee:** the three-tier primary health care plan.' },
+      { when: '1983, 2002, 2017', what: 'National Health Policies. **NHP 2017** aimed for government spending of **2.5% of GDP by 2025**.' },
+      { when: '2005', what: '**National Rural Health Mission**, ASHAs and Janani Suraksha Yojana. The urban mission followed in 2013.' },
+      { when: '2014', what: '**Mission Indradhanush** for immunisation of children and pregnant women (Prelims 2016).' },
+      { when: '2018', what: '**Ayushman Bharat:** Health and Wellness Centres (now Ayushman Arogya Mandirs) and **PM-JAY**.' },
+      { when: '2019-20', what: '**National Medical Commission Act** replaced the MCI.' },
+      { when: '2021', what: '**Ayushman Bharat Digital Mission:** health IDs and records (Prelims 2022).' },
+      { when: 'October 2024', what: 'PM-JAY extended to **all citizens aged 70+**, regardless of income, with up to ₹5 lakh a year.' },
+    ] },
+    { t: 'strata', caption: 'Public health care pyramid', layers: [
+      { title: 'Tertiary', sub: 'Medical colleges, AIIMS' },
+      { title: 'Secondary', sub: 'District hospitals; Community Health Centres' },
+      { title: 'Primary', sub: 'Primary Health Centres; Sub-centres, now Ayushman Arogya Mandirs; ASHA and ANM link to homes' },
+    ] },
+    { t: 'table', caption: 'Key indicators. SRS figures are as reported from official bulletins; check the latest release.', head: ['Indicator', 'Latest found', 'Target or context'], rows: [
+      ['Infant Mortality Rate', '**24** per 1,000 (SRS 2024)', 'Rural 27, urban 17. Kerala 8'],
+      ['Under-5 Mortality Rate', '**28** per 1,000 (SRS 2024)', 'SDG target: 25 by 2030'],
+      ['Maternal Mortality Ratio', '**88** per lakh live births (SRS 2021-23)', 'SDG target: below 70. One report gives 87 for 2022-24, unconfirmed'],
+      ['Child stunting', '35.5% (NFHS-5, 2019-21)', 'Poshan Abhiyaan aims to cut it'],
+      ['Anaemia in women aged 15-49', '57% (NFHS-5)', 'A major public health concern'],
+    ] },
+    { t: 'h3', text: 'Who pays for health care' },
+    { t: 'p', text: 'National Health Accounts for 2021-22 showed government health spending at about **1.84% of GDP**, short of the NHP goal, and out-of-pocket spending at about **39.4%** of total health spending. Reports on the 2022-23 accounts, published in 2026, indicate that out-of-pocket spending rose again, with figures from about 44% of total to about 50% of current health spending. The denominator explains part of the gap, so state it when you quote.' },
+    { t: 'compare', caption: 'The insurance debate', columns: [
+      { title: 'PM-JAY strengths', items: ['Up to **₹5 lakh per family per year** for secondary and tertiary care', 'Portable and cashless', 'Reduces catastrophic hospital bills', 'Over 1.14 crore cards for the elderly by February 2026 (reported from a Rajya Sabha reply)'] },
+      { title: 'Criticism', items: ['Most out-of-pocket costs are for **outpatient care and medicines**, which it does not cover', 'Private hospitals may select profitable cases', 'Fraud risk and delayed payments', 'A public primary care system may lose focus'] },
+    ] },
+    { t: 'list', items: [
+      '**Challenges:** shortages in rural areas, weak primary care, rising non-communicable diseases, malnutrition, drug resistance, and mental health.',
+      '**Laws:** Clinical Establishments Act, 2010 (adopted unevenly), Mental Healthcare Act, 2017.',
+      '**Good examples:** Kerala and Tamil Nadu public systems; Tamil Nadu\'s drug procurement corporation.',
+    ] },
+
+    { t: 'h', text: 'Education' },
+    { t: 'timeline', items: [
+      { when: '1964-66', what: '**Kothari Commission:** common school idea, and 6% of GDP on education. It led to the **NPE 1968**.' },
+      { when: '1976', what: '**42nd Amendment** moves education to the Concurrent List.' },
+      { when: '1986', what: 'New NPE, updated in 1992.' },
+      { when: '2002', what: '**86th Amendment:** **Article 21A** (ages 6-14), changes to Article 45, and a duty under **Article 51A(k)**.' },
+      { when: '2009', what: '**RTE Act:** 25% seats in private schools for disadvantaged children (Section 12(1)(c)), and teacher qualification norms (Prelims 2018).' },
+      { when: '2020', what: '**NEP 2020**, from the Kasturirangan Committee.' },
+    ] },
+    { t: 'table', caption: 'NEP 2020 in brief', head: ['Area', 'Key feature'], rows: [
+      ['Structure', '**5+3+3+4** replaces 10+2'],
+      ['Foundations', 'Literacy and numeracy by Class 3, through **NIPUN Bharat** (2021)'],
+      ['Language', 'Mother tongue or local language at least up to Class 5, where possible. The three-language formula remains disputed'],
+      ['Higher education', '**GER 50% by 2035**, multiple entry and exit, single regulator proposed'],
+      ['Funding', 'Public spending of **6% of GDP**'],
+      ['Assessment', '**PARAKH** as a national assessment centre'],
+    ] },
+    { t: 'table', caption: 'Know who produces what. Prelims can mix these up.', head: ['Survey', 'Who', 'Latest finding I could confirm'], rows: [
+      ['**ASER**', 'Pratham, an NGO; rural; tests at home', 'ASER 2024: 23.4% of Class 3 pupils read Class 2 text (16.3% in 2022); recovery after Covid, with government schools gaining'],
+      ['**PARAKH Rashtriya Sarvekshan**', 'NCERT; replaced NAS; Classes 3, 6, 9', '2024 survey: performance declines at higher stages, with gaps for SC and ST pupils'],
+      ['**UDISE+**', 'Ministry of Education; school data', '2024-25: secondary dropout about 11.5% on the official table, though reports differ and the method is debated'],
+      ['**AISHE**', 'Ministry of Education; higher education', '2023-24 (released July 2026): GER reached **30.0%**, enrolment 4.50 crore; female GER higher than male'],
+      ['**NFHS**', 'Health Ministry, through IIPS', 'NFHS-5 is the last full round I could verify'],
+      ['**SRS**', 'Registrar General', 'Vital rates: birth, death and infant mortality'],
+    ] },
+    { t: 'list', items: [
+      '**Schemes:** **Samagra Shiksha** (2018) merged SSA, RMSA and teacher education. **PM POSHAN** (2021, formerly Mid-Day Meal). **PM SHRI** model schools; some states objected to linking funds to NEP adoption.',
+      '**Regulators:** **Viksit Bharat Shiksha Adhishthan Bill, 2025** would replace UGC, AICTE and NCTE with one apex body. It was before a Joint Parliamentary Committee as of late August 2026, not passed. Concerns are about centralisation and federalism.',
+      '**Digital:** **SWAYAM** offers online courses (Prelims 2016 used SHGs as a false option), and DIKSHA serves teachers. Remember the digital divide.',
+      '**Quality issues:** teacher vacancies, single-teacher schools, a boom in private tuition, and shrinking enrolment in government schools.',
+    ] },
+    { t: 'note', kind: 'trap', title: 'Article and age', text: 'Article 21A covers **6-14**. Under the **amended Article 45**, the state is to provide early care for children up to 6. Article 51A(k) puts the duty on **parents**. RTE\'s 25% quota applies to private unaided schools, but minority institutions are exempt following *Pramati* (2014).' },
+
+    { t: 'h', text: 'Human resources and skills' },
+    { t: 'flow', caption: 'Human capital pipeline', steps: [
+      { title: 'Early years', sub: 'Nutrition, Anganwadi' },
+      { title: 'School', sub: 'Foundational learning' },
+      { title: 'Skills and college', sub: 'ITIs, apprenticeships, universities' },
+      { title: 'Work', sub: 'Formal jobs, female participation' },
+      { title: 'Lifelong', sub: 'Reskilling, health, pensions' },
+    ] },
+    { t: 'list', items: [
+      '**Skill India (2015):** a Ministry of Skill Development since 2014, the National Skill Development Corporation, and a national policy.',
+      '**PM Kaushal Vikas Yojana:** short-term training aligned with the **National Skills Qualification Framework**, as tested in Prelims 2018.',
+      '**Problems:** weak placement, low employer involvement, low prestige of vocational routes, and mismatch with industry needs.',
+      '**Demographic link:** the young workforce needs jobs. SRS 2024 confirms fertility below replacement, so the window will not stay open.',
+    ] },
+    { t: 'note', kind: 'mains', title: 'Health and education in one frame', text: 'Use a "three As and a Q" structure: **Access, Affordability, Accountability and Quality**. For each, add one data point and one example. The structure works for both sectors, and a strong conclusion can link better outcomes with state capacity and higher public spending.' },
+
+    { t: 'h', text: 'Exam guide' },
+    { t: 'note', kind: 'mains', title: 'Likely angles', text: '(1) Insurance against public primary care: what should India prioritise? (2) Should health be a fundamental right by law? Cite Article 21 and Rajasthan. Cover cost and capacity. (3) Learning crisis: why enrolment did not lead to learning; ASER, NIPUN and teacher quality. (4) Federalism in NEP and the VBSA Bill. (5) Demographic dividend without skills, and how HDI gaps shape it. Delivery of welfare is in the next note.' },
+    { t: 'h3', text: 'Quick recall' },
+    { t: 'list', items: [
+      'IMR 24; U5MR 28; MMR 88. NHP 2017: 2.5% of GDP.',
+      'HDI 2025 report: 130th; 0.685.',
+      'PM-JAY ₹5 lakh; 70+ from October 2024. ABDM 2021.',
+      '86th Amendment: 21A, 45, 51A(k). RTE 2009: 12(1)(c).',
+      'NEP 2020: 5+3+3+4; GER 50% by 2035; 6% of GDP. AISHE 2023-24 GER: 30%.',
+      'ASER: Pratham. PARAKH: NCERT. UDISE+ and AISHE: Ministry of Education.',
+    ] },
+  ],
+  sources: [
+    { label: 'UNDP: India\'s human development continues to make progress, ranks 130 of 193', url: 'https://www.undp.org/node/521916' },
+    { label: 'Registrar General: Special Bulletin on Maternal Mortality 2021-23', url: 'https://censusindia.gov.in/nada/index.php/catalog/46177' },
+    { label: 'The Wire: SRS 2024 report', url: 'https://thewire.in/health/all-the-states-except-six-in-north-india-are-below-replacement-fertility-levels-govt-report-suggests' },
+    { label: 'Vajiram and Ravi: National Health Accounts Report, key findings (secondary)', url: 'https://vajiramandravi.com/current-affairs/national-health-accounts-report/' },
+    { label: 'Down To Earth: National Health Accounts estimates', url: 'https://www.downtoearth.org.in/health/indias-per-capita-health-expense-jumped-82-in-last-decade-national-health-accounts-estimates' },
+    { label: 'Business Today: Ayushman Bharat cards for seniors aged 70+', url: 'https://www.businesstoday.in/personal-finance/insurance/story/govt-rolls-out-ayushman-bharat-cards-for-70-seniors-with-rs-5-lakh-free-treatment-heres-how-to-apply-477945-2025-05-27' },
+    { label: 'Millennium Post: ASER 2024', url: 'https://www.millenniumpost.in/big-stories/aser-2024-reading-arithmetic-skills-improve-among-class-3-and-5-students-led-by-govt-schools-596643' },
+    { label: 'Careers360: PARAKH Rashtriya Sarvekshan 2024 results', url: 'https://news.careers360.com/parakh-rashtriya-sarvekshan-result-2024-state-govt-schools-sc-st-far-behind-class-3-6-9-maths-science-language-evs-exam-survey' },
+    { label: 'Careers360: AISHE 2023-24 report', url: 'https://news.careers360.com/union-ministry-of-education-aishe-2022-23-24-report-higher-education-ger-heis-enrolment-female-ger-stem-students-enrolments' },
+    { label: 'Ministry of Education: UDISE+ 2024-25 release', url: 'https://dsel.education.gov.in/sites/default/files/update/PIB2161543.pdf' },
+    { label: 'PRS India: Joint Committee on Viksit Bharat Shiksha Adhishthan Bill', url: 'https://prsindia.org/parliamentary-committees/joint-committee-on-viksit-bharat-shiksha-adhishthan-bill-2025' },
+    { label: 'UPSC Civil Services Prelims 2016, 2018 and 2022, GS Paper I', url: 'https://www.upsc.gov.in/examinations/previous-question-papers' },
+  ],
+  beyond: {
+    refer: [
+      { what: 'National Health Accounts, latest report', where: 'National Health Systems Resource Centre', why: 'Reports disagree on the 2022-23 out-of-pocket share. Read the original table.', url: 'https://nhsrcindia.org/' },
+      { what: 'NEP 2020 full text', where: 'Ministry of Education', why: 'For exact targets and wording in Mains.', url: 'https://www.education.gov.in/' },
+    ],
+    current: [
+      { issue: 'AISHE 2023-24', link: 'Released July 2026: GER 30%, close to NEP milestones. Link with the 50% by 2035 target.', source: 'Careers360', url: 'https://news.careers360.com/union-ministry-of-education-aishe-2022-23-24-report-higher-education-ger-heis-enrolment-female-ger-stem-students-enrolments' },
+      { issue: 'VBSA Bill', link: 'With a Joint Committee as of August 2026. Links to autonomy and federalism in higher education.', source: 'PRS India', url: 'https://prsindia.org/parliamentary-committees/joint-committee-on-viksit-bharat-shiksha-adhishthan-bill-2025' },
+      { issue: 'National Health Accounts', link: 'May 2026 coverage flagged a high burden of out-of-pocket costs in the 2022-23 data.', source: 'Vajiram and Ravi (secondary)', url: 'https://vajiramandravi.com/current-affairs/national-health-accounts-report/' },
+    ],
+  },
+}

@@ -1,4 +1,5 @@
 import { PageHead, PlannerTabs } from '../components/Shell'
+import { toVerify } from '../data/toVerify'
 import { guide } from '../lib/plan'
 import { weeklyLoad } from '../lib/schedule'
 import { update, useStore } from '../lib/store'
@@ -89,6 +90,19 @@ export function Guide() {
       <Section title="Languages and essay"><Table rows={guide.languages} /></Section>
       <Section title="Source index"><Table rows={guide.sources} /></Section>
       <Section title="How to read subject priority"><Table rows={guide.importance} /></Section>
+      <Section title="Verify before the exam">
+        <p className="mb-3 max-w-[68ch] text-soft">These points could not be confirmed from a primary source when the notes were written in November 2026. Check them, especially anything that changes over time.</p>
+        <div className="grid gap-4 md:grid-cols-2">
+          {toVerify.map((group) => (
+            <div key={group.area} className="card">
+              <h3 className="text-[19px]">{group.area}</h3>
+              <ul className="mt-2 list-disc space-y-1.5 pl-5 text-[14.5px]">
+                {group.items.map((item) => <li key={item}>{item}</li>)}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </Section>
       <Section title="Official sources to check">
         <ul className="mt-2 space-y-1.5">
           {[

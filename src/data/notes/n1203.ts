@@ -1,0 +1,136 @@
+import type { TopicNote } from './types'
+
+export const note: TopicNote = {
+  day: '2026-12-03',
+  summary: 'How globalisation changes Indian society, and how communalism, regionalism and secularism work in practice, with the commissions, cases and constitutional provisions to quote.',
+  minutes: 24,
+  blocks: [
+    { t: 'h', text: 'The big picture' },
+    { t: 'p', text: 'GS I asks about "effects of globalization on Indian society" and "social empowerment, communalism, regionalism and secularism". The link between them is **identity under change**. Rapid economic change creates opportunity and anxiety. Groups then organise around religion, region or language, and the Constitution has to accommodate them without letting them break the whole.' },
+
+    { t: 'h', text: 'Globalisation and society' },
+    { t: 'p', text: 'Globalisation is the faster movement of goods, money, people, ideas and images across borders. India\'s turning point was the **1991 reforms (LPG)**, though its ties with world trade and migration are much older.' },
+    { t: 'table', caption: 'Effects by group: always show both sides', head: ['Area', 'Gains', 'Costs'], rows: [
+      ['Women', 'Jobs in IT, BPO, garments; exposure, higher aspirations', 'Low-paid and insecure work; double burden; commodified images'],
+      ['Family', 'More mobility, later marriage, more choice', 'Stress on elderly care, migration separates families'],
+      ['Workers', 'New services and gig work; remittances', 'Informal, contract work; weak social security'],
+      ['Tribals', 'Some market access', 'Displacement for mines and dams; loss of forest rights'],
+      ['Farmers', 'Export markets, new inputs', 'Global price swings; distress in some crops'],
+      ['Culture', 'Yoga, cinema and food go global; diaspora links', 'Consumerism, threat to small languages and crafts'],
+      ['Caste', 'New jobs loosen hereditary occupations', 'Private jobs without quotas; caste networks still shape hiring'],
+    ] },
+    { t: 'compare', caption: 'Key terms', columns: [
+      { title: 'Cultural change', items: ['**Homogenisation:** a single global culture', '**Glocalisation:** global products adapt to local taste, such as McAloo Tikki', '**Hybridisation:** new mixed forms', '**McDonaldisation (Ritzer):** efficiency and sameness spread', '**Cultural revivalism:** a defensive turn to identity'] },
+      { title: 'Economic and work', items: ['**Gig work:** NITI Aayog estimated 77 lakh workers in 2020-21, and 2.35 crore by 2029-30', '**Labour Codes:** in force from 21 November 2025, with the first statutory recognition of gig workers', '**Remittances:** India is the largest recipient worldwide', '**Brain drain and gain**', '**Digital divide**'] },
+    ] },
+    { t: 'note', kind: 'mains', title: 'Beyond a list of effects', text: 'Globalisation is not a one-way wave. Indian society filters it through caste, class and gender, so its effect on a Bengaluru engineer is not its effect on a Bastar Adivasi. The 2025 US tariffs and tighter migration rules show that globalisation can also be reversed. Those shocks can hit garment and gem workers directly.' },
+
+    { t: 'h', text: 'Communalism' },
+    { t: 'p', text: 'Communalism is the belief that people of one religion share common secular interests, which differ from or oppose those of another. It is an **ideology used in politics**, and is different from religiosity. A devout person need not be communal. **Bipan Chandra** set out three stages.' },
+    { t: 'flow', caption: 'Bipan Chandra\'s stages of communalism', steps: [
+      { title: 'Communal nationalism', sub: 'Followers of a religion share secular interests' },
+      { title: 'Liberal communalism', sub: 'Those interests differ between religions, though they can be reconciled' },
+      { title: 'Extreme communalism', sub: 'Interests are hostile and cannot be reconciled; often the politics of fear' },
+    ] },
+    { t: 'timeline', caption: 'Key events and inquiries', items: [
+      { when: '1905-32', what: 'Bengal partition, **separate electorates (1909)**, Lucknow Pact (1916), Communal Award (1932).' },
+      { when: '1946-47', what: 'Direct Action Day and Partition violence.' },
+      { when: '1984', what: 'Anti-Sikh violence; **Nanavati Commission** and later SIT work.' },
+      { when: '1992-93', what: 'Babri Masjid demolition; **Liberhan Commission**; Mumbai riots and **Srikrishna Commission**.' },
+      { when: '2002', what: 'Gujarat violence; Nanavati-Mehta Commission.' },
+      { when: '2006-07', what: '**Sachar Committee** on Muslim socio-economic status, and the **Ranganath Misra Commission** on minorities.' },
+      { when: '2013, 2020', what: 'Muzaffarnagar and Delhi riots.' },
+      { when: '2019', what: 'Supreme Court\'s **Ayodhya** judgment, which praised the Places of Worship Act as a secular safeguard.' },
+    ] },
+    { t: 'table', caption: 'Causes and responses', head: ['Cause', 'Response'], rows: [
+      ['Vote-bank mobilisation', 'RPA Section 123(3); *Abhiram Singh* (2017): no appeals on religion, caste or language'],
+      ['Rumour and social media', 'Fast police action, fact-checks, IT rules'],
+      ['Hate speech and enmity', 'Bharatiya Nyaya Sanhita **Section 196** (earlier IPC 153A) and **Section 299** (earlier 295A)'],
+      ['Mob violence', '*Tehseen Poonawalla* (2018): nodal officers, fast-track courts'],
+      ['Weak police neutrality', 'Police reform (*Prakash Singh*, 2006), mixed police forces'],
+      ['Segregation and low contact', 'Mixed schooling and housing, peace committees; Ashutosh Varshney found that civic links between communities reduce riots'],
+    ] },
+    { t: 'note', kind: 'trap', title: 'Terms to keep apart', text: '**Places of Worship Act, 1991:** freezes the character of sites as on **15 August 1947**, with Ayodhya excluded. Its validity remains under challenge in the Supreme Court (check the latest). The **Prevention of Communal Violence Bill, 2011**, never became law. **Sachar** is about socio-economic status, and **Liberhan** is about the Babri demolition.' },
+
+    { t: 'h', text: 'Regionalism' },
+    { t: 'p', text: 'Regionalism is loyalty to a region, based on language, ethnicity, culture or development gaps. It is **not always bad**. Federal politics can channel it. It turns harmful when it leads to violence or to attacks on migrants.' },
+    { t: 'compare', columns: [
+      { title: 'Positive', items: ['Protects languages and culture', 'Gives voice to backward areas', 'Makes government closer to people', 'Linguistic states are often credited with strengthening unity'] },
+      { title: 'Negative', items: ['**Sons of the soil** politics and attacks on migrants (Myron Weiner\'s term)', 'Water and border disputes', 'Secessionist movements', 'Pressure for local job quotas', 'Regional parties can hold national policy hostage'] },
+    ] },
+    { t: 'timeline', caption: 'Reorganising India', items: [
+      { when: '1948', what: '**Dhar Commission** and **JVP Committee** reject language as the main basis.' },
+      { when: '1952-53', what: '**Potti Sriramulu** dies fasting, and **Andhra State** is formed.' },
+      { when: '1953-56', what: '**Fazl Ali Commission (SRC)**, then the **States Reorganisation Act, 1956**.' },
+      { when: '1960-87', what: 'Maharashtra and Gujarat, Nagaland, Punjab-Haryana, Northeast states, Goa.' },
+      { when: '1965', what: 'Anti-Hindi agitation in Tamil Nadu shapes language policy.' },
+      { when: '2000, 2014', what: 'Chhattisgarh, Uttarakhand, Jharkhand. Then **Telangana**.' },
+      { when: '2019', what: 'J&K and Ladakh become Union Territories.' },
+    ] },
+    { t: 'table', caption: 'Live regional questions, as of November 2026', head: ['Issue', 'Where it stands'], rows: [
+      ['**Ladakh**', 'Demands for statehood and the Sixth Schedule. After Leh violence in September 2025, the Centre offered Article 371-type safeguards. Talks were reported inconclusive in October 2026'],
+      ['**Delimitation**', 'The 84th Amendment froze seats until the first census after 2026. Southern states fear losing share. A 2026 Bill for an earlier exercise reportedly failed in April'],
+      ['**Fiscal federalism**', 'The 16th Finance Commission kept the states\' share at **41%**. Southern states argue efficient states are penalised'],
+      ['**Local job quotas**', '**Article 16(3)** lets only Parliament impose residence conditions. The Punjab and Haryana High Court struck down Haryana\'s 75% private quota law in 2023'],
+      ['**Inter-state disputes**', 'Belagavi (Karnataka-Maharashtra); Cauvery and Mahadayi waters; Assam-Mizoram border'],
+      ['**Language**', 'Disputes over the three-language formula in Tamil Nadu and Maharashtra'],
+    ] },
+    { t: 'note', kind: 'exam', title: 'How it can be tested', text: 'For Prelims, know the sequence of reorganisation commissions, **Article 371** special provisions and the **Sixth Schedule** (Assam, Meghalaya, Tripura, Mizoram). The Sixth Schedule currently covers only those four states, so Ladakh would need a constitutional amendment.' },
+
+    { t: 'h', text: 'Secularism' },
+    { t: 'p', text: '**"Secular" was added to the Preamble by the 42nd Amendment (1976)**, but the idea was already in the Constitution. The Constitution does not define it. Indian scholars such as **Rajeev Bhargava** call the model **principled distance**: the state can intervene in or stay away from religion, depending on what equality and liberty require.' },
+    { t: 'compare', caption: 'Models', columns: [
+      { title: 'Western or French (laicite)', items: ['**Strict wall** between church and state', 'No state support to religious bodies', 'Focus on the individual', 'Example: France, with its limits on religious symbols in schools'] },
+      { title: 'Indian', items: ['**Equal respect** for all faiths (sarva dharma samabhava)', 'State can reform religion: temple entry (**Article 25(2)(b)**), triple talaq', 'State can aid religious schools', 'Protects groups as well as individuals (**Article 30**)', 'Personal laws remain plural'] },
+    ] },
+    { t: 'table', caption: 'Constitution and cases', head: ['Provision or case', 'Point'], rows: [
+      ['Articles 14, 15, 16', 'Equality and no religious discrimination'],
+      ['Articles 25-28', 'Freedom of conscience; denominational rights; no tax for promoting a religion; **no religious instruction in wholly state-funded schools**'],
+      ['Articles 29-30', 'Minority cultural and educational rights'],
+      ['Article 44', 'Directive Principle on a Uniform Civil Code'],
+      ['*S.R. Bommai* (1994)', 'Secularism is part of the **basic structure**'],
+      ['*Shirur Mutt* (1954)', 'Origin of the **essential religious practices** test'],
+      ['*Shah Bano* (1985) and *Danial Latifi* (2001)', 'Maintenance rights, Parliament\'s 1986 law, and how it was read'],
+      ['*Balram Singh* (November 2024)', 'Upheld "socialist" and "secular" in the Preamble'],
+    ] },
+    { t: 'note', kind: 'exam', title: 'Prelims 2020', text: 'UPSC gave a statement saying the Constitution defines its "basic structure" in terms of federalism, secularism, fundamental rights and democracy. That is wrong. **Basic structure is a judicial doctrine**, and the Constitution does not define it.' },
+    { t: 'h3', text: 'Uniform Civil Code and recent disputes' },
+    { t: 'compare', columns: [
+      { title: 'For a UCC', items: ['Gender justice', 'Article 44', 'National integration', 'Goa has long had a common code (with some exceptions)', '**Uttarakhand** brought its UCC into force in January 2025'] },
+      { title: 'Against, or for caution', items: ['21st Law Commission (2018): not necessary or desirable at this stage, and reform within communities instead', 'Fear of majority norms being imposed', 'Tribal customary law', 'Articles 25-29 raise objections', 'Consent has to be built'] },
+    ] },
+    { t: 'p', text: '**Waqf (Amendment) Act, 2025:** In September 2025, the Supreme Court declined to stay the Act as a whole. It paused the clause requiring five years\' practice of Islam until rules are framed, and capped non-Muslim members on boards, among other directions. The main challenge was still pending as of the latest reports found. **Government\'s case:** transparency in property management. **Critics:** undue interference in community rights.' },
+    { t: 'note', kind: 'trap', title: 'Minorities', text: 'Six groups are notified under the **National Commission for Minorities Act, 1992**: Muslims, Christians, Sikhs, Buddhists, Parsis and Jains. *T.M.A. Pai* (2002) held that minority status for Article 30 is decided **state by state**. "Minority" is not defined in the Constitution.' },
+
+    { t: 'h', text: 'Exam guide' },
+    { t: 'note', kind: 'mains', title: 'Likely angles', text: '(1) Has globalisation weakened or strengthened identities? Use glocalisation and revivalism. (2) Distinguish communalism from religiosity, and explain why riots occur, using Varshney and the Sachar and Srikrishna reports. (3) Is regionalism a threat to unity? Show that linguistic states helped, and name current strains: delimitation, finance and Ladakh. (4) Indian secularism: principled distance against Western separation; ask whether state practice is consistent. (5) Should India adopt a UCC now? Give both sides, and suggest a gradual, gender-just route.' },
+    { t: 'h3', text: 'Quick recall' },
+    { t: 'list', items: [
+      'Bipan Chandra: three stages of communalism.',
+      'Sachar 2006; Ranganath Misra 2007; Srikrishna (Mumbai); Liberhan (Babri).',
+      'Dhar and JVP 1948; Fazl Ali 1953; SRA 1956; Telangana 2014.',
+      '42nd Amendment 1976: "secular". *Bommai* 1994: basic structure. *Balram Singh* 2024.',
+      'Article 44: UCC. Uttarakhand: January 2025.',
+      'Places of Worship Act: 15 August 1947 cut-off.',
+    ] },
+  ],
+  sources: [
+    { label: 'Bar and Bench: Supreme Court stays key provisions of Waqf Amendment Act', url: 'https://www.barandbench.com/news/litigation/supreme-court-stays-key-provisions-of-waqf-amendment-act-but-no-stay-on-registration-of-waqfs' },
+    { label: 'Telangana Today: Centre offers Article 371 safeguards and legislature for Ladakh, May 2026', url: 'https://telanganatoday.com/centre-offers-article-371-safeguards-and-legislature-for-ladakh' },
+    { label: 'SuperKalam summary: Talks between government and Ladakh groups inconclusive, October 2026', url: 'https://superkalam.com/current-affairs/16-10-2026/talks-between-govt-ladakh-groups-remain-inconclusive-pg12-ab7acb03-7fc7-46cb-8d91-2a7308aa4621' },
+    { label: 'SCC Online: 131st Constitutional Amendment Bill, 2026', url: 'https://www.scconline.com/blog/post/2026/04/17/constitution-131st-amendment-bill-2026-introduced-inlok-sabha/' },
+    { label: 'Standard references from memory, for further reading and not re-opened: Bipan Chandra, Communalism in Modern India; Rajeev Bhargava on secularism; Ashutosh Varshney, Ethnic Conflict and Civic Life' },
+    { label: 'UPSC Civil Services Prelims 2020, GS Paper I', url: 'https://www.upsc.gov.in/examinations/previous-question-papers' },
+  ],
+  beyond: {
+    refer: [
+      { what: 'Bare text of Articles 25-30, 44 and 371', where: 'Legislative Department, Constitution of India', why: 'Exact wording matters for Prelims.', url: 'https://legislative.gov.in/constitution-of-india/' },
+      { what: 'Report of the 16th Finance Commission', where: 'Ministry of Finance', why: 'State shares and criteria. The 41% figure here is from memory of the February 2026 report, so check it.', url: 'https://fincomindia.nic.in/' },
+    ],
+    current: [
+      { issue: 'Ladakh talks', link: 'Reported inconclusive in October 2026. Article 371-type safeguards are on the table, while groups seek statehood and the Sixth Schedule.', source: 'SuperKalam summary', url: 'https://superkalam.com/current-affairs/16-10-2026/talks-between-govt-ladakh-groups-remain-inconclusive-pg12-ab7acb03-7fc7-46cb-8d91-2a7308aa4621' },
+      { issue: 'Waqf Amendment Act challenge', link: 'Supreme Court interim order of September 2025 still shapes the issue. Check the final ruling.', source: 'Bar and Bench', url: 'https://www.barandbench.com/news/litigation/supreme-court-stays-key-provisions-of-waqf-amendment-act-but-no-stay-on-registration-of-waqfs' },
+      { issue: 'Delimitation and federal balance', link: 'The April 2026 Bill and Census 2027 keep the question alive.', source: 'SCC Online', url: 'https://www.scconline.com/blog/post/2026/04/17/constitution-131st-amendment-bill-2026-introduced-inlok-sabha/' },
+    ],
+  },
+}

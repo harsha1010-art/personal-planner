@@ -1,0 +1,122 @@
+import type { TopicNote } from './types'
+
+export const note: TopicNote = {
+  day: '2026-12-22',
+  summary: 'The end of formal empires after 1945, the ideologies that competed to shape new states, and how borders were drawn and redrawn, from Berlin 1884 to South Sudan 2011.',
+  minutes: 22,
+  blocks: [
+    { t: 'h', text: 'The big picture' },
+    { t: 'p', text: 'In 1945, the UN had 51 founding members, and much of Asia and Africa was still under colonial rule. Today it has **193 members** (as of November 2026). The change is **decolonisation**. It occurred alongside a clash of ideas: capitalism, socialism, communism, fascism. It also left borders, many drawn by outsiders, that still cause conflict. India played a central role in all three stories.' },
+
+    { t: 'h', text: 'Decolonisation' },
+    { t: 'table', caption: 'Why empires ended.', head: ['Factor', 'How it worked'], rows: [
+      ['**Nationalist movements**', 'Mass politics, as in India; armed struggle, as in Algeria and Vietnam'],
+      ['**Weak Europe**', 'World War II left Britain and France exhausted and dependent on US aid'],
+      ['**Superpower pressure**', 'USA and USSR both opposed old empires, for their own reasons'],
+      ['**UN and world opinion**', 'UN General Assembly **Resolution 1514 (December 1960)** declared colonial rule a denial of rights. A Special Committee (C-24) followed in 1961.'],
+      ['**Changing economics**', 'Formal control became costly. Influence could continue without it: the idea of **neo-colonialism** (Nkrumah, 1965).'],
+    ] },
+    { t: 'timeline', caption: 'Waves of decolonisation.', items: [
+      { when: '1800s', what: 'First wave: Spanish and Portuguese America. Haiti (1804), then Bolivar, San Martin and Brazil (1822). This was settler elites and enslaved people; a different pattern from later cases.' },
+      { when: '1945-49', what: 'Indonesia declares independence in 1945 and the Dutch transfer sovereignty in 1949. **India and Pakistan 1947.** Burma and Ceylon 1948.' },
+      { when: '1954', what: 'French defeat at **Dien Bien Phu**; Geneva Accords split Vietnam at the 17th parallel. Algerian war begins (independence in 1962).' },
+      { when: '1955', what: '**Bandung Conference** in Indonesia: 29 Asian and African states.' },
+      { when: '1956', what: '**Suez Crisis:** Nasser nationalises the canal. Britain, France and Israel withdraw under US and Soviet pressure. A sign of the end of European imperial power.' },
+      { when: '1957', what: '**Ghana** under Nkrumah: first sub-Saharan colony to gain independence from Britain.' },
+      { when: '1960', what: 'The **"Year of Africa"**: 17 African states become independent.' },
+      { when: '1961', what: 'First **Non-Aligned Movement** summit, Belgrade. **Goa** taken from Portugal by India.' },
+      { when: '1975', what: 'Portugal leaves Angola and Mozambique after its own 1974 revolution.' },
+      { when: '1980, 1990, 1994', what: 'Zimbabwe; Namibia; end of apartheid in South Africa.' },
+      { when: '1997, 1999, 2002', what: 'Hong Kong to China, Macau to China, Timor-Leste independent.' },
+    ] },
+    { t: 'compare', caption: 'Different ways out of empire.', columns: [
+      { title: 'Mainly negotiated', items: ['India: mass politics, then a transfer of power', 'Ghana: elections and strikes', 'Malaysia, after a communist insurgency'] },
+      { title: 'Mainly violent', items: ['Algeria (with France)', 'Vietnam (with France, then USA)', 'Kenya: Mau Mau uprising', 'Angola and Mozambique'] },
+    ] },
+    { t: 'note', kind: 'mains', title: 'What India did', text: 'India\'s independence inspired others. **Nehru\'s** Asian Relations Conference (1947) and Bandung (1955), UN activism against apartheid (India raised it at the UN from 1946), and the **Non-Aligned Movement** (with Tito, Nasser, Nkrumah and Sukarno) gave new states a voice. Note that non-alignment does not mean neutrality. It means choosing independently, issue by issue.' },
+    { t: 'p', text: '**Legacies:** mono-crop economies, weak institutions, ethnic conflict shaped by colonial policy, and debt. Examples include **Rwanda**, where Belgian rule hardened Hutu-Tutsi identities, and **Nigeria\'s Biafra war**. Some historians add that post-colonial elites also bear responsibility, so do not blame the empire alone.' },
+
+    { t: 'h', text: 'Political philosophies' },
+    { t: 'table', caption: 'The main ideologies. Syllabus: "their forms and effect on the society."', head: ['Ideology', 'Core idea', 'Thinkers', 'Forms', 'Effect on society'], rows: [
+      ['**Capitalism and liberalism**', 'Private property, markets, individual liberty, limited state', 'Adam Smith (1776), J.S. Mill', 'Laissez-faire; welfare capitalism (**Keynes**, New Deal); neoliberalism (**Hayek**, Thatcher, Reagan)', 'High growth and innovation; inequality and booms and busts'],
+      ['**Socialism**', 'Collective or social control over production; equality', 'Owen, Saint-Simon, Fourier', 'Utopian; **Fabian** (gradual, 1884); democratic socialism; Nordic social democracy', 'Welfare states, labour rights; can reduce incentives if overextended'],
+      ['**Marxism and communism**', 'History as class struggle; revolution leading to a classless, stateless society', 'Marx and Engels (Manifesto, 1848; Das Kapital, 1867)', '**Leninism** (vanguard party), **Stalinism** (planned economy, terror), **Maoism** (peasant revolution); market reforms under Deng from 1978', 'Rapid industry, mass literacy and health gains; purges, famine, no political freedom'],
+      ['**Fascism and Nazism**', 'Extreme nationalism, one-party rule, leader cult; Nazism adds racial ideology', 'Mussolini; Hitler', 'Italy from 1922; Germany from 1933', 'War, repression, genocide'],
+      ['**Anarchism**', 'Rejects the coercive state', 'Proudhon, Bakunin, Kropotkin', 'Mutualism, anarcho-communism', 'Limited direct impact; shaped labour movements'],
+    ] },
+    { t: 'flow', caption: 'Marx\'s historical stages, as commonly taught.', steps: [
+      { title: 'Feudalism', sub: 'Lords and serfs' },
+      { title: 'Capitalism', sub: 'Bourgeoisie and proletariat' },
+      { title: 'Socialism', sub: 'Workers\' state' },
+      { title: 'Communism', sub: 'Classless, stateless' },
+    ] },
+    { t: 'note', kind: 'trap', title: 'Socialism is not communism', text: '**Socialism** covers a wide range, including elected governments that keep markets and a parliament. **Communism** in Marxist theory is the end stage; in practice, it meant one-party states. **Capitalism** also has many forms. The USA, Germany and Singapore are all market economies, yet they differ greatly. Also, **fascism** is opposed to both liberal democracy and communism.' },
+    { t: 'note', kind: 'exam', title: 'Prelims 2020: Gandhism and Marxism', text: 'UPSC asked for one common agreement between Gandhism and Marxism, with options including a stateless society, class struggle and abolition of private property. Know where they agree (critique of capitalist exploitation; stateless ideal) and where they differ (violence, class struggle, role of machinery, moral means).' },
+    { t: 'table', caption: 'India\'s own path.', head: ['Thread', 'What it means'], rows: [
+      ['**Nehruvian socialism**', 'Mixed economy; public sector at the "commanding heights"; planning; Avadi session of Congress in 1955 endorsed a "socialistic pattern of society"'],
+      ['**Constitution**', 'Directive Principles (Part IV); "**socialist**" added to the Preamble by the **42nd Amendment (1976)**'],
+      ['**Others**', 'M.N. Roy\'s radical humanism; Gandhi\'s trusteeship; Lohia and J.P. Narayan\'s socialism; Upadhyaya\'s integral humanism'],
+      ['**After 1991**', 'Liberalisation; market role grew, but welfare schemes stayed'],
+    ] },
+    { t: 'timeline', caption: 'The Cold War in brief. Ideology became a global conflict.', items: [
+      { when: '1947-49', what: 'Truman Doctrine; Marshall Plan; **NATO (1949)**; China turns communist (1949). Warsaw Pact follows in 1955.' },
+      { when: '1950-53', what: 'Korean War.' },
+      { when: '1959-62', what: 'Cuban Revolution, then the **Cuban Missile Crisis** (October 1962).' },
+      { when: '1955-75', what: 'Vietnam War. US withdrawal; country unified in 1975-76.' },
+      { when: '1979-89', what: 'Soviet war in Afghanistan.' },
+      { when: '1989-91', what: 'Berlin Wall falls (1989). **USSR dissolves in December 1991.**' },
+    ] },
+
+    { t: 'h', text: 'Redrawing national boundaries' },
+    { t: 'p', text: 'Borders are not natural facts. Most were made by treaties, wars, or colonial officials. Note the principle that often settled post-colonial disputes: **uti possidetis**, under which new states inherit colonial borders. The Organisation of African Unity accepted this in 1964.' },
+    { t: 'table', caption: 'Key moments.', head: ['When', 'Event', 'What changed'], rows: [
+      ['1815', 'Congress of Vienna', 'European order after Napoleon'],
+      ['1861, 1871', 'Italian and German unification', 'New big states in Europe'],
+      ['1884-85', 'Berlin Conference', 'Africa divided, ignoring peoples'],
+      ['1893', '**Durand Line**', 'British India and Afghanistan; Afghanistan still disputes it'],
+      ['1914', '**McMahon Line**', 'Simla talks; India and China dispute it'],
+      ['1916', '**Sykes-Picot Agreement**', 'Secret Anglo-French plan for Ottoman Arab lands; now shorthand for arbitrary borders'],
+      ['1919-23', 'Versailles, Trianon, Lausanne', 'New states: Poland, Czechoslovakia, Yugoslavia. Modern Turkey.'],
+      ['1945', 'Yalta and Potsdam', 'Germany and Poland shift; Germany divided'],
+      ['1947', '**Radcliffe Line**; UN Palestine partition plan (Resolution 181)', 'India and Pakistan. Israel declared in May 1948.'],
+      ['1953', 'Korea armistice', 'Line near the 38th parallel'],
+      ['1971', 'Bangladesh', 'East Pakistan becomes a new state'],
+      ['1990', 'German reunification', '3 October 1990'],
+      ['1991-92', 'USSR and Yugoslavia dissolve', '15 states from the USSR; Yugoslav wars. Czechoslovakia splits peacefully on 1 January 1993.'],
+      ['1993, 2011', 'Eritrea; **South Sudan**', 'South Sudan became the 193rd UN member.'],
+      ['2008, 2014', 'Kosovo\'s declaration; Russian annexation of Crimea', 'Contested. War in Ukraine since 2022.'],
+    ] },
+    { t: 'compare', caption: 'Two principles in tension.', columns: [
+      { title: 'Territorial integrity', items: ['Article 2(4) of the UN Charter', 'Borders cannot be changed by force', 'India\'s firm line on Kashmir and on Aksai Chin'] },
+      { title: 'Self-determination', items: ['Article 1(2) of the UN Charter', 'Peoples may choose their status', 'Basis for decolonisation', 'Contested outside colonial settings'] },
+    ] },
+    { t: 'note', kind: 'trap', title: 'India\'s own map', text: '**Durand Line:** Pakistan and Afghanistan. **McMahon Line:** India and China, in the east. **Radcliffe Line:** India and Pakistan, and India and Bangladesh. The **India-Bangladesh Land Boundary Agreement** was put into effect by the **100th Constitutional Amendment (2015)**, exchanging enclaves.' },
+    { t: 'note', kind: 'recent', title: 'Unfinished decolonisation', text: 'The **International Court of Justice** gave an advisory opinion on Chagos in February 2019. Britain and **Mauritius** signed a treaty in May 2025 to transfer sovereignty, with the Diego Garcia base staying. In **April 2026**, Britain put it on hold after the US withdrew support. Reports in 2025-26 put the number of territories on the UN\'s Non-Self-Governing list at **17**.' },
+
+    { t: 'h', text: 'Exam guide' },
+    { t: 'note', kind: 'mains', title: 'Likely angles', text: 'Why Africa was scrambled and why it was freed; colonial borders as a cause of conflict today; capitalism versus socialism and their effects; why communism fell in the USSR and adapted in China; non-alignment, then and now. Use a compare table in your answer. Give one example from each continent.' },
+    { t: 'h3', text: 'Quick recall' },
+    { t: 'list', items: [
+      'Bandung 1955. NAM Belgrade 1961. UNGA Resolution 1514 in 1960.',
+      'Ghana 1957. Year of Africa 1960. Algeria 1962.',
+      'Manifesto 1848. Fabian Society 1884. Avadi 1955.',
+      'Sykes-Picot 1916. Durand 1893. McMahon 1914. Radcliffe 1947.',
+      'USSR ended December 1991. South Sudan 2011.',
+    ] },
+  ],
+  sources: [
+    { label: 'UPSC CSE syllabus, GS Paper I (candidate\'s copy, upsc-syllabus.pdf, p2)' },
+    { label: 'UPSC Civil Services Prelims 2020, GS Paper I', url: 'https://www.upsc.gov.in/examinations/previous-question-papers' },
+    { label: 'News On AIR, Britain\'s plan to transfer Chagos Islands on hold (11 April 2026)', url: 'https://www.newsonair.gov.in/britains-plan-to-transfer-chagos-islands-to-mauritius-on-hold-after-us-withdraws-support' },
+    { label: 'For further reading: NCERT Class 12, Contemporary World Politics' },
+  ],
+  beyond: {
+    refer: [
+      { what: 'Political map of Africa and of West Asia', where: 'Any recent atlas', why: 'Straight colonial borders and the Sykes-Picot region are best learned on a map.' },
+      { what: 'UN list of Non-Self-Governing Territories', where: 'UN Decolonization website', why: 'The official list changes rarely. Confirm the number and the names there.', url: 'https://www.un.org/dppa/decolonization/en/nsgt' },
+    ],
+    current: [
+      { issue: 'Chagos Islands', link: 'April 2026: UK put the handover to Mauritius on indefinite hold after the US withdrew support; talks continued. Check for later changes.', source: 'News On AIR', url: 'https://www.newsonair.gov.in/britains-plan-to-transfer-chagos-islands-to-mauritius-on-hold-after-us-withdraws-support' },
+    ],
+  },
+}

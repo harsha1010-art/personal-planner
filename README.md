@@ -24,6 +24,7 @@ Then open http://localhost:5173.
 
 - Notes: `src/data/notes/nMMDD.ts`
 - Questions: `src/data/bank/dMMDD.ts`
+- Run `npm run check:notes` to confirm every topic has a well-formed note.
 - Run `npm run check:bank` to enforce the rules: 30 questions, an 8/14/8 difficulty mix, at least 3 Mains questions, and model answers within the word limit.
 
 PYQ wording is checked against UPSC's official papers. Their answers are marked as reasoned, because UPSC's answer keys for these papers were not found on its site. Predicted questions are labelled as practice and are not from UPSC.

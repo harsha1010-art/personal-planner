@@ -1,0 +1,148 @@
+import type { TopicNote } from './types'
+
+export const note: TopicNote = {
+  day: '2026-12-07',
+  summary: 'The chain from farm to ration shop: how MSP is set, who procures, how buffer stocks and the PDS work, what NFSA and PMGKAY promise, and the debates around each.',
+  minutes: 22,
+  blocks: [
+    { t: 'h', text: 'The big picture' },
+    { t: 'p', text: 'India\'s food system links four steps. The state announces a **minimum support price (MSP)**, **procures** grain, holds it as **buffer stock**, and sells it cheaply or gives it free through the **Public Distribution System (PDS)**. This system ended famine-era dependence on imports, but it also creates large fiscal costs, excess stocks of rice and wheat, and uneven benefits across states and crops.' },
+    { t: 'flow', caption: 'One chain, with different bodies at each step.', steps: [
+      { title: 'CACP recommends', sub: 'Cost, demand, trade and other factors' },
+      { title: 'CCEA approves', sub: 'Cabinet Committee on Economic Affairs' },
+      { title: 'Procurement', sub: 'FCI, state agencies, NAFED, NCCF, CCI' },
+      { title: 'Central pool', sub: 'Stock kept against quarterly norms' },
+      { title: 'Allocation', sub: 'Centre to states under NFSA' },
+      { title: 'Fair price shops', sub: 'States identify households and distribute' },
+    ] },
+
+    { t: 'h', text: 'MSP: how it works' },
+    { t: 'p', text: 'MSP is a price at which the government says it will buy, so that farmers have a floor in case market prices collapse. It is an **executive decision and not a legal right**. The **Commission for Agricultural Costs and Prices (CACP)** was set up in 1965 as the Agricultural Prices Commission and took its present name in 1985. It is an **advisory** body attached to the Agriculture Ministry, and not a statutory one.' },
+    { t: 'compare', caption: '22 mandated crops get MSP, plus a separate fair and remunerative price for sugarcane. Toria and de-husked coconut are priced off mustard and copra.', columns: [
+      { title: 'Kharif (14)', items: ['Cereals: paddy, jowar, bajra, maize, ragi', 'Pulses: tur, moong, urad', 'Oilseeds: groundnut, soybean, sunflower, sesamum, niger', 'Fibre: cotton'] },
+      { title: 'Rabi (6)', items: ['Wheat, barley', 'Gram, lentil', 'Rapeseed-mustard, safflower'] },
+      { title: 'Commercial (2)', items: ['Copra', 'Raw jute'] },
+      { title: 'Sugarcane', items: ['**FRP** and not MSP', 'Set under the Sugarcane (Control) Order, 1966, under the Essential Commodities Act', 'Some states add a higher state advised price (SAP)'] },
+    ] },
+    { t: 'table', caption: 'Cost concepts. Budget 2018-19 committed to MSP at 1.5 times the all-India weighted average cost of production, measured on A2+FL.', head: ['Term', 'Includes', 'Why it matters'], rows: [
+      ['**A2**', 'Paid-out costs: seed, fertiliser, hired labour, fuel', 'Lowest cost measure'],
+      ['**A2+FL**', 'A2 plus the imputed value of family labour', 'The government\'s basis for 1.5 times'],
+      ['**C2**', 'A2+FL plus imputed rent on owned land and interest on owned capital', 'Comprehensive cost. The National Commission on Farmers (M.S. Swaminathan, 2004-06) proposed C2 + 50%'],
+    ] },
+    { t: 'table', caption: 'Latest MSPs in Rs per quintal. Rabi 2027-28 approved 30 September 2026; kharif 2026-27 approved 13 May 2026. Margin is over A2+FL cost, as claimed by the government.', head: ['Crop', 'MSP', 'Rise', 'Margin'], rows: [
+      ['Wheat (rabi 2027-28)', '2,610', '25', '106%'],
+      ['Barley', '2,286', '136', '58%'],
+      ['Gram', '5,958', '83', '59%'],
+      ['Lentil', '7,390', '390', '92%'],
+      ['Rapeseed-mustard', '6,613', '413', '96%'],
+      ['Safflower', '7,215', '675 (largest)', '50%'],
+      ['Paddy common (kharif 2026-27)', '2,441', '72', 'About 50%'],
+      ['Paddy Grade A', '2,461', 'n/a', 'n/a'],
+      ['Sunflower seed', 'n/a', '622 (largest in kharif)', 'About 50%'],
+      ['Cotton', 'n/a', '557', 'About 50%'],
+    ] },
+    { t: 'note', kind: 'exam', title: 'Past Prelims', text: 'Prelims 2023 asked about **niger** seed: it does get MSP, it is a kharif crop, and some tribal people use its oil for cooking. Prelims 2018 asked which listed crops have an MSP announced by the CCEA. So learn the crop list, including the less familiar ones. **Turmeric, onion and potato are not on it.**' },
+    { t: 'note', kind: 'trap', title: 'What MSP is not', text: 'MSP is **not** a law, **not** fixed by the Finance Ministry, and **not** a guarantee of purchase in every mandi. Only part of the crop is bought, mainly wheat and rice in a few states. The Shanta Kumar Committee (2015) cited a survey showing only about **6%** of farmers sold to procurement agencies.' },
+    { t: 'h3', text: 'Procurement' },
+    { t: 'table', head: ['Crop', 'Main agency', 'Scheme'], rows: [
+      ['Wheat, paddy', 'FCI and state agencies', 'Central pool; **Decentralised Procurement** (1997) lets states buy and distribute directly'],
+      ['Pulses, oilseeds, copra', 'NAFED, NCCF', '**PM-AASHA** (2018): Price Support Scheme, Price Deficiency Payment Scheme; also Market Intervention Scheme'],
+      ['Cotton', 'Cotton Corporation of India', 'MSP operations'],
+      ['Jute', 'Jute Corporation of India', 'MSP operations'],
+    ] },
+    { t: 'p', text: 'Per the PIB backgrounder (August 2026), total procurement rose from 698.7 million tonnes in 2004-14 to 1,229.2 million tonnes in 2014-26, and the MSP value from Rs 7.41 lakh crore to Rs 26.32 lakh crore (up to February 2026).' },
+    { t: 'h3', text: 'The legal MSP debate' },
+    { t: 'compare', caption: 'Three farm laws of 2020 were repealed in November 2021 after long protests. A legal MSP was the protestors\' further demand, and a committee on MSP was set up in July 2022.', columns: [
+      { title: 'For a legal guarantee', items: ['Most farmers do not get MSP today', 'Income security for small farmers', 'Could help diversify, if extended to pulses and oilseeds', 'Reduces distress sales'] },
+      { title: 'Against', items: ['High fiscal cost and storage burden', 'Private buyers may stay away', 'Could lock in water-heavy crops', 'WTO limits on trade-distorting support', 'Alternatives: price deficiency payments, income support'] },
+    ] },
+
+    { t: 'h', text: 'Buffer stocks' },
+    { t: 'p', text: 'The **central pool** exists for three purposes: operational needs (PDS), emergency reserves, and price stabilisation through open-market sales. The **Food Corporation of India** was set up under the Food Corporations Act, 1964, and began work in 1965.' },
+    { t: 'table', caption: 'Buffer norms, in lakh tonnes, by date in the year (norms in force since 2015).', head: ['Date', 'Rice', 'Wheat', 'Total'], rows: [
+      ['1 April', '135.8', '74.6', '210.4'],
+      ['1 July', '135.4', '275.8', '411.2'],
+      ['1 October', '102.5', '205.2', '307.7'],
+      ['1 January', '76.1', '138.0', '214.1'],
+    ] },
+    { t: 'note', kind: 'recent', title: 'Excess stocks (as of September 2026)', text: 'Central pool stocks stood at **870.45 lakh tonnes** on 1 September 2026 (wheat 479.92, rice 390.53), almost 2.8 times the 1 October norm of 307.7. Another 307.51 lakh tonnes of unmilled paddy was also held. Such surplus raises storage and carrying costs, and it is one reason for **open market sale** of grain and diversion to other uses.' },
+    { t: 'list', items: [
+      '**OMSS:** Under the Open Market Sale Scheme (Domestic), FCI sells surplus grain, mainly to cool market prices.',
+      '**Economic cost:** FCI\'s cost per quintal includes procurement, storage and distribution, and it is well above what beneficiaries pay. The gap is the food subsidy.',
+      '**Storage:** Silos and the cooperative grain storage plan aim to reduce loss. Past audit reports have flagged storage issues.',
+    ] },
+
+    { t: 'h', text: 'PDS and food security law' },
+    { t: 'timeline', caption: 'From rationing to a legal right.', items: [
+      { when: '1940s', what: 'Rationing begins in wartime and after the Bengal famine of 1943.' },
+      { when: '1955', what: '**Essential Commodities Act** gives power to control supply and prices.' },
+      { when: '1965', what: 'FCI and the Agricultural Prices Commission are set up in the Green Revolution period.' },
+      { when: '1997', what: '**Targeted PDS** divides BPL and APL households. **Antyodaya Anna Yojana** follows in 2000 for the poorest.' },
+      { when: '2001 onwards', what: 'PUCL v Union of India (Right to Food case): the Supreme Court issues many orders on food schemes.' },
+      { when: '2013', what: '**National Food Security Act** makes subsidised grain a legal entitlement.' },
+      { when: '2019 onwards', what: '**One Nation One Ration Card** makes ration cards portable.' },
+      { when: '2020-22', what: 'PMGKAY begins as a Covid relief measure, adding free grain on top of NFSA.' },
+      { when: 'January 2024', what: 'Free grain under PMGKAY extended for five years from 1 January 2024.' },
+    ] },
+    { t: 'table', caption: 'National Food Security Act, 2013. Coverage is based on the 2011 Census population. States identify the beneficiaries.', head: ['Feature', 'Provision'], rows: [
+      ['Coverage', 'Up to **75% rural** and **50% urban**: about two-thirds of the population, or **81.35 crore** people'],
+      ['Priority households', '**5 kg** per person per month'],
+      ['Antyodaya households', '**35 kg** per household per month'],
+      ['Original prices', 'Rs 3 rice, Rs 2 wheat, Rs 1 coarse grains per kg; now **free** under PMGKAY'],
+      ['Women', 'Eldest woman aged 18 or more is head of household for ration card'],
+      ['Maternity', 'Pregnant women and lactating mothers get meals and at least **Rs 6,000**'],
+      ['Children', 'Age-based meals through ICDS and midday meals'],
+      ['Food security allowance', 'If entitled grain is not supplied'],
+      ['Grievance', 'District Grievance Redressal Officer and State Food Commission'],
+    ] },
+    { t: 'note', kind: 'trap', title: 'NFSA and PMGKAY', text: 'NFSA is a **law**. PMGKAY is a **scheme** that now pays the price of grain so beneficiaries pay nothing. Coverage figures also differ: the **intended coverage is 81.35 crore**, and as of February 2026 states had identified **80.56 crore** (PIB). Antyodaya is **per household**, not per person.' },
+    { t: 'list', items: [
+      '**SARTHAK PDS:** Reported in the PIB backgrounder of August 2026 as a five-year Rs 25,530 crore scheme for ration transport, handling and automation.',
+      '**Fortified rice:** Cabinet approved continued universal supply of fortified rice under government schemes till December 2028 (October 2024).',
+      '**Reform tools:** Aadhaar seeding, e-PoS devices, and portability cut leakages, though exclusion errors from biometrics remain a concern.',
+    ] },
+
+    { t: 'h', text: 'The policy debates' },
+    { t: 'table', caption: 'The Shanta Kumar High Level Committee on restructuring FCI reported in January 2015.', head: ['Issue', 'What it proposed or what is argued'], rows: [
+      ['NFSA coverage', 'Reduce coverage from about 67% to about 40% of the population. Critics say this would exclude the vulnerable.'],
+      ['FCI role', 'Hand over procurement in Punjab, Haryana and similar states to state agencies; move FCI to eastern states where farmers get little MSP'],
+      ['Cash transfers', 'Move gradually towards cash, starting in cities. Critics fear market risk and low inflation-linking; supporters point to lower costs'],
+      ['Storage', 'Outsource stocking and modernise silos'],
+      ['Labour and levy', 'Curb levy rice and reduce mandi charges'],
+      ['MSP', 'Give pulses and oilseeds better price support'],
+    ] },
+    { t: 'compare', caption: 'WTO limits. The issue is whether India\'s public stockholding counts as trade-distorting support.', columns: [
+      { title: 'India\'s position', items: ['Food security is non-negotiable', 'Wants a **permanent solution** to public stockholding', 'WTO reference prices are from 1986-88, which inflates the measure of subsidy'] },
+      { title: 'Rules and critics', items: ['Agreement on Agriculture: Amber Box limit of **10%** of production value for developing countries', '**Peace clause** of the Bali Ministerial (2013) protects existing programmes for now', 'Exporters argue public stocks can distort world markets'] },
+    ] },
+
+    { t: 'h', text: 'Exam guide' },
+    { t: 'note', kind: 'mains', title: 'Likely angles', text: 'Food security has three parts: **availability, access and absorption**. India\'s surplus shows availability, but malnutrition shows a gap in absorption (link to POSHAN and fortification). Assess whether open-ended procurement fits today\'s surplus, and whether MSP should move towards pulses, oilseeds and millets. Show both sides of legal MSP and cash transfers. Compare with Chhattisgarh and Tamil Nadu for PDS reform examples.' },
+    { t: 'h3', text: 'Quick recall' },
+    { t: 'list', items: [
+      '22 mandated crops: 14 kharif, 6 rabi, 2 commercial. Sugarcane has FRP.',
+      'CACP advises, CCEA approves. A2+FL is the base for 1.5 times.',
+      'Wheat MSP 2027-28: Rs 2,610. Paddy common 2026-27: Rs 2,441.',
+      'Buffer norm 1 July: 411.2 lakh tonnes. 1 October: 307.7.',
+      'NFSA: 75% rural, 50% urban. 5 kg per person, 35 kg per AAY household.',
+      'Shanta Kumar 2015: FCI restructuring.',
+    ] },
+  ],
+  sources: [
+    { label: 'PIB backgrounder, The New Era of Indian Agriculture and Allied Sectors (12 August 2026)', url: 'https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/aug/doc2026812952301.pdf' },
+    { label: 'Vajirao, summary of the rabi MSP decision for 2027-28', url: 'https://www.vajiraoinstitute.com/upsc-ias-current-affairs/cabinet-approves-minimum-support-prices-for-rabi-crops-msp-2027-28.aspx' },
+    { label: 'GKToday, kharif MSP decision for 2026-27 (May 2026)', url: 'https://www.gktoday.in/union-cabinet-approves-higher-msp-for-14-kharif-crops/' },
+    { label: 'Business Today, central pool stock data from FCI (8 October 2026)', url: 'https://www.businesstoday.in/latest/economy/story/global-food-security-faces-fresh-risks-but-indias-grain-buffer-offers-a-cushion-560357-2026-10-08' },
+    { label: 'UPSC Civil Services Prelims 2018 and 2023, GS Paper I', url: 'https://www.upsc.gov.in/examinations/previous-question-papers' },
+  ],
+  beyond: {
+    refer: [
+      { what: 'CCEA press notes on MSP', where: 'Press Information Bureau', why: 'The official full crop-wise tables. This note lists only the figures confirmed from secondary reports for kharif, so check the rest there.', url: 'https://pib.gov.in/' },
+      { what: 'FCI stock position', where: 'Food Corporation of India', why: 'Monthly central pool stock against norms.', url: 'https://fci.gov.in/' },
+    ],
+    current: [
+      { issue: 'Rabi MSP 2027-28', link: 'Approved on 30 September 2026. Wheat got only a Rs 25 rise, which is useful for the diversification debate.', source: 'Vajirao summary of the Cabinet decision', url: 'https://www.vajiraoinstitute.com/upsc-ias-current-affairs/cabinet-approves-minimum-support-prices-for-rabi-crops-msp-2027-28.aspx' },
+      { issue: 'Grain stocks far above norms', link: 'September 2026 stocks almost 2.8 times the 1 October norm.', source: 'Business Today', url: 'https://www.businesstoday.in/latest/economy/story/global-food-security-faces-fresh-risks-but-indias-grain-buffer-offers-a-cushion-560357-2026-10-08' },
+    ],
+  },
+}
