@@ -1,0 +1,174 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+@theme {
+  --font-display: 'Bricolage Grotesque Variable', system-ui, sans-serif;
+  --font-sans: 'Instrument Sans Variable', system-ui, sans-serif;
+
+  --color-paper: var(--paper);
+  --color-sheet: var(--sheet);
+  --color-tint: var(--tint);
+  --color-ink: var(--ink);
+  --color-soft: var(--soft);
+  --color-faint: var(--faint);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-wash: var(--wash);
+  --color-good: var(--good);
+  --color-bad: var(--bad);
+  --color-warn: var(--warn);
+}
+
+:root {
+  --paper: #ffffff;
+  --sheet: #ffffff;
+  --tint: #f4f2ec;
+  --ink: #14130f;
+  --soft: #55524a;
+  --faint: #716d62;
+  --rule: #e4e1d8;
+  --accent: #ffc22e;
+  --accent-ink: #14130f;
+  --wash: #fff4d3;
+  --good: #0f7a4d;
+  --bad: #c62f1d;
+  --warn: #9a6200;
+  /* The colour of the subject being read. Topic pages override it. */
+  --subject: #14130f;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --paper: #121210;
+  --sheet: #1b1b18;
+  --tint: #22221e;
+  --ink: #f4f2ea;
+  --soft: #bcb8ab;
+  --faint: #9a968a;
+  --rule: #33322c;
+  --accent: #ffc22e;
+  --accent-ink: #14130f;
+  --wash: #3a2f10;
+  --good: #52c78f;
+  --bad: #f4806f;
+  --warn: #e6b04f;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.022em;
+  line-height: 1.08;
+}
+
+button, select, summary, label[for], input[type='checkbox'], input[type='radio'] {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+}
+
+html {
+  scroll-padding-top: 88px;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--faint);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 42px;
+  padding: 8px 18px;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 120ms, color 120ms, transform 120ms;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+.card {
+  border: 1.5px solid var(--rule);
+  border-radius: 18px;
+  background: var(--sheet);
+  padding: 20px;
+}
+
+.field {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--rule);
+  border-radius: 12px;
+  background: var(--sheet);
+  color: var(--ink);
+  font-size: 15.5px;
+}
+
+.field:focus {
+  border-color: var(--ink);
+  outline: none;
+}
+
+.prose-text p + p {
+  margin-top: 0.8em;
+}
+
+/* Long-form notes */
+.notes p {
+  font-size: 17.5px;
+  line-height: 1.72;
+}
+
+.notes strong {
+  font-weight: 650;
+}

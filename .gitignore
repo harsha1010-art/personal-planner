@@ -1,0 +1,7 @@
+node_modules
+dist
+*.local
+.DS_Store
+# Books and question papers stay on your PC, never in this repo
+*.pdf
+*.zip
