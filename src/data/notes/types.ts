@@ -24,6 +24,11 @@ export type Block =
   | { t: 'svg'; id: DiagramId; caption: string }
   | { t: 'note'; kind: NoteKind; title: string; text: string }
 
+export interface TopicBeyond {
+  refer: { what: string; where: string; why: string; url?: string }[]
+  current: { issue: string; link: string; source: string; url?: string }[]
+}
+
 export interface TopicNote {
   day: string
   summary: string
@@ -32,6 +37,8 @@ export interface TopicNote {
   heroAlt?: string
   blocks: Block[]
   sources: { label: string; url?: string }[]
+  /** What this topic needs from outside the site, and its current-affairs links. */
+  beyond?: TopicBeyond
 }
 
 export const pictureUrl = (pic: Picture, width = 1200) =>

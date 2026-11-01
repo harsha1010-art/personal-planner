@@ -124,7 +124,7 @@ export function Today() {
 
       <section className="mt-10" aria-label="Beyond this site">
         <h2 className="mb-3 text-[26px]">Beyond this site today</h2>
-        <BeyondPanel beyond={beyondFor(day.date, subject)} />
+        <BeyondPanel beyond={note?.beyond ?? beyondFor(day.date, subject)} />
       </section>
 
       <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1fr)_340px]">

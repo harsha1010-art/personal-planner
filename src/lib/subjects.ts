@@ -30,7 +30,7 @@ const COLORS: Record<string, string> = {
 
 export const subjectColor = (subject: string) => COLORS[subject] ?? '#14130f'
 
-const REVISION = /revision|PYQ|buffer|mock|test|audit|repair|consolidation|rapid recall|backlog|syllabus mapping|^Rest|Light final|Map and places|Map, species|CSAT final/i
+const REVISION = /revision|PYQ|buffer and|mock|test|audit|repair|consolidation|rapid recall|backlog|syllabus mapping|^Rest|Light final|Map and places|Map, species|CSAT final|CSAT full paper|^CSAT: (comprehension|numeracy) \+|^Current affairs: (polity, governance, IR|economy, environment, S&T)/i
 
 /** Plan days that introduce a topic to learn, as opposed to revision and tests. */
 export const isLearningDay = (d: Day) => !REVISION.test(d.topic) && subjectOf(d) !== 'Mixed'

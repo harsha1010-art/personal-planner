@@ -184,7 +184,7 @@ export function Topic() {
 
           <NoteBlock block={{ t: 'h', text: BEYOND }} />
           <p className="mb-4 !text-[16px] text-soft">These notes aim to be enough for this topic. Use the items below only for what notes cannot do: maps, official wording and the latest news.</p>
-          <div className="not-prose"><BeyondPanel beyond={beyondFor(date, meta.subject)} /></div>
+          <div className="not-prose"><BeyondPanel beyond={note.beyond ?? beyondFor(date, meta.subject)} /></div>
 
           <section className="mt-14 rounded-[20px] bg-tint p-6">
             <h2 className="text-[26px]">Now test it</h2>
