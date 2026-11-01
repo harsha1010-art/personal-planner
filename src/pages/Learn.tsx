@@ -31,7 +31,7 @@ export function Learn() {
     <>
       <PageHead title="Learn">
         Every syllabus topic, in the order of your plan, plus Sociology, languages and Essay. <span className="num font-semibold text-ink">{notes.length}</span> of{' '}
-        <span className="num font-semibold text-ink">{totalTopics}</span> topics have full notes so far. The rest are listed so you can see what is still to come.
+        <span className="num font-semibold text-ink">{totalTopics}</span> topics have notes. Check the Verify before the exam list in the Guide for points that could change or could not be confirmed.
       </PageHead>
       <div className="mb-9 flex flex-wrap gap-1.5" role="group" aria-label="Filter by subject">
         {['All', ...subjectsInOrder].map((s) => (
