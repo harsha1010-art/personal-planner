@@ -1,0 +1,143 @@
+import type { TopicNote } from './types'
+
+export const note: TopicNote = {
+  day: '2027-01-09',
+  summary: 'From Vasco da Gama to Dalhousie: the European companies, the wars that made the British supreme, every Governor-General in order, the Acts from 1773 to 1858, and how the Company ran India.',
+  minutes: 30,
+  hero: { file: 'Lord Clive meeting with Mir Jafar after the Battle of Plassey.jpg', credit: 'Francis Hayman', license: 'Public domain' },
+  heroAlt: 'Painting of Robert Clive meeting Mir Jafar after the Battle of Plassey, 1757',
+  blocks: [
+    { t: 'h', text: 'The big picture' },
+    { t: 'p', text: 'In about 250 years, Europeans went from being traders on the coast to rulers of the subcontinent. The story has three stages: **trade** (1498-1740s), **conquest** (1740s-1856), and **Crown rule** (from 1858). Mughal decline after Aurangzeb left regional states that fought each other. That gave the Company its opening.' },
+    { t: 'p', text: 'Prelims likes this area because it rewards exact pairing: which Act did what, which Governor-General did what, which treaty ended which war. This note gives those sequences. The economic side is in the next note. Later Viceroys and Acts are in the notes on the Congress and on Gandhi.' },
+    { t: 'flow', caption: 'How a trading company became a state.', steps: [
+      { title: 'Trade', sub: 'Factories at Surat, Madras, Bombay, Calcutta' },
+      { title: 'Rivalry', sub: 'Carnatic Wars remove the French, 1746-63' },
+      { title: 'Revenue', sub: 'Plassey 1757, Buxar 1764, diwani 1765' },
+      { title: 'Conquest', sub: 'Mysore, Marathas, Sikhs fall by 1849' },
+      { title: 'Annexation', sub: 'Subsidiary Alliance and Lapse, to 1856' },
+      { title: 'Crown', sub: 'Act of 1858 ends Company rule' },
+    ] },
+
+    { t: 'h', text: 'The European companies' },
+    { t: 'table', caption: 'Order of arrival: Portuguese, Dutch, English, Danes, French. Note that the English company was founded before the Dutch one, but the Dutch reached India first in strength.', head: ['Power', 'Founding', 'Key places', 'End in India'], rows: [
+      ['**Portuguese**', '**Vasco da Gama** reached Calicut in **1498**; Zamorin was the local ruler', '**Almeida**, first viceroy (1505), Blue Water policy. **Albuquerque** took Goa from **Bijapur**, 1510. Diu, Daman, Hooghly', 'Lost Hooghly to Shah Jahan, 1632. Goa freed in 1961'],
+      ['**Dutch**', 'VOC, 1602', 'Masulipatnam (1605), Pulicat, Nagapattinam, Chinsura', 'Beaten by Travancore at Colachel (1741) and by the English at Bedara (1759)'],
+      ['**English**', 'Charter from Elizabeth I, 31 Dec **1600**', 'Surat (1613), Madras (1639), Bombay (dowry to Charles II, leased to Company 1668), Calcutta (Job Charnock, 1690)', 'Ruled till 1858 as Company'],
+      ['**Danes**', 'Company formed 1616', 'Tranquebar, Serampore', 'Sold to the British, 1845'],
+      ['**French**', 'Founded **1664** under Colbert', 'Surat (1668), Pondicherry (1670s, Francois Martin), Chandernagore', 'Kept small enclaves till after 1947'],
+    ] },
+    { t: 'list', items: [
+      '**Hawkins** (1609) and **Sir Thomas Roe** (1615-19) went to Jahangir\'s court. Roe won trading rights.',
+      '**Farman of 1717:** Mughal emperor **Farrukhsiyar** gave the Company duty-free trade in Bengal for a small yearly payment. Misuse of this pass, the dastak, later caused conflict with the Nawabs.',
+    ] },
+    { t: 'note', kind: 'exam', title: 'Prelims on the early period', text: '**2022:** Albuquerque took Goa from Bijapur, and the English factory at Madras stood on land leased from a representative of the Vijayanagara empire. The claim that the Dutch got east-coast land from Gajapati rulers is the doubtful one. **2021:** Vasco da Gama did not arrive under Deva Raya II; and the English factory in the first quarter of the 1600s was at Broach, not Chicacole or Trichinopoly. **2024:** Krishnadevaraya allowed the Portuguese a fort at Bhatkal. **2023:** Bahadur Shah of Gujarat surrendered Diu. **2025:** papaya, pineapple and guava came to India through the Portuguese.' },
+
+    { t: 'h', text: 'How the British won' },
+    { t: 'table', caption: 'The wars in order. These are the pairs UPSC can test.', head: ['War', 'Dates', 'Key events', 'Ended by'], rows: [
+      ['First Carnatic', '1746-48', 'Tied to Austrian Succession. French beat Nawab at St Thome', 'Aix-la-Chapelle, 1748; Madras returned'],
+      ['Second Carnatic', '1749-54', 'Succession disputes. **Clive** seized Arcot, 1751. Dupleix recalled', 'Treaty of Pondicherry, 1754'],
+      ['Third Carnatic', '1756-63', 'Seven Years\' War. **Wandiwash, 1760:** Eyre Coote beat Lally', 'Treaty of Paris, 1763'],
+      ['**Plassey**', '23 June **1757**', 'Clive beat **Siraj-ud-Daula**; Mir Jafar made Nawab', 'Company as kingmaker'],
+      ['**Buxar**', '22 Oct **1764**', 'Munro beat Mir Qasim, Shuja-ud-Daula and Shah Alam II', '**Allahabad, 1765:** diwani of Bengal, Bihar, Orissa'],
+      ['First Mysore', '1767-69', 'Haidar Ali came near Madras', 'Treaty of Madras, 1769'],
+      ['Second Mysore', '1780-84', 'Haidar died in 1782; Tipu continued', 'Treaty of Mangalore, 1784'],
+      ['Third Mysore', '1790-92', 'Cornwallis at Seringapatam', 'Treaty of Seringapatam; half of Mysore lost'],
+      ['Fourth Mysore', '1799', 'Wellesley. **Tipu killed**; Wodeyars restored', 'Mysore under Subsidiary Alliance'],
+      ['First Maratha', '1775-82', 'Raghunath Rao dispute; Treaty of Surat (1775), Purandar (1776), Wadgaon (1779)', 'Treaty of Salbai, 1782'],
+      ['Second Maratha', '1803-05', 'Peshwa signed **Bassein, 1802**. Assaye, 1803', 'Treaties with Bhonsle, Scindia, Holkar'],
+      ['Third Maratha', '1817-19', 'Lord Hastings. Peshwa pensioned to Bithur', 'Peshwaship abolished'],
+      ['First Sikh', '1845-46', 'After Ranjit Singh (d. 1839). Sobraon', 'Treaty of Lahore, 1846'],
+      ['Second Sikh', '1848-49', 'Chillianwala, Gujrat', '**Punjab annexed, 1849**, Dalhousie'],
+    ] },
+    { t: 'list', items: [
+      '**Dual government (1765-72):** Clive\'s system. The Company held the diwani (revenue), while the Nawab kept nizamat (law and order) with no money. It meant power without responsibility, and was followed by the Bengal famine of 1770. Warren Hastings ended it in 1772.',
+      '**Other conquests:** Sindh, 1843 (Napier); Nepal, Treaty of Sagauli, 1816; Burma, Treaty of Yandabo, 1826; Amritsar treaty with Ranjit Singh, 1809.',
+      '**Battle of Panipat, 1761:** Ahmad Shah Abdali beat the Marathas. This was not a British war, but it weakened the one power able to challenge them.',
+    ] },
+    { t: 'note', kind: 'exam', title: 'Prelims 2021: successor states', text: 'UPSC tested how regional states arose. The Nizamat of Arcot came out of Hyderabad, and Mysore came out of the Vijayanagara empire. Rohilkhand was not formed from territory occupied by Ahmad Shah Durrani. Treat each successor state separately.' },
+
+    { t: 'h', text: 'Two tools of annexation' },
+    { t: 'compare', caption: 'Use the right name with the right man. Wellesley did not invent the alliance idea, since the French had used similar methods, but he made it a system.', columns: [
+      { title: 'Subsidiary Alliance, Wellesley', items: ['Ruler keeps a Company force and pays for it', 'British Resident at the court', 'No other European employed without consent', 'No war or treaty without Company consent', 'Company protects the ruler and does not interfere inside (in theory)', '**Order:** Hyderabad (1798), Mysore (1799), Tanjore (1799), Awadh (1801), Peshwa (1802), Scindia and Bhonsle (1803)'] },
+      { title: 'Doctrine of Lapse, Dalhousie', items: ['A dependent ruler with no natural heir: state lapses to the Company', 'Adopted heir not recognised for this purpose', '**Order:** Satara (1848), Jaitpur and Sambalpur (1849), Baghat (1850), Udaipur (1852), **Jhansi (1853)**, **Nagpur (1854)**', 'Pension of **Nana Saheb** stopped too', '**Awadh, 1856** was annexed for misgovernance, not by Lapse'] },
+    ] },
+    { t: 'note', kind: 'trap', title: 'Awadh and Lapse', text: 'Awadh was **not** taken under the Doctrine of Lapse. Dalhousie annexed it in 1856 on the charge of misrule. **Prelims 2018** asked which statement does not apply to the Subsidiary Alliance. The system cost the ruler and gave the Company an army and paramountcy; "a fixed income for the Company" was not its stated purpose.' },
+
+    { t: 'h', text: 'Governors-General, in order' },
+    { t: 'table', caption: 'Governor-General of Bengal to 1833, of India from 1833. Canning became the first Viceroy in 1858.', head: ['Name', 'Years', 'What to remember'], rows: [
+      ['**Warren Hastings**', '1773-85', 'First GG of Bengal. Ended dual government. Civil and criminal courts in districts. Calcutta Madrasa (1781), Asiatic Society with William Jones (1784). Rohilla War'],
+      ['**Cornwallis**', '1786-93', '**Permanent Settlement, 1793**. Civil service reform; high pay, no private trade. Cornwallis Code. Thanas under darogas. Third Mysore War'],
+      ['John Shore', '1793-98', 'Non-intervention. Charter Act 1793'],
+      ['**Wellesley**', '1798-1805', 'Subsidiary Alliance. **Fort William College**, 1800. Fourth Mysore, Second Maratha'],
+      ['Minto I', '1807-13', 'Treaty of Amritsar, 1809. Charter Act 1813'],
+      ['**Lord Hastings**', '1813-23', 'Third Maratha War. Pindaris put down. Sagauli. Ryotwari in Madras (Munro, 1820). Mahalwari regulation (1822)'],
+      ['Amherst', '1823-28', 'First Burma War. Yandabo'],
+      ['**Bentinck**', '1828-35', '**Sati banned, 1829**. Thugs suppressed (Sleeman). **English Education, 1835**. First GG of India. Coorg annexed'],
+      ['Metcalfe', '1835-36', 'Removed press curbs: "liberator of the Indian press"'],
+      ['Auckland', '1836-42', 'First Afghan War'],
+      ['Ellenborough', '1842-44', 'Sindh annexed. Slavery abolished by law, 1843'],
+      ['Hardinge I', '1844-48', 'First Sikh War'],
+      ['**Dalhousie**', '1848-56', 'Lapse. Punjab, Awadh. **Railway, 1853** (Bombay-Thane). Telegraph. **Post Office Act, 1854**. **Wood\'s Despatch, 1854**. Public Works Department'],
+      ['**Canning**', '1856-62', 'Revolt of 1857. Last GG, first Viceroy. Widow Remarriage Act (1856). Universities (1857). IPC (1860). Indian Councils Act (1861)'],
+    ] },
+    { t: 'note', kind: 'trap', title: 'Three names people swap', text: '**Two Hastings:** Warren Hastings (first GG) and Lord Hastings (Third Maratha War). **Prelims 2018** gave Fort William College against "Arthur" Wellesley. The founder was **Richard** Wellesley; Arthur was his brother, later Duke of Wellington. Prelims 2020 asked why the college was set up: to train British civilians for administration in India. In the same 2018 pair question, the Benaras Sanskrit College was linked wrongly to William Jones. It was founded by **Jonathan Duncan**.' },
+
+    { t: 'h', text: 'Acts of Parliament, 1773-1858' },
+    { t: 'timeline', caption: 'Each Act tightened Parliament\'s hold over the Company and moved power towards the centre.', items: [
+      { when: 'Regulating Act, 1773', what: 'Governor of Bengal became **Governor-General of Bengal** with a council of four. Bombay and Madras made subordinate. **Supreme Court at Calcutta** (1774, Elijah Impey). Servants barred from private trade and gifts.' },
+      { when: 'Pitt\'s India Act, 1784', what: 'Created a **Board of Control** in Britain for political matters; Directors kept commerce. This is **double government**. The territories were called "British possessions in India".' },
+      { when: 'Act of 1786', what: 'Cornwallis could override his council and was also Commander-in-Chief.' },
+      { when: 'Charter Act, 1793', what: 'Renewed the Company\'s charter for 20 years. Board of Control paid from Indian revenue.' },
+      { when: 'Charter Act, 1813', what: '**Ended the trade monopoly except tea and China trade.** Allowed missionaries. **Rs 1 lakh a year** for education. Stated Crown sovereignty over Company territories.' },
+      { when: 'Charter Act, 1833', what: 'GG of Bengal became **Governor-General of India** (Bentinck first). All law-making powers centralised. Company\'s commercial activity ended. **Macaulay** led the first Law Commission. Said no Indian should be barred from office for religion, birth or colour.' },
+      { when: 'Charter Act, 1853', what: 'Separate legislative wing of the Council. **Open competition** for civil service. No fixed period of renewal for Company rule.' },
+      { when: 'Government of India Act, 1858', what: 'Passed after the revolt. **Crown took over**; Company, Directors and Board of Control ended. **Secretary of State** (Lord Stanley first) with a Council of India of 15. GG became **Viceroy**. Canning read the Queen\'s Proclamation at Allahabad on 1 November 1858.' },
+    ] },
+    { t: 'note', kind: 'exam', title: 'Prelims on the Acts', text: '**2023:** the Act that made the GG of Bengal the GG of India was the **Charter Act of 1833**. **2019:** the Charter Act of 1813 ended the trade monopoly (except tea and China) and asserted Crown sovereignty. **2018:** the Charter Act of 1813, the General Committee of Public Instruction (1823) and the Orientalist-Anglicist debate all led to English education.' },
+
+    { t: 'h', text: 'How the Company governed' },
+    { t: 'strata', caption: 'Four arms of control were in place by 1858: civil service, army, police and courts.', layers: [
+      { title: 'Civil service', sub: 'Cornwallis made it professional. Haileybury trained recruits. Open exam from 1853. **Satyendranath Tagore** was the first Indian to qualify (1863).' },
+      { title: 'Army', sub: 'Indian sepoys under British officers. After 1857, more British troops and mixed-caste regiments (Peel Commission).' },
+      { title: 'Police', sub: 'Cornwallis took police duty from zamindars and made thanas under a daroga. Police Act came in 1861.' },
+      { title: 'Courts', sub: 'Hastings set up Diwani and Faujdari Adalats. Cornwallis separated revenue from justice. Bentinck ended the provincial circuit courts. **IPC, 1860**; High Courts, 1861.' },
+    ] },
+    { t: 'h3', text: 'Education and press' },
+    { t: 'table', head: ['Date', 'Step', 'Point'], rows: [
+      ['1781', 'Calcutta Madrasa', 'Warren Hastings'],
+      ['1791', 'Benaras Sanskrit College', 'Jonathan Duncan'],
+      ['1813', 'Charter Act', 'First public money for education'],
+      ['1823', 'General Committee of Public Instruction', 'Oriental lean'],
+      ['**1835**', '**Macaulay\'s Minute**, Bentinck\'s resolution', 'English as medium; "downward filtration"'],
+      ['**1854**', '**Wood\'s Despatch**', '"Magna Carta of English education": graded schools, vernacular at primary level'],
+      ['1857', 'Universities at Calcutta, Bombay, Madras', 'Under Canning'],
+      ['1799-1835', 'Press', 'Wellesley\'s censorship (1799), Adams\'s licensing (1823), Metcalfe\'s relaxation (1835)'],
+    ] },
+    { t: 'p', text: '**Policy towards the princes** moved in three stages: ring-fence or buffer states (to 1813), subordinate isolation (1813-57), and subordinate union (after 1858). Treat this as a Mains idea rather than a set of Prelims dates.' },
+
+    { t: 'h', text: 'Exam guide' },
+    { t: 'note', kind: 'mains', title: 'Likely angles', text: '**Why the British succeeded:** naval power, better army discipline, Indian revenue that paid for conquest, and division among Indian rulers. Do not reduce this to "Indian disunity"; Mysore and the Sikhs adopted European methods and were still beaten. **Company to Crown:** show how each Act added parliamentary control. **Administration:** the same structures that gave order also served extraction. In the Bengal case, Plassey is a military episode, but Buxar and the diwani (1765) gave real power. Historians differ on whether this was planned conquest or a series of local moves; state both.' },
+    { t: 'h3', text: 'Quick recall' },
+    { t: 'list', items: [
+      'Order of arrival: Portuguese, Dutch, English, Danes, French.',
+      'Plassey 1757, Buxar 1764, Allahabad 1765.',
+      'Wandiwash 1760 ended French ambitions.',
+      'Tipu died 1799. Peshwa ended 1818. Punjab annexed 1849. Awadh 1856.',
+      'Regulating 1773, Pitt 1784, Charter 1813 (monopoly, Rs 1 lakh), 1833 (GG of India), 1853 (open exam), GoI Act 1858 (Crown).',
+      'Cornwallis: Permanent Settlement. Bentinck: sati, English education. Dalhousie: Lapse, railway, post.',
+    ] },
+  ],
+  sources: [
+    { label: 'UPSC Civil Services Prelims GS Paper I, 2018-2025 (questions cited above)', url: 'https://www.upsc.gov.in/examinations/previous-question-papers' },
+    { label: 'Further reading, not checked for this note: Bipan Chandra and others, India\'s Struggle for Independence; Sekhar Bandyopadhyay, From Plassey to Partition' },
+  ],
+  beyond: {
+    refer: [
+      { what: 'Historical atlas of India, 1765 and 1856', where: 'Any school atlas or NCERT Class 8 history map pages', why: 'A map of the annexations shows what a table cannot, including the position of Awadh, Satara, Jhansi and Nagpur.' },
+    ],
+    current: [
+      { issue: 'Maratha Military Landscapes', link: 'UNESCO added 12 Maratha forts to the World Heritage List in July 2025, at the 47th committee session in Paris. Eleven are in Maharashtra and one, Gingee, is in Tamil Nadu. Useful with the Maratha wars.', source: 'News On AIR, July 2025', url: 'https://www.newsonair.gov.in/maratha-military-landscapes-of-india-inscribed-in-unescos-world-heritage-list' },
+    ],
+  },
+}

@@ -1,0 +1,157 @@
+import type { TopicNote } from './types'
+
+export const note: TopicNote = {
+  day: '2027-01-23',
+  summary: 'How money is created, what RBI does, how a repo rate change travels to your EMI and to prices, how banks are regulated, and how financial markets fit together. Rates confirmed as of 30 October 2026.',
+  minutes: 28,
+  blocks: [
+    { t: 'h', text: 'The big picture' },
+    { t: 'p', text: 'Money is a claim that everyone accepts. It works as a **medium of exchange**, **unit of account** and **store of value**. Most money in India is not notes. It is bank deposits, and banks create it when they lend. RBI cannot control each loan, so it steers the **price of short-term money** and the **amount of liquidity**, to keep inflation near target while supporting growth. This is **monetary policy**. Fiscal policy, in the next note, is the government\'s budget.' },
+    { t: 'table', caption: 'Current rates, shown on the RBI website on 30 October 2026, after the policy of 7 October 2026.', head: ['Rate', 'Level', 'What it is'], rows: [
+      ['**Repo rate**', '**5.50%**', 'RBI lends overnight to banks against government securities'],
+      ['SDF rate', '5.25%', 'Banks park surplus with RBI, no collateral needed. Floor of the corridor'],
+      ['MSF rate', '5.75%', 'Emergency borrowing, partly by dipping into SLR holdings. Ceiling of the corridor'],
+      ['Bank Rate', '5.75%', 'Long-term rediscount rate; aligned with MSF. Used for penalties'],
+      ['Fixed reverse repo', '3.35%', 'No longer the floor; used at RBI\'s discretion'],
+      ['**CRR**', '**3.00%**', 'Share of deposits (NDTL) held as cash with RBI. Earns no interest'],
+      ['**SLR**', '**18.00%**', 'Share of NDTL held in liquid assets such as government securities'],
+    ] },
+    { t: 'note', kind: 'trap', title: 'Bank Rate is not the repo rate', text: 'Bank Rate is above the repo rate because it moves with the **MSF**. Also, the CRR is held **with RBI** and the SLR is held **by the bank itself**. CRR is under **Section 42** of the RBI Act, and SLR is under **Section 24** of the Banking Regulation Act.' },
+
+    { t: 'h', text: 'How banks create money' },
+    { t: 'p', text: 'RBI issues **reserve money** (M0): currency plus bank reserves. Banks then multiply it. Suppose you deposit Rs 100, CRR is 3% and SLR is 18%. The bank keeps Rs 21 and can lend Rs 79. The borrower pays a shop, and the shop deposits Rs 79 in a bank. That bank can lend 79% of that, and so on.' },
+    { t: 'table', caption: 'Worked example of the credit multiplier, assuming no one holds cash.', head: ['Round', 'New deposit', 'Reserves kept (21%)', 'New loan'], rows: [
+      ['1', '100', '21', '79'],
+      ['2', '79', '16.6', '62.4'],
+      ['3', '62.4', '13.1', '49.3'],
+      ['Limit', 'About 476', 'About 100', 'About 376'],
+    ] },
+    { t: 'p', text: 'So the simple multiplier here is 1 / 0.21, about 4.8. In reality it is smaller, because people hold cash and banks may hold extra reserves. **Money multiplier = broad money / reserve money.** It rises when CRR falls, or when people bank more of their money. It falls when CRR rises or people hold more cash.' },
+    { t: 'table', caption: 'Money aggregates.', head: ['Measure', 'Contains', 'Liquidity'], rows: [
+      ['M0', 'Currency in circulation + bankers\' deposits with RBI + other deposits with RBI', 'Base'],
+      ['M1', 'Currency with public + demand deposits + other deposits with RBI', 'Most liquid (narrow money)'],
+      ['M3', 'M1 + time deposits with banks', 'Broad money. Main indicator'],
+    ] },
+    { t: 'note', kind: 'exam', title: 'Prelims 2019 and 2021', text: 'Both years asked what raises the **money multiplier**. Learn the logic rather than the option wording: higher CRR lowers it, wider banking habit raises it.' },
+
+    { t: 'h', text: 'RBI and the monetary policy framework' },
+    { t: 'timeline', items: [
+      { when: '1 April 1935', what: 'RBI begins work under the **RBI Act, 1934**, following the Hilton Young Commission.' },
+      { when: '1 January 1949', what: 'RBI is nationalised.' },
+      { when: '2014', what: '**Urjit Patel Committee** recommends inflation targeting on CPI.' },
+      { when: '2016', what: 'RBI Act amended. **Section 45ZA** provides for an inflation target and **45ZB** creates the **Monetary Policy Committee (MPC)**.' },
+      { when: 'November 2022', what: 'RBI reports to the government for the first time after missing the target for three consecutive quarters.' },
+      { when: '25 March 2026', what: 'Government notifies target for **1 April 2026 to 31 March 2031**: **4%, with 2% lower and 6% upper tolerance**.' },
+    ] },
+    { t: 'strata', caption: 'The MPC: who decides.', layers: [
+      { title: 'Six members', sub: 'Three from RBI (including the Governor as chair) and three nominated by the Centre' },
+      { title: 'Voting', sub: 'Majority rule, one vote each; Governor has a casting vote in a tie' },
+      { title: 'Frequency', sub: 'At least four meetings a year; in practice six. Minutes are published' },
+      { title: 'Accountability', sub: 'If average CPI is outside the band for three consecutive quarters, RBI must explain to the government and propose remedies' },
+    ] },
+    { t: 'table', caption: 'RBI\'s tools. Learn which are quantitative and which are qualitative.', head: ['Tool', 'How it works', 'To ease'], rows: [
+      ['Repo and LAF', 'Set the price of overnight money. Target: **Weighted Average Call Rate**', 'Cut repo'],
+      ['CRR', 'Locks up cash', 'Cut CRR'],
+      ['SLR', 'Forces holding of liquid assets', 'Cut SLR'],
+      ['Open Market Operations', 'RBI buys or sells government securities', 'Buy securities (injects cash)'],
+      ['Market Stabilisation Scheme', 'Issues securities to absorb extra liquidity', 'Reduce'],
+      ['Moral suasion, sector limits', 'Selective, qualitative', 'Encourage lending'],
+    ] },
+    { t: 'note', kind: 'exam', title: 'Prelims 2020', text: 'UPSC asked what RBI would **not** do in an expansionary policy, listing cutting SLR, raising MSF and cutting Bank Rate and repo. Raising MSF tightens, so it does not fit. A quick check: anything that makes money cheaper or more plentiful is expansionary.' },
+
+    { t: 'h', text: 'How a repo rate change moves through the economy' },
+    { t: 'flow', caption: 'The transmission chain, using the rise of 7 October 2026 from 5.25% to 5.50%.', steps: [
+      { title: 'RBI raises repo by 25 bps', sub: 'Overnight money gets dearer. 1 bps = 0.01%' },
+      { title: 'Money market rates rise', sub: 'Call rate, T-bills, CP and CD rates follow' },
+      { title: 'Banks reprice', sub: 'External-benchmark loans reset; deposits rise more slowly' },
+      { title: 'Borrowers and savers react', sub: 'EMIs up, big purchases postponed, saving more attractive' },
+      { title: 'Demand cools', sub: 'Consumption and investment slow' },
+      { title: 'Inflation eases', sub: 'After a lag of several quarters. Growth may slow as well' },
+    ] },
+    { t: 'p', text: '**Worked EMI example:** a Rs 50 lakh home loan for 20 years at 8.00% has an EMI of about **Rs 41,820**. At 8.25%, it is about **Rs 42,600**. A rise of about Rs 780 a month. Multiply this across millions of borrowers and spending falls. Other channels work too. Higher rates can attract foreign money, which supports the rupee and makes imports cheaper. Higher bond yields lower bond prices. Expectations matter: a credible RBI can cool wage and price setting.' },
+    { t: 'table', caption: 'Repo rate path. All figures from RBI policy statements.', head: ['When', 'Repo', 'Context'], rows: [
+      ['February 2023', '6.50%', 'End of the post-Covid hike cycle'],
+      ['February, April, June 2025', '6.25%, 6.00%, 5.50%', 'Cuts as inflation fell'],
+      ['December 2025', '5.25%', 'Further cut'],
+      ['7 October 2026', '**5.50%**', 'First hike since February 2023. Vote on rate 6-0. Stance changed to **calibrated tightening**; two members preferred neutral'],
+    ] },
+    { t: 'p', text: '**Why RBI hiked in October 2026:** a West Asia conflict flare-up raised crude prices, and inflation is projected to rise: **5.2%** for 2026-27, with **6.0%** in Q3 and 5.7% in Q4. Growth was strong, with a projection of **7.1%**. Bank credit grew **18.1%** year on year on 15 September 2026, and RBI saw risks in strong money and credit growth, although it noted limited evidence of demand-side pressure. System liquidity averaged a surplus of about **Rs 5.9 lakh crore** (RBI, October 2026).' },
+    { t: 'compare', caption: 'Limits of transmission: both sides.', columns: [
+      { title: 'Why it works', items: ['External benchmark floating loans (since October 2019) reset quickly', 'Credible target anchors expectations', 'Interest-sensitive sectors respond: housing, autos, MSMEs'] },
+      { title: 'Why it can be weak', items: ['Food and fuel inflation is supply-driven', 'Deposit rates and fixed-rate loans adjust slowly', 'Surplus liquidity can keep market rates below repo', 'Large government borrowing affects yields'] },
+    ] },
+
+    { t: 'h', text: 'Banks and the bad-loan problem' },
+    { t: 'table', caption: 'Banks in India.', head: ['Type', 'Key feature'], rows: [
+      ['Scheduled commercial banks', 'In the Second Schedule of the RBI Act: public, private, foreign, small finance, payments'],
+      ['Regional Rural Banks', 'Owned by Centre, sponsor bank and state; focused on rural credit'],
+      ['Payments banks', 'Take small deposits and offer payments, but **cannot lend**. Prelims 2016 tested this'],
+      ['Small finance banks', 'Lend mainly to small borrowers and the unbanked'],
+      ['Co-operative banks', 'Member-owned; also supervised by RBI'],
+      ['NBFCs', 'Lend, but cannot take demand deposits or issue cheques; outside the payment system'],
+    ] },
+    { t: 'list', items: [
+      '**NPA:** a loan with interest or principal overdue for more than **90 days**. **GNPA** is before provisions, and **NNPA** is after.',
+      '**CRAR:** capital / risk-weighted assets. It is a cushion against loss, under the **Basel** framework.',
+      '**Priority Sector Lending:** banks must direct a share of credit to agriculture, MSMEs and weaker sections. The domestic bank target is 40% of adjusted net bank credit.',
+      '**Resolution:** SARFAESI Act 2002 (enforcing security), **Insolvency and Bankruptcy Code 2016** (time-bound resolution), and **NARCL** (bad bank).',
+      '**Prompt Corrective Action:** RBI limits on weak banks.',
+    ] },
+    { t: 'table', caption: 'Bank health, March 2026.', head: ['Indicator', 'Level', 'Source'], rows: [
+      ['GNPA ratio', '1.73% (2.22% in March 2025). The FSR rounds to 1.8%', 'RBI Bulletin and FSR, June 2026'],
+      ['NNPA ratio', '0.40% (0.50% in March 2025)', 'RBI Bulletin, 2026'],
+      ['CRAR, CET1', '17.7%, 15.3%', 'RBI FSR, June 2026'],
+      ['Financial Inclusion Index', '70.0 (67.0 in March 2025)', 'RBI, 16 July 2026'],
+    ] },
+
+    { t: 'h', text: 'Financial markets' },
+    { t: 'compare', columns: [
+      { title: 'Money market (up to 1 year)', items: ['Call money: overnight, between banks', 'Treasury bills: Centre, up to 364 days, issued at discount', 'Commercial Paper: companies', 'Certificates of Deposit: banks', 'Repo and TREPS'] },
+      { title: 'Capital market (over 1 year)', items: ['Government securities', 'Corporate bonds', 'Equity', 'Primary market: new issues', 'Secondary market: trading on NSE and BSE'] },
+    ] },
+    { t: 'table', caption: 'Regulators.', head: ['Body', 'Area'], rows: [
+      ['RBI', 'Banks, NBFCs, payments, forex, government debt market'],
+      ['SEBI (statutory since 1992)', 'Securities markets, mutual funds, AIFs'],
+      ['IRDAI', 'Insurance'],
+      ['PFRDA', 'Pensions (NPS)'],
+      ['IFSCA', 'GIFT City International Financial Services Centre'],
+    ] },
+    { t: 'p', text: '**Bond price and yield move in opposite directions.** A bond pays Rs 7 a year on Rs 100, or 7%. If market rates rise to 8%, buyers will pay less for it, about Rs 87.5 on a perpetual bond. So when RBI hikes, existing bond holders lose. **Inflation-Indexed Bonds** protect the investor from inflation risk and were tested in Prelims 2022. RBI also issues **e-Rupee**, a central bank digital currency, which is a direct RBI liability and differs from a deposit.' },
+    { t: 'note', kind: 'recent', title: 'What will change before Prelims', text: 'The **next MPC is on 2-4 December 2026**, followed by more meetings before May 2027. The Budget announced a **High Level Committee on Banking for Viksit Bharat**. Check repo, CRR and stance on the RBI home page in May 2027. Do not rely on this page alone.' },
+
+    { t: 'h', text: 'Exam guide' },
+    { t: 'note', kind: 'mains', title: 'Likely angles', text: 'Transmission and its limits. Inflation targeting: did it work, and should food be excluded? For: credible anchor, lower average inflation than before 2016. Against: supply shocks are not in RBI\'s control, and growth and jobs may suffer. Balance sheet health: record low GNPA, yet risk from rapid credit growth and unsecured lending. Use the **Urjit Patel Committee**, IBC and FSR data.' },
+    { t: 'h3', text: 'Quick recall' },
+    { t: 'list', items: [
+      'Repo 5.50, SDF 5.25, MSF and Bank Rate 5.75. CRR 3, SLR 18 (30 October 2026).',
+      'CRR cut to 3% in stages, September-November 2025.',
+      'Target 4 with 2-6 band, to 31 March 2031. Sections 45ZA, 45ZB, 45ZN.',
+      'Six MPC members, Governor has a casting vote.',
+      'Multiplier rises when CRR falls. NPA after 90 days.',
+      'Payments banks cannot lend.',
+    ] },
+  ],
+  sources: [
+    { label: 'RBI home page, current rates, read on 1 November 2026', url: 'https://www.rbi.org.in/home.aspx' },
+    { label: 'RBI, Monetary Policy Statement, 7 October 2026', url: 'https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742' },
+    { label: 'RBI, Governor\'s Statement, 7 October 2026', url: 'https://rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63744' },
+    { label: 'RBI, Financial Stability Report, June 2026', url: 'https://rbidocs.rbi.org.in/rdocs/PublicationReport/Pdfs/0FSRJUNE2026_300626A120EF6C37694C8C933181147F1379D7.PDF' },
+    { label: 'RBI, Financial Inclusion Index for March 2026, 16 July 2026', url: 'https://rbidocs.rbi.org.in/rdocs/PressRelease/PDFs/PR686B5E4E6AB420641F3817B29B617BE2932.PDF' },
+    { label: 'Gazette notification of inflation target, 25 March 2026 (tracker page)', url: 'https://gazettetracker.com/g/CG-DL-E-25032026-271285' },
+    { label: 'PRS, Union Budget 2026-27 Analysis', url: 'https://prsindia.org/files/budget/budget_parliament/2026/Union_Budget_Analysis-2026-27.pdf' },
+    { label: 'UPSC Prelims GS Paper I, 2016, 2019, 2020, 2021, 2022', url: 'https://www.upsc.gov.in/examinations/previous-question-papers' },
+  ],
+  beyond: {
+    refer: [
+      { what: 'RBI home page, Current Rates panel', where: 'rbi.org.in', why: 'The only safe place for repo, CRR and SLR on the exam eve.', url: 'https://www.rbi.org.in/home.aspx' },
+      { what: 'Monetary Policy Reports and statements', where: 'RBI Monetary Policy page', why: 'Latest stance and projections. Next decision on 4 December 2026.', url: 'https://www.rbi.org.in/scripts/annualpolicy.aspx' },
+      { what: 'Financial Stability Report', where: 'RBI, usually June and December', why: 'A newer edition should replace the bank data here.', url: 'https://www.rbi.org.in/' },
+    ],
+    current: [
+      { issue: 'Repo hike and stance change', link: 'On 7 October 2026, MPC raised repo to 5.50%, the first hike since February 2023, and moved to calibrated tightening.', source: 'RBI', url: 'https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63742' },
+      { issue: 'Inflation target renewed', link: '4% (2-6 band) notified on 25 March 2026 for April 2026 to March 2031.', source: 'Gazette of India', url: 'https://gazettetracker.com/g/CG-DL-E-25032026-271285' },
+      { issue: 'CRR cut', link: 'CRR fell by 100 bps to 3.0% in stages during September-November 2025, per RBI publications.', source: 'RBI' },
+      { issue: 'Financial inclusion', link: 'FI-Index reached 70.0 in March 2026, driven mainly by usage.', source: 'RBI', url: 'https://rbidocs.rbi.org.in/rdocs/PressRelease/PDFs/PR686B5E4E6AB420641F3817B29B617BE2932.PDF' },
+    ],
+  },
+}

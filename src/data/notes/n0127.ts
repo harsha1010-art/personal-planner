@@ -1,0 +1,146 @@
+import type { TopicNote } from './types'
+
+export const note: TopicNote = {
+  day: '2027-01-27',
+  summary: 'The three sectors of the economy from the ground up: how MSP and the food system work, subsidies with worked examples, industrial policy and core sectors, services, and the schemes UPSC tests.',
+  minutes: 28,
+  blocks: [
+    { t: 'h', text: 'The big picture' },
+    { t: 'p', text: 'The central puzzle of the Indian economy is a mismatch. **Agriculture** gives nearly one-fifth of national income (current prices, Economic Survey 2025-26), yet employs **43.0%** of workers (PLFS 2025). **Services** make up about **54%** of GDP (H1 2025-26, Survey) but use fewer workers. So farm incomes stay low. **Manufacturing** is meant to absorb those workers. Policy in all three sectors tries to deal with this mismatch.' },
+    { t: 'table', caption: 'Sector data, new GDP series where shown. These change every quarter.', head: ['Sector', 'Growth', 'As of and source'], rows: [
+      ['Primary (real GVA)', '2.9% in Q1 2026-27', 'MoSPI, 31 Aug 2026'],
+      ['Manufacturing', '9.2% in Q1 2026-27', 'PIB, 1 Sep 2026'],
+      ['Secondary', '8.6% in Q1 2026-27', 'MoSPI, 31 Aug 2026'],
+      ['Tertiary', '10.0% in Q1 2026-27; finance, real estate and professional services 12.1%', 'MoSPI and PIB'],
+    ] },
+
+    { t: 'h', text: 'Agriculture: how MSP really works' },
+    { t: 'p', text: '**Minimum Support Price (MSP)** is a floor price announced before sowing. The **Commission for Agricultural Costs and Prices (CACP)** recommends it and the **Cabinet Committee on Economic Affairs (CCEA)** approves it. It covers **22 mandated crops**: 14 kharif, 6 rabi, and 2 commercial (jute and copra). Sugarcane has a separate **Fair and Remunerative Price**. MSP has no statutory backing. It binds only where the government actually buys.' },
+    { t: 'table', caption: 'Cost concepts. Since 2018-19, MSP has been set at 1.5 times A2+FL or more.', head: ['Cost', 'Includes'], rows: [
+      ['**A2**', 'Paid-out costs: seed, fertiliser, hired labour, machinery'],
+      ['**A2+FL**', 'A2 plus the imputed value of family labour. **Used for the 1.5 times rule**'],
+      ['**C2**', 'A2+FL plus imputed rent on own land and interest on own capital. **Swaminathan Commission** suggested C2 + 50%'],
+    ] },
+    { t: 'table', caption: 'Latest MSPs. Worked margin: wheat (2,610 - 1,264) / 1,264 = 106%.', head: ['Crop', 'Season', 'MSP (Rs per quintal)', 'Rise'], rows: [
+      ['Common paddy', 'Kharif 2026-27, approved 13 May 2026', '2,441', '+72'],
+      ['Sunflower seed', 'Kharif 2026-27', 'Check PIB', '+622, largest in kharif'],
+      ['**Wheat**', 'RMS 2027-28, approved 30 Sep 2026', '**2,610**', '+25; cost Rs 1,264'],
+      ['Barley', 'RMS 2027-28', '2,286', '+136'],
+      ['Gram', 'RMS 2027-28', '5,958', '+83'],
+      ['Lentil', 'RMS 2027-28', '7,390', 'See PIB'],
+      ['Rapeseed and mustard', 'RMS 2027-28', '6,613', 'See PIB'],
+      ['Safflower', 'RMS 2027-28', '7,215', '+675, largest in rabi'],
+    ] },
+    { t: 'flow', caption: 'From farm to ration shop.', steps: [
+      { title: 'MSP announced', sub: 'CACP then CCEA' },
+      { title: 'Procurement', sub: 'FCI and state agencies buy mainly rice and wheat' },
+      { title: 'Buffer stock', sub: 'Held to meet NFSA and price shocks' },
+      { title: 'Allocation', sub: 'Centre allots grain to states' },
+      { title: 'Ration shop', sub: 'NFSA: free under PMGKAY' },
+    ] },
+    { t: 'p', text: '**Food subsidy, worked:** suppose the **economic cost** of a kg of wheat is Rs 30: MSP plus bonus, procurement incidentals and distribution costs. If it is issued free, the subsidy is the whole Rs 30 per kg. So higher MSP, storage losses or poor efficiency all raise the bill. The **National Food Security Act, 2013** covers up to 75% of rural and 50% of urban population. **PMGKAY** gives free grain under NFSA and was extended for five years from 1 January 2024.' },
+    { t: 'note', kind: 'exam', title: 'What UPSC has asked', text: 'Prelims 2019 tested the **economic cost** of FCI grain: MSP and bonus plus procurement incidentals and distribution cost. Prelims 2020 asked whether procurement at MSP is unlimited for all cereals, pulses and oilseeds (no). Prelims 2018 and 2023 tested **which crops** have MSP; niger is one. Prelims 2016 tested **PMFBY**.' },
+    { t: 'compare', caption: 'Legal guarantee for MSP: both sides.', columns: [
+      { title: 'For', items: ['Income certainty for small farmers', 'Most farmers now get no real MSP benefit outside procurement', 'Could encourage crops other than rice and wheat, if properly targeted'] },
+      { title: 'Against', items: ['High fiscal cost and storage needs', 'Reinforces rice-wheat bias and groundwater stress in Punjab and Haryana', 'WTO limits on trade-distorting support', 'Private buyers may leave if forced to pay above market price'] },
+    ] },
+    { t: 'p', text: '**Where growth comes from:** decade growth to 2024-25 was 4.5% overall, but **fishing 8.8%** and **livestock 7.1%** far outran **crops at 3.5%** (Survey 2025-26). So allied activities drive farm income growth. Hence the push for diversification and animal husbandry credit in Budget 2026-27.' },
+    { t: 'table', caption: 'Farm schemes. Confirm the latest allocation in the Expenditure Budget.', head: ['Scheme', 'Key point'], rows: [
+      ['**PM-KISAN** (2019)', 'Rs 6,000 a year in three instalments, by direct transfer to landholding farmers'],
+      ['**PMFBY** (2016)', 'Crop insurance. Farmer premium: 2% kharif, 1.5% rabi, 5% commercial and horticulture. Voluntary since 2020'],
+      ['**e-NAM** (2016)', 'Online market linking APMC mandis'],
+      ['**Kisan Credit Card**', 'Short-term crop credit'],
+      ['**10,000 FPOs**', 'Scheme for Farmer Producer Organisations, 2020'],
+      ['**Soil Health Card**', 'Crop-wise nutrient advice'],
+      ['**Mission for pulses**', 'Pulses self-reliance, approved by Cabinet, October 2025'],
+    ] },
+    { t: 'note', kind: 'trap', title: 'Farm law reminders', text: 'The three **farm laws of 2020** were **repealed** in 2021. Agriculture is a **State List** subject, while trade in foodstuffs is in the **Concurrent List**. Much of the farm reform debate involves this federal split.' },
+
+    { t: 'h', text: 'Subsidies: what, why, and how they distort' },
+    { t: 'table', caption: 'Budget Estimates for 2026-27. Total subsidies Rs 4,54,773 crore (PRS, 2026).', head: ['Subsidy', 'BE 2026-27 (Rs crore)', 'Mechanism'], rows: [
+      ['Food', '2,27,629', 'FCI and states, for free grain'],
+      ['Fertiliser', '1,70,799', 'Paid to companies against sales. Actuals can exceed BE if global prices rise'],
+      ['LPG', '12,085', 'Targeted cooking gas support'],
+    ] },
+    { t: 'p', text: '**Fertiliser, worked logic:** the farmer pays a controlled price for urea, with a statutory maximum retail price. The company receives the gap from the Centre. For **P and K** fertilisers, the **Nutrient-Based Subsidy** (since 2010) fixes the subsidy per kg of nutrient and lets prices move more. Result: urea becomes relatively cheap, so farmers overuse it. That worsens the **N:P:K balance** and damages soil. Neem coating of urea, **PM-PRANAM**, and direct benefit transfers at point of sale try to limit this.' },
+    { t: 'compare', caption: 'WTO Agreement on Agriculture: three boxes.', columns: [
+      { title: 'Amber', items: ['Trade-distorting', 'Includes price support', 'Limit: **10%** of production value for developing countries (de minimis)', 'India uses the **Bali peace clause** of 2013 for public stockholding'] },
+      { title: 'Blue', items: ['Amber support with production limits', 'Mostly used by developed countries'] },
+      { title: 'Green', items: ['Minimal distortion', 'Research, extension, pest control, some income support', 'No limit'] },
+    ] },
+    { t: 'p', text: '**Merit vs non-merit:** subsidies on primary education or vaccines have wide social benefit. Others, such as free power causing groundwater depletion, can hurt in the long term. Use the 16th Finance Commission advice on rationalising state subsidies and off-budget financing. A **fair** answer should accept the case for targeted support and criticise only leakages and poor targeting.' },
+
+    { t: 'h', text: 'Industry' },
+    { t: 'timeline', caption: 'Industrial policy.', items: [
+      { when: '1948, 1956', what: 'Mixed economy. The **1956 Resolution** reserved core sectors for the state and is called the economic constitution of India.' },
+      { when: '1991', what: '**New Industrial Policy**: licensing largely ended, MRTP asset limits removed, PSU role reduced, FDI opened.' },
+      { when: '2005', what: 'SEZ Act.' },
+      { when: '2014', what: '**Make in India**.' },
+      { when: '2020', what: '**PLI schemes**: output-linked incentive, later covering 14 sectors.' },
+      { when: 'Budget 2026-27', what: 'Revival of 200 legacy clusters, Semiconductor Mission 2.0, Electronics Component Scheme raised to Rs 40,000 crore, SME Growth Fund of Rs 10,000 crore, rare earth corridors.' },
+    ] },
+    { t: 'table', caption: 'Revised MSME definition, effective 1 April 2025. Both limits must be met. Investment is in plant and machinery.', head: ['Type', 'Investment up to', 'Turnover up to'], rows: [
+      ['Micro', 'Rs 2.5 crore', 'Rs 10 crore'],
+      ['Small', 'Rs 25 crore', 'Rs 100 crore'],
+      ['Medium', 'Rs 125 crore', 'Rs 500 crore'],
+    ] },
+    { t: 'compare', caption: 'Two measures of industrial output.', columns: [
+      { title: 'IIP', items: ['Volume index by MoSPI', '**New base 2022-23**, starting with April 2026 data', 'Sector and use-based classification', '6.7% in July 2026; capital goods 16.1%'] },
+      { title: 'Index of Core Industries', items: ['Eight industries, by the Office of Economic Adviser', 'Coal, crude oil, natural gas, refinery products, fertilisers, steel, cement, electricity', 'Refinery products carried the highest weight in the 2011-12 base', '5.4% in July 2026'] },
+    ] },
+    { t: 'list', items: [
+      '**Disinvestment:** target Rs 80,000 crore in BE 2026-27, after five years of shortfalls (PRS).',
+      '**R&D gap:** India spends 0.64% of GDP on R&D. Business makes up 41% of it, versus 77% in China (Survey 2025-26).',
+      '**Strengths:** medium and high-tech share of manufacturing value added reached 46%. Organised manufacturing added 57 lakh jobs in 2015-16 to 2024-25 (Survey).',
+      '**PLI debate:** it attracts investment and exports in electronics, but may raise import dependence and favour big firms.',
+    ] },
+
+    { t: 'h', text: 'Services' },
+    { t: 'p', text: 'Services grew 9% in H1 2025-26 and make up about 54% of GDP (Survey). They are India\'s best export: the services surplus was **US$ 85.8 billion** in April-August 2026 (RBI). Key drivers are IT, business and financial services, and **Global Capability Centres**. Limits: formal service jobs need skills, many workers are in low-pay trade and transport, and AI may reduce routine work. Budget 2026-27 proposed a standing committee on **Education to Employment and Enterprise**, to assess this.' },
+    { t: 'compare', caption: 'Can India skip manufacturing? A common Mains question.', columns: [
+      { title: 'Services-led', items: ['India has an edge in skilled labour', 'High export growth', 'Less capital needed', 'Digital public infrastructure helps'] },
+      { title: 'Manufacturing-led', items: ['Absorbs low-skilled labour at scale', 'Supply chain depth and defence needs', 'Reduces import dependence', '"Premature deindustrialisation" is a risk'] },
+    ] },
+    { t: 'note', kind: 'recent', title: 'What will change before Prelims', text: 'Budget 2027-28 allocations, including subsidies and schemes. Economic Survey sector shares on the new GDP base. Monthly IIP and core sector data. Check the **PIB CCEA releases** for sugarcane FRP and any MSP changes. New kharif MSPs usually arrive close to the monsoon, possibly after Prelims.' },
+
+    { t: 'h', text: 'Exam guide' },
+    { t: 'note', kind: 'mains', title: 'Likely angles', text: 'Doubling farm income and allied activities. MSP, procurement and crop diversification. Fertiliser subsidy and soil health. Food security and WTO. Structural transformation: why workers have not moved out of farms fast enough. PLI and manufacturing. Services and jobs. Cite **Swaminathan Commission**, **Shanta Kumar Committee** on FCI reform, and the 16th Finance Commission on subsidies.' },
+    { t: 'h3', text: 'Quick recall' },
+    { t: 'list', items: [
+      'Agriculture: 43.0% of jobs (2025), nearly one-fifth of income.',
+      'MSP: CACP recommends, CCEA approves; 22 crops; at least 1.5 x A2+FL.',
+      'Wheat RMS 2027-28 Rs 2,610. Common paddy KMS 2026-27 Rs 2,441.',
+      'Subsidies BE 2026-27: food Rs 2.28 lakh crore, fertiliser Rs 1.71 lakh crore.',
+      'Amber limit 10%. Bali peace clause 2013.',
+      'MSME new limits: 2.5/10, 25/100, 125/500 (Rs crore).',
+      'IIP base 2022-23. Eight core industries.',
+    ] },
+  ],
+  sources: [
+    { label: 'PIB, Cabinet approves Rabi MSPs for RMS 2027-28, 30 September 2026', url: 'https://www.pib.gov.in/PressReleasepage.aspx?PRID=2316941&reg=48&lang=1' },
+    { label: 'DD News, Cabinet approves Kharif MSP 2026-27, May 2026', url: 'https://ddnews.gov.in/en/cabinet-approves-higher-msp-for-14-kharif-crops-for-2026-27-marketing-season/' },
+    { label: 'PIB, Agriculture and Economic Survey 2025-26', url: 'https://www.pib.gov.in/PressReleasePage.aspx?PRID=2219960&reg=3&lang=1' },
+    { label: 'PRS, Economic Survey 2025-26 summary', url: 'https://prsindia.org/policy/report-summaries/economic-survey-2025-26' },
+    { label: 'PIB, PLFS Annual Report 2025, 27 March 2026', url: 'https://www.pib.gov.in/PressReleasePage.aspx?PRID=2246009&lang=1&reg=3' },
+    { label: 'PRS, Union Budget 2026-27 Analysis', url: 'https://prsindia.org/files/budget/budget_parliament/2026/Union_Budget_Analysis-2026-27.pdf' },
+    { label: 'PRS, Demand for Grants 2026-27: Food and Public Distribution', url: 'https://prsindia.org/budgets/parliament/demand-for-grants-2026-27-analysis-food-and-public-distribution' },
+    { label: 'Union Budget 2026-27, Expenditure Profile, Statement 7', url: 'https://www.indiabudget.gov.in/doc/eb/stat7.pdf' },
+    { label: 'PIB factsheet on Q1 GDP, IIP and core sector, 1 September 2026', url: 'https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/sep/doc_9759_20260901_14422101.pdf' },
+    { label: 'PIB, new IIP series, base 2022-23', url: 'https://www.pib.gov.in/PressReleasePage.aspx?PRID=2267531&reg=3&lang=1' },
+    { label: 'UPSC Prelims GS Paper I, 2016, 2018, 2019, 2020, 2023', url: 'https://www.upsc.gov.in/examinations/previous-question-papers' },
+  ],
+  beyond: {
+    refer: [
+      { what: 'Expenditure Budget and Budget at a Glance 2027-28', where: 'indiabudget.gov.in', why: 'Subsidy and scheme figures here are BE 2026-27 and will be replaced. Check actuals as well.', url: 'https://www.indiabudget.gov.in/' },
+      { what: 'CCEA releases on MSP and FRP', where: 'PIB', why: 'Full crop table with cost and margin.', url: 'https://www.pib.gov.in/PressReleasepage.aspx?PRID=2316941&reg=48&lang=1' },
+      { what: 'Economic Survey 2026-27, agriculture, industry and services chapters', where: 'indiabudget.gov.in', why: 'Sector shares on the new base, which this note does not give exactly.', url: 'https://www.indiabudget.gov.in/economicsurvey/' },
+      { what: 'Eight core industries weights', where: 'Office of Economic Adviser, DPIIT', why: 'Check whether weights and base have moved after the 2026 rebasing.', url: 'https://eaindustry.nic.in/' },
+    ],
+    current: [
+      { issue: 'Rabi MSP', link: 'Cabinet raised wheat MSP to Rs 2,610 for RMS 2027-28 on 30 September 2026.', source: 'PIB', url: 'https://www.pib.gov.in/PressReleasepage.aspx?PRID=2316941&reg=48&lang=1' },
+      { issue: 'Kharif MSP', link: 'Cabinet approved MSP for 14 kharif crops on 13 May 2026; common paddy at Rs 2,441.', source: 'DD News', url: 'https://ddnews.gov.in/en/cabinet-approves-higher-msp-for-14-kharif-crops-for-2026-27-marketing-season/' },
+      { issue: 'Industrial rebound', link: 'IIP on the new base grew 6.7% in July 2026, and capital goods grew 16.1%.', source: 'PIB', url: 'https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/sep/doc_9759_20260901_14422101.pdf' },
+      { issue: 'Budget 2026-27 industrial measures', link: 'Semiconductor Mission 2.0, legacy clusters and SME Growth Fund were proposed in February 2026.', source: 'PRS', url: 'https://prsindia.org/files/budget/budget_parliament/2026/Union_Budget_Analysis-2026-27.pdf' },
+    ],
+  },
+}

@@ -1,0 +1,155 @@
+import type { TopicNote } from './types'
+
+export const note: TopicNote = {
+  day: '2027-01-13',
+  summary: 'Gandhi\'s mass movements from Champaran to Quit India, the Acts of 1919 and 1935, every constitutional offer from Simon to Mountbatten, the INA, and the road to partition, in sequence.',
+  minutes: 32,
+  blocks: [
+    { t: 'h', text: 'The big picture' },
+    { t: 'p', text: 'From 1917 to 1947 the movement became a mass one. Gandhi added peasants, women and small towns through non-violent struggle in phases. Each mass phase was answered with a British constitutional offer. Meanwhile communal politics hardened, and the war of 1939-45 broke British capacity to hold India. Freedom came with **partition**.' },
+    { t: 'p', text: 'This is the most heavily tested part of Modern History in recent Prelims. UPSC likes fine points about what a pact or plan actually said. So read the content of each offer, not only its date.' },
+    { t: 'flow', caption: 'The rhythm of the struggle: struggle, truce, constitutional offer, struggle again. Bipan Chandra calls this "struggle-truce-struggle".', steps: [
+      { title: '1917-18', sub: 'Local satyagrahas' },
+      { title: '1920-22', sub: 'Non-Cooperation' },
+      { title: '1923-29', sub: 'Swarajists; Simon; Nehru Report' },
+      { title: '1930-34', sub: 'Civil Disobedience' },
+      { title: '1937-39', sub: 'Provincial ministries' },
+      { title: '1942', sub: 'Quit India' },
+      { title: '1945-47', sub: 'Negotiation and partition' },
+    ] },
+
+    { t: 'h', text: 'Gandhi: first steps' },
+    { t: 'table', caption: 'He returned from South Africa on 9 January 1915.', head: ['Event', 'Year', 'Point'], rows: [
+      ['**Champaran**', '1917', 'Bihar; **tinkathia** system on indigo; Rajkumar Shukla invited him; Rajendra Prasad and others joined. His first civil disobedience in India'],
+      ['**Ahmedabad mill strike**', '1918', 'Bonus dispute. Gandhi fasted for the first time in India. Anasuya Sarabhai on the workers\' side'],
+      ['**Kheda**', '1918', 'Revenue relief after crop failure. Vallabhbhai Patel joined him'],
+      ['**Rowlatt Satyagraha**', '1919', 'Rowlatt Act: arrest and trial without normal process. First all-India strike'],
+      ['**Jallianwala Bagh**', '13 April 1919', 'General **Dyer** fired on a crowd at Amritsar. Protest over arrests of **Satyapal and Kitchlew**. **Hunter Committee**. Tagore gave up his knighthood; later Udham Singh killed O\'Dwyer (1940)'],
+    ] },
+    { t: 'note', kind: 'exam', title: 'Prelims 2019 and 2018', text: '**2019:** Gandhi was instrumental in ending indentured labour, and the Congress was declared illegal after the Salt Law was broken. But he **did** support recruiting Indians at Chelmsford\'s War Conference, so the claim that he did not was wrong. **2018:** the key feature of Champaran was joining peasant unrest to the national movement.' },
+
+    { t: 'h', text: 'The three mass movements' },
+    { t: 'table', caption: 'Know one row at a time. This table holds most of the facts tested.', head: ['', 'Non-Cooperation', 'Civil Disobedience', 'Quit India'], rows: [
+      ['**Dates**', 'August 1920 to Feb 1922', 'March 1930 to 1934, with a truce in 1931', 'August 1942 onwards'],
+      ['**Trigger**', 'Jallianwala, Khilafat, Rowlatt', 'Simon, Purna Swaraj, salt tax', 'Cripps failure, war, fear of Japan'],
+      ['**Method**', 'Do not cooperate', 'Actively break laws', '"**Do or Die**"; open rebellion by default'],
+      ['**Key sessions**', 'Calcutta (Sept 1920), Nagpur (Dec 1920)', 'Lahore (Dec 1929)', 'Wardha (July), Bombay AICC (**8 August 1942**)'],
+      ['**Reach**', 'Muslims through Khilafat; Awadh; Assam; Malabar', 'Women, peasants; NWFP, Dharasana, Tamil coast', 'Students, peasants, underground leaders; parallel governments'],
+      ['**End**', 'Withdrawn after **Chauri Chaura**, 5 Feb 1922', 'Gandhi-Irwin truce, 1931; second phase crushed', 'Crushed by force; leaders released 1944-45'],
+      ['**Muslim role**', 'High', 'Less, except Khudai Khidmatgars', 'League opposed'],
+    ] },
+    { t: 'h3', text: 'Non-Cooperation, 1920-22' },
+    { t: 'list', items: [
+      '**Khilafat:** Ali brothers, Maulana Azad, Hakim Ajmal Khan. Launched with Gandhi\'s support. Tilak died on 1 August 1920, the same day it started.',
+      '**Programme:** surrender of titles; boycott of schools, courts, councils, foreign cloth. Later non-payment of taxes. National schools (Kashi Vidyapith, Jamia Millia), **panchayats**, khadi, Tilak Swaraj Fund.',
+      '**Chauri Chaura:** Gorakhpur, 22 policemen killed. Gandhi withdrew it at Bardoli on 12 Feb 1922. He was jailed for six years. **Malaviya** and Krishna Kant defended the accused.',
+    ] },
+    { t: 'note', kind: 'exam', title: 'Prelims 2025 on Non-Cooperation', text: 'UPSC asked twice in one paper. **Retaining titles** was not part of the programme; boycott of courts and foreign cloth, strict non-violence and panchayats were. Also, Congress adopted Swaraj by "all legitimate and peaceful means", and the plan moved in stages, with civil disobedience held back as a later stage. A third question asked who defended the Chauri Chaura accused: **Madan Mohan Malaviya and Krishna Kant**.' },
+    { t: 'h3', text: 'Between the movements' },
+    { t: 'timeline', items: [
+      { when: '1 Jan 1923', what: '**Swaraj Party**: **C. R. Das, Motilal Nehru**. Enter councils to wreck them. **No-Changers** (Rajaji, Patel, Rajendra Prasad) stayed with constructive work. **Vithalbhai Patel** became President of the Central Assembly (1925).' },
+      { when: '1927-28', what: '**Simon Commission**, all-British, seven members. Boycotted from February 1928. Lajpat Rai fatally hurt at Lahore. Birkenhead dared Indians to draft their own constitution.' },
+      { when: '1928', what: '**Nehru Report** (Motilal): Dominion Status, joint electorates with reserved seats, Fundamental Rights. Jinnah replied with **Fourteen Points** (1929). Jawaharlal and Bose opposed the Dominion goal.' },
+      { when: 'Oct 1929', what: 'Irwin\'s **Deepavali Declaration**: Dominion Status as the eventual aim.' },
+      { when: 'Dec 1929', what: '**Lahore, Nehru: Purna Swaraj.** 26 January 1930 observed as Independence Day.' },
+    ] },
+    { t: 'h3', text: 'Civil Disobedience, 1930-34' },
+    { t: 'list', items: [
+      '**Dandi March:** **12 March to 6 April 1930**. Sabarmati to Dandi with 78 followers. Salt chosen as a shared need and a simple law to break.',
+      '**Spread:** Rajaji at **Vedaranyam**. **Sarojini Naidu** at **Dharasana**. **Khan Abdul Ghaffar Khan\'s** Khudai Khidmatgars in NWFP; Garhwali soldiers refused to fire at **Peshawar**. Rani Gaidinliu in the Naga hills. No-tax in Bardoli and UP.',
+      '**Gandhi-Irwin Pact, 5 March 1931:** Congress to suspend the movement and attend the Round Table. Ordinances withdrawn, non-violent prisoners freed, coastal salt-making allowed. **No inquiry into police excesses**.',
+      '**Karachi, March 1931:** Patel presided. Endorsed the pact. Resolution on **Fundamental Rights and economic policy**. Bhagat Singh had been hanged days before.',
+      '**Round Table Conferences:** First (Nov 1930-Jan 1931), no Congress. Second (Sept-Dec 1931), **Gandhi attended**, failed on minorities. Third (Nov-Dec 1932), no Congress. **Ambedkar** attended all three.',
+      '**Communal Award (August 1932):** MacDonald gave separate electorates to Depressed Classes. Gandhi fasted at Yerwada. **Poona Pact, September 1932:** Gandhi and Ambedkar agreed on joint electorates with more reserved seats (from 71 to about 147 in the provinces).',
+    ] },
+    { t: 'note', kind: 'exam', title: 'Prelims 2020 and 2025', text: '**2020:** the Gandhi-Irwin Pact included the invitation to the Round Table, withdrawal of ordinances and release of prisoners not charged with violence, but **not** an inquiry into police excesses. **2025:** Gandhi took up uplift of Harijans in his programme after the **Poona Pact**. **2025:** "Sedition has become my religion" is tied to the Salt Law phase in 1930, with the widely cited source being his Young India writing during the march. Check the original wording if it comes up again. **2021:** Prelims asked what occurred on 8 August 1942: the AICC adopted the Quit India Resolution.' },
+    { t: 'h3', text: 'Quit India, 1942' },
+    { t: 'list', items: [
+      '**Sequence:** Wardha resolution, 14 July. Gowalia Tank, Bombay, 8 August. Top leaders arrested on **9 August**. **Aruna Asaf Ali** raised the flag.',
+      '**Underground:** Jayaprakash Narayan, Lohia, **Usha Mehta** (Congress Radio).',
+      '**Parallel governments:** **Ballia** (Chittu Pandey), **Tamluk** (Tamralipta), **Satara** (Prati Sarkar).',
+      '**Stood aside:** CPI backed the war after Russia entered; the League and Hindu Mahasabha did not join.',
+      '**Gandhi:** 21-day fast in February 1943. Kasturba died in detention in 1944. Bengal famine of 1943 made the toll much worse.',
+    ] },
+
+    { t: 'h', text: 'The Acts of 1919 and 1935' },
+    { t: 'compare', caption: 'Both are Parliament\'s replies to pressure. Much of the 1935 Act lives on in the Constitution.', columns: [
+      { title: 'Government of India Act, 1919 (Montagu-Chelmsford)', items: ['Followed Montagu\'s statement of **20 August 1917**', '**Dyarchy** in provinces', 'Bicameral centre; Council of State and Legislative Assembly', 'Direct election with limited vote', '**Separate electorates extended** (Sikhs, others)', 'Central and provincial subjects split', 'High Commissioner for India in London', 'Chamber of Princes (1921)', 'Public Service Commission urged (set up 1926)'] },
+      { title: 'Government of India Act, 1935', items: ['Longest Act: 321 sections, 10 schedules', '**All-India Federation** of provinces and princes (never formed)', '**Provincial autonomy**; dyarchy ended in provinces', '**Dyarchy at centre** (on paper)', '**Federal, Provincial, Concurrent Lists**', '**Residuary powers: Governor-General**', 'Federal Court (1937), RBI, Public Service Commissions', 'Burma separated; Sindh and Orissa created', 'Separate electorates extended; **reserved seats for women**', 'Bicameral in six provinces'] },
+    ] },
+    { t: 'table', caption: 'Dyarchy under the 1919 Act. Transferred subjects went to ministers answerable to the council; reserved subjects stayed with the Governor.', head: ['Reserved', 'Transferred'], rows: [
+      ['**Police**, **justice**, **land revenue**, finance, irrigation', '**Local self-government**, education, health, agriculture, industries'],
+    ] },
+    { t: 'note', kind: 'exam', title: 'Prelims on these Acts', text: '**2022:** Reserved subjects were justice, land revenue and police; local self-government was Transferred. **2021:** the 1919 reforms did not give all women above 21 the vote, but the **1935 Act gave women reserved seats**. **2018:** residuary powers went to the **Governor-General**. **2024:** the 1935 Act provided for an All-India Federation, but defence and foreign affairs were **not** under the federal legislature. They were reserved. **2016:** the "Montagu-Chelmsford Proposals" concerned **constitutional reforms**. **2026:** UPSC tested how the 1919 reforms kept and extended separate electorates.' },
+    { t: 'p', text: '**1937 elections:** Congress won a majority in five of eleven provinces and was largest in others, forming eight ministries in the end. All resigned in **October-November 1939** over the war being declared without consent. The League marked a **Day of Deliverance** on 22 December 1939. **2026** tested why Bose formed the **Forward Bloc in 1939**: after Tripuri, Bose had lost Gandhi\'s support, and the Left would not break with Congress unity.' },
+
+    { t: 'h', text: 'War and constitutional offers' },
+    { t: 'table', head: ['Offer', 'Date', 'Main terms', 'Fate'], rows: [
+      ['**August Offer**', '8 Aug 1940', 'Linlithgow: Dominion Status as a goal; larger Executive Council; minority veto', 'Rejected. Led to **Individual Satyagraha** (Vinoba first, Oct 1940)'],
+      ['**Cripps Mission**', 'March 1942', 'Dominion Status after war. Constituent body: elected by provincial assemblies, nominated by princes. Provinces could stay out', 'Rejected by Congress and League'],
+      ['**C. R. Formula**', '1944', 'Post-war plebiscite in Muslim-majority areas', 'Jinnah refused'],
+      ['**Wavell Plan**, Simla', 'June-July 1945', 'All-Indian council but for Viceroy and C-in-C', 'Failed over League\'s claim to name all Muslims'],
+      ['**Cabinet Mission**', 'March-May 1946', 'Pethick-Lawrence, Cripps, A. V. Alexander. Rejected Pakistan. Weak Centre. Groups A, B, C. Constituent Assembly', 'Accepted, then disputed over grouping'],
+      ['**Attlee statement**', '20 Feb 1947', 'Britain to leave by June 1948', 'Forced the pace'],
+      ['**Mountbatten Plan**', '3 June 1947', 'Partition; Punjab and Bengal assemblies to vote; Sylhet, NWFP referendum', 'Accepted'],
+    ] },
+    { t: 'note', kind: 'exam', title: 'Prelims on Cripps and the Assembly', text: '**2016:** Cripps offered **Dominion Status** after the war. **2022:** Constituent Assembly members were **not** to be nominated by provincial assemblies (they were elected; only the princes nominated), but a province could sign a separate agreement with Britain. **2024:** **Sachchidananda Sinha** was provisional President before Rajendra Prasad.' },
+
+    { t: 'h', text: 'Subhas Bose and the INA' },
+    { t: 'timeline', items: [
+      { when: '1938-39', what: 'Congress president at Haripura. Re-elected at Tripuri over Sitaramayya, then resigned. **Forward Bloc**, 1939.' },
+      { when: 'Jan 1941', what: 'Escaped from house arrest in Calcutta; went to Germany. Azad Hind Radio.' },
+      { when: '1942', what: 'First **INA** under **Mohan Singh**, with Indian prisoners of war. Rash Behari Bose led the Indian Independence League.' },
+      { when: 'July-Oct 1943', what: 'Bose took charge at Singapore. **Provisional Government of Free India, 21 October 1943**. **Rani of Jhansi Regiment** under Lakshmi Swaminathan.' },
+      { when: 'Late 1943-44', what: 'Andaman and Nicobar handed over by Japan in name. INA in the **Imphal-Kohima** campaign. Flag raised at **Moirang**. "Delhi Chalo".' },
+      { when: 'Aug 1945', what: 'Japan surrendered. Bose reportedly died after an air crash at Taipei. Inquiries differ, and this remains disputed in public debate.' },
+      { when: 'Nov 1945 on', what: '**Red Fort trials:** **Shah Nawaz Khan, P. K. Sehgal, Gurbaksh Singh Dhillon**. Defence: Bhulabhai Desai, Tej Bahadur Sapru, Nehru and others. Huge public protest.' },
+      { when: 'Feb 1946', what: '**Royal Indian Navy mutiny**, HMIS Talwar, Bombay. Patel and Jinnah urged surrender; Left supported the ratings. It signalled that the armed forces could no longer be relied upon.' },
+    ] },
+    { t: 'note', kind: 'trap', title: 'Prelims 2021', text: 'Shah Nawaz Khan, Sehgal and Dhillon were **INA officers**, not members of the 1946 Interim Government or the Drafting Committee. Also remember: Mohan Singh and Rash Behari Bose came **before** Subhas in the INA story.' },
+
+    { t: 'h', text: 'Road to partition' },
+    { t: 'flow', caption: 'Each step closed off an alternative. None alone made partition inevitable.', steps: [
+      { title: '1940', sub: 'League\'s Lahore Resolution' },
+      { title: '1945-46', sub: 'League sweeps Muslim seats' },
+      { title: '16 May 1946', sub: 'Cabinet Mission plan' },
+      { title: '16 Aug 1946', sub: 'Direct Action; Calcutta killings' },
+      { title: '2 Sept 1946', sub: 'Interim Government under Nehru' },
+      { title: '9 Dec 1946', sub: 'Constituent Assembly meets' },
+      { title: '3 June 1947', sub: 'Mountbatten Plan' },
+      { title: '15 Aug 1947', sub: 'Independence; Radcliffe Line' },
+    ] },
+    { t: 'list', items: [
+      '**Cabinet Mission groups:** A (Hindu-majority provinces), B (Punjab, NWFP, Sindh), C (Bengal, Assam). Nehru\'s July remark on sovereignty in the Assembly upset the League, which then withdrew.',
+      '**Indian Independence Act, 18 July 1947:** two Dominions; ended British paramountcy; Assembly as sovereign. Article 395 of the Constitution later repealed this Act and the 1935 Act.',
+      '**Human cost:** mass migration and killing in Punjab and Bengal. Estimates vary widely. Gandhi worked in Noakhali and fasted at Calcutta and Delhi.',
+      '**Princes:** Patel and V. P. Menon used Instruments of Accession. Hyderabad, Junagadh and Kashmir were the difficult cases.',
+    ] },
+    { t: 'note', kind: 'trap', title: 'Common confusions', text: 'Lahore 1929 is **Purna Swaraj**; Lahore 1940 is the **League\'s resolution**. The Muslim League\'s "Direct Action" is 1946. Congress **rejected** Cripps but **accepted** the Cabinet Mission plan with conditions. The Simon Commission recommended ending dyarchy in provinces, not independence. Prelims 2021: **Songs from Prison**, a translation of ancient Indian religious lyrics, is linked to Gandhi, not Tilak, Nehru or Naidu.' },
+
+    { t: 'h', text: 'Exam guide' },
+    { t: 'note', kind: 'mains', title: 'Likely angles', text: '**Gandhian method:** how did satyagraha mobilise different classes, and where did it stop? Critics include Ambedkar on caste and the Left on class, and Tagore on charkha. **Withdrawal of Non-Cooperation:** was it a betrayal or sound leadership? Show both. **Partition:** historians give different weights to Jinnah and the League, Congress miscalculation, and British policy; Ayesha Jalal and Bipan Chandra differ sharply. **Why Britain left:** the INA trials, the RIN mutiny, war exhaustion and the loss of Indian consent. **Constitution:** show how the 1935 Act shaped lists, emergency powers and the federal scheme after 1950.' },
+    { t: 'h3', text: 'Quick recall' },
+    { t: 'list', items: [
+      'Champaran 1917, Ahmedabad and Kheda 1918, Rowlatt and Jallianwala 1919.',
+      'NCM 1920-22, Swaraj Party 1923, Simon 1927, Lahore 1929, Dandi 1930, Pact 1931, Poona 1932.',
+      '1919: dyarchy in provinces. 1935: federation, provincial autonomy, residuary with GG.',
+      'August Offer 1940, Cripps 1942, Quit India 1942, Wavell 1945, Cabinet Mission 1946, Mountbatten 1947.',
+      'INA: Mohan Singh, Rash Behari, then Subhas. Government 21 Oct 1943. Trials Nov 1945.',
+      'Direct Action 16 Aug 1946. Interim Government 2 Sept 1946. Act 18 July 1947.',
+    ] },
+  ],
+  sources: [
+    { label: 'UPSC Civil Services Prelims GS Paper I, 2016-2026 (questions cited above)', url: 'https://www.upsc.gov.in/examinations/previous-question-papers' },
+    { label: 'Further reading, not checked for this note: Bipan Chandra and others, India\'s Struggle for Independence; Sekhar Bandyopadhyay, From Plassey to Partition' },
+  ],
+  beyond: {
+    refer: [
+      { what: 'Government of India Act, 1935, and Constitution, Article 395', where: 'Legislative Department, Ministry of Law and Justice', why: 'Exact text, if you want to compare the Act with the Constitution.' },
+    ],
+    current: [
+      { issue: 'Partition Horrors Remembrance Day', link: 'Declared in August 2021, it is observed each year on 14 August to mark the suffering of partition. Critics say it risks reopening old divisions. Keep both views.', source: 'Prime Minister\'s Office, August 2021', url: 'https://www.pmindia.gov.in/en/news_updates/in-memory-of-the-struggles-and-sacrifices-of-our-people-14th-august-will-be-observed-as-partition-horrors-remembrance-day-pm/' },
+      { issue: 'Sardar Patel at 150', link: 'A two-year national programme for his 150th birth anniversary was announced for 2024-26, with the main Ekta Diwas events at Kevadia on 31 October 2025. Links to Bardoli and to the integration of princely states.', source: 'Deccan Herald, 2024', url: 'https://www.deccanherald.com/amp/story/india%2Fgovernment-to-commemorate-150th-birth-anniversary-of-sardar-patel-with-two-year-long-programme-3244640' },
+    ],
+  },
+}
