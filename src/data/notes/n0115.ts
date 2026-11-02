@@ -40,7 +40,7 @@ export const note: TopicNote = {
       { when: '1967-68', what: '**Plate tectonics** unites these ideas: rigid lithospheric plates move over the asthenosphere.' },
     ] },
     { t: 'note', kind: 'exam', title: 'Prelims 2025: drift evidence', text: 'UPSC listed three items as possible evidence for continental drift: ancient rock belts matching between Brazil and West Africa, Ghana\'s gold linked to the Brazil plateau, and **Gondwana** sediments in India with counterparts in six southern landmasses. All three are standard evidence. Also learn **tillite** and fossils such as **Mesosaurus** and **Lystrosaurus**.' },
-    { t: 'p', text: '**Major plates:** Pacific, North American, South American, Eurasian, African, Antarctic and Indo-Australian. **Minor plates:** Cocos, Nazca, Arabian, Philippine, Caroline and Fuji.' },
+    { t: 'p', text: '**Major plates:** Pacific, North American, South American, Eurasian, African, Antarctic and Indo-Australian. **Minor plates:** Cocos, Nazca, Arabian, Philippine, Caroline and Fiji.' },
     { t: 'table', caption: 'Three kinds of boundary. Learn one example for each row.', head: ['Boundary', 'What happens', 'Features', 'Example'], rows: [
       ['Divergent (constructive)', 'Plates move apart, magma rises', 'Mid-ocean ridges, rift valleys, shallow quakes', 'Mid-Atlantic Ridge; East African Rift'],
       ['Convergent: ocean-ocean', 'One plate subducts', 'Trench, island arc', 'Mariana, Aleutian, Japan, Philippines'],
