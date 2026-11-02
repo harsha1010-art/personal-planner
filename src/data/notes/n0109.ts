@@ -112,7 +112,7 @@ export const note: TopicNote = {
       ['**1835**', '**Macaulay\'s Minute**, Bentinck\'s resolution', 'English as medium; "downward filtration"'],
       ['**1854**', '**Wood\'s Despatch**', '"Magna Carta of English education": graded schools, vernacular at primary level'],
       ['1857', 'Universities at Calcutta, Bombay, Madras', 'Under Canning'],
-      ['1799-1835', 'Press', 'Wellesley\'s censorship (1799), Adams\'s licensing (1823), Metcalfe\'s relaxation (1835)'],
+      ['1799-1835', 'Press', 'Wellesley\'s censorship (1799), John Adam\'s licensing (1823), Metcalfe\'s relaxation (1835)'],
     ] },
     { t: 'p', text: '**Policy towards the princes** moved in three stages: ring-fence or buffer states (to 1813), subordinate isolation (1813-57), and subordinate union (after 1858). Treat this as a Mains idea rather than a set of Prelims dates.' },
 
