@@ -43,7 +43,7 @@ export const note: TopicNote = {
     ] },
     { t: 'flow', caption: 'From agreements to crisis to a slow thaw', steps: [
       { title: '1993-2013', sub: 'Peace and tranquillity deals, 2005 political parameters, 2013 border defence pact' },
-      { title: 'Doklam, 2017', sub: 'Standoff on a Bhutan-China trijunction' },
+      { title: 'Doklam, 2017', sub: 'Standoff on the India-Bhutan-China trijunction' },
       { title: 'Galwan, 2020', sub: 'First fatal clash in decades; apps banned, investment rules tightened' },
       { title: 'October 2024', sub: 'Patrolling arrangement for Depsang and Demchok; Modi-Xi at Kazan' },
       { title: '2025', sub: 'Kailash yatra and direct flights resume; Modi at Tianjin' },

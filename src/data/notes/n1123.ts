@@ -65,7 +65,7 @@ export const note: TopicNote = {
       ['Ghana vadya', 'Solid', 'Cymbals, jaltarang, ghatam'],
     ] },
     { t: 'p', text: '**Martial arts:** Kalaripayattu (Kerala), Silambam (Tamil Nadu), Gatka (Punjab), Thang-Ta (Manipur), Mardani Khel (Maharashtra). These often overlap with theatre and dance, including Chhau.' },
-    { t: 'note', kind: 'exam', title: 'UNESCO intangible heritage', text: 'Vedic chanting, Kumbh Mela (Prelims 2019 tested a question about it), Ramlila, Chhau, Kalbelia, Yoga, Nowruz, Durga Puja in Kolkata (2021) and Garba (2023) are on the list. Check the latest additions before the exam.' },
+    { t: 'note', kind: 'exam', title: 'UNESCO intangible heritage', text: 'Vedic chanting, Kumbh Mela, Ramlila, Chhau, Kalbelia, Yoga, Nowruz, Durga Puja in Kolkata (2021), Garba (2023) and Deepavali (December 2025) are on the list. Check the latest additions before the exam.' },
     { t: 'h3', text: 'Quick recall' },
     { t: 'list', items: ['Eight classical forms: Bharatanatyam, Kathak, Kathakali, Mohiniyattam, Kuchipudi, Odissi, Manipuri, Sattriya.', 'Trinity of Carnatic music. Bhatkhande: thaats.', 'Yakshagana: Karnataka. Koodiyattam: Kerala.'] },
   ],

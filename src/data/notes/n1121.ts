@@ -39,10 +39,10 @@ export const note: TopicNote = {
       ['Provincial', 'Regional styles', 'Bengal: Adina Mosque. Jaunpur: Atala Masjid. Gujarat: Jama Masjid. Bijapur: Gol Gumbaz. Golconda: Charminar. Mandu: Jahaz Mahal'],
       ['Mughal', 'Charbagh gardens; pietra dura; symmetrical plans; white marble', 'Humayun\'s Tomb, Fatehpur Sikri, Taj Mahal, Red Fort'],
     ] },
-    { t: 'note', kind: 'trap', title: 'Common confusions', text: 'Iltutmish completed the Qutb Minar, which Aibak began. **Alai Darwaza** has the first true arch and dome of real scale. Humayun\'s Tomb was built by his widow Hamida Banu Begum, as a precursor to the Taj Mahal. Pietra dura begins with Itimad-ud-Daulah at Agra.' },
+    { t: 'note', kind: 'trap', title: 'Common confusions', text: 'Iltutmish completed the Qutb Minar, which Aibak began. **Balban\'s tomb** has the first true arch, and **Alai Darwaza** the first surviving true dome. Humayun\'s Tomb was built by his widow Bega Begum, as a precursor to the Taj Mahal. Pietra dura begins with Itimad-ud-Daulah at Agra.' },
     { t: 'note', kind: 'mains', title: 'Common angle', text: 'Discuss Indo-Islamic architecture as a synthesis, using specific features: arches and domes on one side, and lotus and kalasha on the other. Connect with conservation issues such as pollution at the Taj Mahal, and the Supreme Court\'s M.C. Mehta case.' },
     { t: 'h3', text: 'Quick recall' },
-    { t: 'list', items: ['Khajuraho: Chandela. Konark: Eastern Ganga. Thanjavur: Rajaraja I.', 'Rathas: Mamallapuram. Hoysala: star plan.', 'Alai Darwaza: first true arch. Taj: pietra dura and charbagh.'] },
+    { t: 'list', items: ['Khajuraho: Chandela. Konark: Eastern Ganga. Thanjavur: Rajaraja I.', 'Rathas: Mamallapuram. Hoysala: star plan.', 'Balban\'s tomb: first true arch. Alai Darwaza: first true dome. Taj: pietra dura and charbagh.'] },
   ],
   sources: [
     { label: 'Nitin Singhania, Indian Art and Culture, Ch 1' },
