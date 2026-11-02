@@ -17,7 +17,7 @@ export const note: TopicNote = {
 
     { t: 'h', text: 'Women: status and movements' },
     { t: 'timeline', caption: 'Women\'s organisations and turning points', items: [
-      { when: '1917, 1927', what: '**Women\'s India Association** and **All India Women\'s Conference**.' },
+      { when: '1917, 1927', what: '**Women\'s Indian Association** and **All India Women\'s Conference**.' },
       { when: '1972', what: '**SEWA**, founded by Ela Bhatt, organises informal women workers.' },
       { when: '1974', what: '***Towards Equality*** report of the Committee on the Status of Women in India shows declining status after independence.' },
       { when: '1970s-80s', what: 'Chipko, anti-dowry and anti-rape campaigns; the **Mathura case** led to the 1983 criminal law changes.' },

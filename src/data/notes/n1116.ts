@@ -42,7 +42,7 @@ export const note: TopicNote = {
       ['Bengal', 'Ilyas Shahi, Husain Shah', 'Bengali literature; Chaitanya\'s era'],
       ['Gujarat', 'Ahmad Shah, Mahmud Begarha', 'Founded Ahmedabad; Portuguese conflict'],
       ['Malwa', 'Hoshang Shah', 'Mandu architecture'],
-      ['Mewar', 'Rana Kumbha, Rana Sanga', 'Kirti Stambha at Chittor; Sanga lost at Khanwa in 1527'],
+      ['Mewar', 'Rana Kumbha, Rana Sanga', 'Vijay Stambha at Chittor; Sanga lost at Khanwa in 1527'],
       ['Odisha', 'Eastern Gangas, Gajapatis', 'Konark, Jagannath at Puri'],
     ] },
     { t: 'h3', text: 'Portuguese arrival' },

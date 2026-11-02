@@ -67,7 +67,7 @@ export const note: TopicNote = {
       ['Assessment', '**PARAKH** as a national assessment centre'],
     ] },
     { t: 'table', caption: 'Know who produces what. Prelims can mix these up.', head: ['Survey', 'Who', 'Latest finding I could confirm'], rows: [
-      ['**ASER**', 'Pratham, an NGO; rural; tests at home', 'ASER 2024: 23.4% of Class 3 pupils read Class 2 text (16.3% in 2022); recovery after Covid, with government schools gaining'],
+      ['**ASER**', 'Pratham, an NGO; rural; tests at home', 'ASER 2024: 23.4% of Class 3 pupils in government schools read Class 2 text (16.3% in 2022); recovery after Covid, with government schools gaining'],
       ['**PARAKH Rashtriya Sarvekshan**', 'NCERT; replaced NAS; Classes 3, 6, 9', '2024 survey: performance declines at higher stages, with gaps for SC and ST pupils'],
       ['**UDISE+**', 'Ministry of Education; school data', '2024-25: secondary dropout about 11.5% on the official table, though reports differ and the method is debated'],
       ['**AISHE**', 'Ministry of Education; higher education', '2023-24 (released July 2026): GER reached **30.0%**, enrolment 4.50 crore; female GER higher than male'],

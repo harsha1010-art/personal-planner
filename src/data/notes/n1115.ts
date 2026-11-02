@@ -14,7 +14,7 @@ export const note: TopicNote = {
       { when: 'Khalji, 1290-1320', what: '**Alauddin** defeated Mongols and took Gujarat, Ranthambhore, Chittor, and sent **Malik Kafur** to the south. Introduced **market control**, branding of horses (**dagh**), a descriptive roll of soldiers (**chehra**), and land revenue at half the produce.' },
       { when: 'Tughluq, 1320-1414', what: '**Ghiyasuddin** built Tughluqabad. **Muhammad bin Tughluq** tried capital shift to Daulatabad, token currency, the Doab tax and the Khurasan and Qarachil campaigns. **Firoz Shah** ran canals, abolished many taxes, and imposed **jizya** on brahmanas. **Timur** sacked Delhi in **1398**.' },
       { when: 'Sayyid, 1414-1451', what: 'Khizr Khan and successors; a weak and narrow state.' },
-      { when: 'Lodi, 1451-1526', what: 'Afghan rule. **Sikandar Lodi** founded Agra (1504) and the **gaz-i-Sikandari** measure. **Ibrahim Lodi** lost to Babur at **Panipat in 1526**.' },
+      { when: 'Lodi, 1451-1526', what: 'Afghan rule. **Sikandar Lodi** founded Agra (about 1504-06; sources differ) and the **gaz-i-Sikandari** measure. **Ibrahim Lodi** lost to Babur at **Panipat in 1526**.' },
     ] },
     { t: 'note', kind: 'exam', title: 'Prelims 2021', text: 'UPSC tested whether Chengiz Khan reached the Indus during the reign of Iltutmish (yes), and whether Timur came during Muhammad bin Tughluq\'s reign (no, it was under the later Tughluqs). So learn which foreign invader came under which ruler.' },
 

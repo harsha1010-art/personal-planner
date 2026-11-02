@@ -23,7 +23,7 @@ export const note: TopicNote = {
     { t: 'compare', columns: [
       { title: 'Language', items: ['**22** languages in the **Eighth Schedule**', '**121** languages counted in Census 2011', '**Hindi:** about 43.6% of speakers', '**11** classical languages (after five were added in October 2024)', '**Families:** Indo-Aryan, Dravidian, Austro-Asiatic, Sino-Tibetan'] },
       { title: 'Social groups', items: ['**SC:** 16.6%', '**ST:** 8.6%', '**PVTGs:** 75', 'OBC: no recent all-India count, as census has not counted them', 'Bihar\'s 2023 survey found 63% backward and extremely backward classes'] },
-      { title: 'Other diversity', items: ['**Region:** ecological zones and food', '**Rural-urban:** 31.2% urban in 2011', '**Sex ratio:** 943 in 2011', '**Literacy:** 74.04% in 2011', '**Age:** a young population now starting to age'] },
+      { title: 'Other diversity', items: ['**Region:** ecological zones and food', '**Rural-urban:** 31.2% urban in 2011', '**Sex ratio:** 943 in 2011', '**Literacy:** about 73% in 2011 (74.04% was the provisional figure)', '**Age:** a young population now starting to age'] },
     ] },
     { t: 'h3', text: 'What holds India together' },
     { t: 'list', items: [
