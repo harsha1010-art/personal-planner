@@ -167,7 +167,7 @@ export const note: TopicNote = {
       ['Durand', 'Pakistan and Afghanistan'],
       ['Longest land border', 'With Bangladesh; then China and Pakistan'],
     ] },
-    { t: 'note', kind: 'trap', title: 'Prelims 2026: states', text: 'UPSC tested Indian state borders: which state touches the most others, which state has one neighbour, and which has the longest international border. **Sikkim** has one Indian neighbour, West Bengal. **West Bengal**, not Rajasthan, has the longest international border. UP touches the most states.' },
+    { t: 'note', kind: 'trap', title: 'Prelims 2026: states', text: 'UPSC tested Indian state borders: which state touches the most others, which state has one neighbour, and which has the longest international border. **Sikkim** and **Meghalaya** each have one neighbouring State: West Bengal and Assam. **West Bengal**, not Rajasthan, has the longest international border. UP touches the most states.' },
 
     { t: 'h', text: 'Exam guide' },
     { t: 'note', kind: 'mains', title: 'Likely angles', text: 'Mains GS I asks about critical geographical features and changes in them. Discuss the shrinking Aral and Lake Chad, Red Sea and Hormuz chokepoints for India\'s energy security, and the value of Arctic routes. Add a small sketch map: even a rough outline with two labels improves an answer.' },

@@ -72,7 +72,7 @@ export const note: TopicNote = {
     ] },
     { t: 'table', caption: 'World distribution. Vision lists these leaders, and producers can change.', head: ['Mineral', 'Leading producer', 'Others'], rows: [
       ['Iron ore', 'Australia', 'Brazil, China, India'],
-      ['Bauxite', 'Australia', 'Guinea, China, Brazil'],
+      ['Bauxite', 'Guinea and Australia (the lead changes by year)', 'China, Brazil'],
       ['Copper', 'Chile', 'Peru, DR Congo, China'],
       ['Manganese', 'South Africa', 'Australia, Gabon, China'],
       ['Cobalt', 'DR Congo, about three-fourths (Prelims 2023)', ''],
