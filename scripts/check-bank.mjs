@@ -1,7 +1,7 @@
 // Checks the question bank against the rules for a complete daily set.
 // Run with: npm run check:bank
 // Add dates to report on those days only: node scripts/check-bank.mjs 2027-01-01 2027-01-02
-import { readdirSync, readFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import ts from 'typescript'
@@ -72,8 +72,14 @@ const days = [...new Set([...all.map((q) => q.day), ...mains.map((m) => m.day)])
 for (const day of days) {
   const set = all.filter((q) => q.day === day)
   const m = mains.filter((x) => x.day === day).length
-  // Essay and language exercises are writing practice, so only Sociology weeks need three.
-  if (!set.length) { console.log(`${day}: ${m} Mains`); if (m < 3 && day.startsWith('soc-')) fail(`${day}: needs at least 3 Mains questions`); continue }
+  // Essay and language exercises are writing practice. A Sociology chapter needs 5 practice questions at 10 marks and 5 at 20.
+  if (!set.length) {
+    const own = mains.filter((x) => x.day === day)
+    const practice = own.filter((x) => !x.pyq)
+    console.log(`${day}: ${m} Mains (${own.length - practice.length} PYQ)`)
+    if (/^soc\d-/.test(day) && existsSync(join(root, 'src', 'data', 'notes', `n${day}.ts`)) && (practice.filter((x) => x.marks === 10).length < 5 || practice.filter((x) => x.marks === 20).length < 5)) fail(`${day}: needs 5 practice questions at 10 marks and 5 at 20`)
+    continue
+  }
   const count = (d) => set.filter((q) => q.difficulty === d).length
   const pyq = set.filter((q) => q.kind === 'pyq').length
   const formats = new Set(set.map((q) => q.format)).size
@@ -95,9 +101,12 @@ for (const day of days) {
 
 for (const m of mains) {
   if (!shown(m.day)) continue
-  const w = m.model.trim().split(/\s+/).length
-  if (w > m.words * 1.1) fail(`${m.id}: model answer has ${w} words, limit ${m.words}`)
+  if (m.model) {
+    const w = m.model.trim().split(/\s+/).length
+    if (w > m.words * 1.1) fail(`${m.id}: model answer has ${w} words, limit ${m.words}`)
+  }
   if (!m.mustCover?.length) fail(`${m.id}: no mustCover list`)
+  if (m.pyq && !m.tests) fail(`${m.id}: PYQ needs a note on what it tests`)
 }
 
 const answers = [0, 1, 2, 3].map((a) => all.filter((q) => q.answer === a).length)
@@ -106,8 +115,9 @@ if (!only.length) {
   const missing = topics.filter((d) => all.filter((q) => q.day === d.date).length !== 30)
   console.log(`Topics with a full test: ${topics.length - missing.length} of ${topics.length}`)
   if (missing.length) console.log(`Still to write: ${missing.map((d) => d.date.slice(5)).join(', ')}`)
-  const socWeeks = plan.sociology.map((r) => Object.values(r)[0]).filter((w) => /^Week \d+/.test(w)).map((w) => `soc-${w.replace(/\D/g, '').padStart(2, '0')}`)
-  console.log(`Sociology weeks with 3 Mains: ${socWeeks.filter((k) => mains.filter((m) => m.day === k).length >= 3).length} of ${socWeeks.length}`)
+  const socChapters = [...readFileSync(join(root, 'src', 'lib', 'sociology.ts'), 'utf8').matchAll(/key: '(soc\d-\d\d)'/g)].map((x) => x[1])
+  const socDone = socChapters.filter((k) => mains.filter((m) => m.day === k && !m.pyq).length >= 10)
+  console.log(`Sociology chapters with 10 practice questions: ${socDone.length} of ${socChapters.length}; Sociology PYQs mapped: ${mains.filter((m) => m.pyq).length}`)
   if (thinReasons) console.log(`Note: ${thinReasons} one-word reasons remain in the first sets (to ${FIRST_SETS_END})`)
 }
 console.log(problems ? `${problems} problems` : 'All checks passed')

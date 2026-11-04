@@ -215,7 +215,7 @@ Decline: Weakening patronage and attacks around 1200 ended its great phase.
 Limits: Access was largely limited to monks and higher social groups.
 
 Nalanda shows how institutions preserve knowledge and link regions. The new university at Rajgir draws on this legacy, but the old model's real strength lay in its deep, long-lasting scholarship.` },
-  { id: 'm-soc01-1', day: 'soc-01', marks: 10, words: 150, directive: 'Discuss', question: 'Sociology is a product of modernity. Discuss.', mustCover: ['Meaning of modernity', 'Three revolutions', 'Founders\' responses', 'Limits: colonial view'], model: `Modernity refers to the rational, industrial and individualistic order that emerged in post-feudal Europe. Sociology arose as an attempt to understand this change.
+  { id: 'm-soc01-1', day: 'soc1-01', marks: 10, words: 150, directive: 'Discuss', question: 'Sociology is a product of modernity. Discuss.', mustCover: ['Meaning of modernity', 'Three revolutions', 'Founders\' responses', 'Limits: colonial view'], model: `Modernity refers to the rational, industrial and individualistic order that emerged in post-feudal Europe. Sociology arose as an attempt to understand this change.
 
 The Enlightenment gave faith in reason and in studying society. The French Revolution broke old hierarchies and raised the question of order. The Industrial Revolution created cities, factories and new forms of inequality.
 
@@ -226,7 +226,7 @@ Modernity therefore gave sociology both its subject and its method.
 However, Raewyn Connell and others argue that this story leaves out colonialism, as well as non-European thought. Indian sociology, for example, began with questions shaped by colonial rule.
 
 So sociology is a product of modernity, but of a modernity that was uneven and global.` },
-  { id: 'm-soc01-2', day: 'soc-01', marks: 15, words: 250, directive: 'Critically examine', question: 'Critically examine the difference between sociology and common sense, with suitable examples from India.', mustCover: ['Define both', 'Evidence and method', 'Indian examples', 'Double hermeneutic', 'Limits of the opposition'], model: `Common sense is the taken-for-granted knowledge used in everyday life. Sociology is a systematic, evidence-based study of society. The two differ, but they are not simply opposed.
+  { id: 'm-soc01-2', day: 'soc1-01', marks: 15, words: 250, directive: 'Critically examine', question: 'Critically examine the difference between sociology and common sense, with suitable examples from India.', mustCover: ['Define both', 'Evidence and method', 'Indian examples', 'Double hermeneutic', 'Limits of the opposition'], model: `Common sense is the taken-for-granted knowledge used in everyday life. Sociology is a systematic, evidence-based study of society. The two differ, but they are not simply opposed.
 
 Differences
 
@@ -243,7 +243,7 @@ Common sense is not always false. Ethnomethodologists such as Garfinkel treat ev
 Conclusion
 
 Sociology does not replace common sense. It tests it, explains it and sometimes enriches it. This makes the discipline useful for public debate.` },
-  { id: 'm-soc01-3', day: 'soc-01', marks: 10, words: 150, directive: 'Examine', question: 'Examine the relationship between sociology and social anthropology, with reference to India.', mustCover: ['Traditional division', 'Blurring', 'Indian scholars', 'Conclusion'], model: `Traditionally, social anthropology studied small, "simple" societies through fieldwork, while sociology studied modern, complex societies, often through surveys.
+  { id: 'm-soc01-3', day: 'soc1-01', marks: 10, words: 150, directive: 'Examine', question: 'Examine the relationship between sociology and social anthropology, with reference to India.', mustCover: ['Traditional division', 'Blurring', 'Indian scholars', 'Conclusion'], model: `Traditionally, social anthropology studied small, "simple" societies through fieldwork, while sociology studied modern, complex societies, often through surveys.
 
 This distinction reflected colonial origins, as anthropologists often studied colonised peoples.
 

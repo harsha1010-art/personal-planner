@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { BeyondPanel } from '../components/BeyondPanel'
+import { ChapterEnd, ChapterTop } from '../components/ChapterParts'
+import { chapterByKey } from '../lib/sociology'
 import { NoteBlock, slug } from '../components/NoteBlocks'
 import { PageHead } from '../components/Shell'
 import { mainsForDay, questionsForDay } from '../data/bank'
@@ -64,7 +66,7 @@ export function Learn() {
                     )}
                     <div className="p-4">
                       <div className="text-[13px] font-semibold text-faint">
-                        {when}{note ? `, ${note.minutes} min read` : ', notes not written yet'}
+                        {when}{note ? `, ${note.minutes} min read` : chapterByKey.has(t.key) ? ', earlier draft only' : ', notes not written yet'}
                       </div>
                       <h3 className="mt-1 text-[20px] leading-tight">{t.title}</h3>
                       {read && <div className="mt-1.5 text-[13.5px] font-semibold text-good">Read</div>}
@@ -73,7 +75,7 @@ export function Learn() {
                 )
                 return (
                   <li key={t.key}>
-                    {note ? (
+                    {note || chapterByKey.has(t.key) ? (
                       <Link to={`/learn/${t.key}`} className="block h-full overflow-hidden rounded-[18px] border-[1.5px] border-rule transition-colors hover:border-ink">{body}</Link>
                     ) : (
                       <div className="h-full overflow-hidden rounded-[18px] border-[1.5px] border-dashed border-rule">{body}</div>
@@ -97,7 +99,13 @@ export function Topic() {
   const [progress, setProgress] = useState(0)
   const [active, setActive] = useState('')
 
-  const headings = [...(note?.blocks.flatMap((b) => (b.t === 'h' ? [b.text] : [])) ?? []), BEYOND]
+  const chapter = note?.chapter
+  const headings = [
+    ...(chapter ? ['Learning objectives', 'Source mapping'] : []),
+    ...(note?.blocks.flatMap((b) => (b.t === 'h' ? [b.text] : [])) ?? []),
+    ...(chapter ? ['Important terms', 'One-page revision', 'Recall questions', 'Previous-year questions', 'Practice questions', 'Chapter checklist'] : []),
+    BEYOND,
+  ]
 
   useEffect(() => {
     const onScroll = () => {
@@ -117,10 +125,16 @@ export function Topic() {
   }, [date])
 
   if (!note) {
+    const draft = chapterByKey.get(date)?.draft
     return (
       <>
-        <PageHead title={meta.title}>Notes for this topic are not written yet.</PageHead>
-        <Link className="btn" to="/learn">All topics</Link>
+        <PageHead title={meta.title}>
+          {draft ? 'This chapter has not been rewritten from the textbooks yet. Until it is, read the earlier draft note, which was written without checking the books.' : 'Notes for this topic are not written yet.'}
+        </PageHead>
+        <div className="flex flex-wrap gap-2">
+          {draft && noteForDay(draft) && <Link className="btn btn-primary" to={`/learn/${draft}`}>Read the earlier draft</Link>}
+          <Link className="btn" to={draft ? '/sociology' : '/learn'}>{draft ? 'Sociology index' : 'All topics'}</Link>
+        </div>
       </>
     )
   }
@@ -180,7 +194,9 @@ export function Topic() {
         </nav>
 
         <article className="notes min-w-0">
+          {chapter && <ChapterTop c={chapter} />}
           {note.blocks.map((block, i) => <NoteBlock key={i} block={block} />)}
+          {chapter && <ChapterEnd chapterKey={date} c={chapter} />}
 
           <NoteBlock block={{ t: 'h', text: BEYOND }} />
           <p className="mb-4 !text-[16px] text-soft">These notes aim to be enough for this topic. Use the items below only for what notes cannot do: maps, official wording and the latest news.</p>
@@ -195,7 +211,12 @@ export function Topic() {
               <button
                 className="btn"
                 aria-pressed={!!read}
-                onClick={() => update((s) => ({ ...s, checks: { ...s.checks, [`read:${date}`]: !read } }))}
+                onClick={() => update((s) => ({
+                  ...s,
+                  checks: { ...s.checks, [`read:${date}`]: !read },
+                  // A Sociology chapter then comes up for revision after 1, 7 and 30 days on Today.
+                  ...(chapter && !read && !s.days[date]?.doneOn ? { days: { ...s.days, [date]: { status: 'Done', doneOn: isoToday() } } } : {}),
+                }))}
               >
                 {read ? 'Marked as read' : 'Mark as read'}
               </button>

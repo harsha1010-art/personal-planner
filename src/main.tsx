@@ -14,6 +14,7 @@ import { Result } from './pages/Result'
 import { Mains, MainsDesk } from './pages/Mains'
 import { Progress } from './pages/Progress'
 import { Syllabus } from './pages/Syllabus'
+import { Sociology } from './pages/Sociology'
 import { Cards } from './pages/Cards'
 import { Guide } from './pages/Guide'
 
@@ -34,6 +35,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="mains/:questionId" element={<MainsDesk />} />
           <Route path="progress" element={<Progress />} />
           <Route path="syllabus" element={<Syllabus />} />
+          <Route path="sociology" element={<Sociology />} />
           <Route path="cards" element={<Cards />} />
           <Route path="guide" element={<Guide />} />
           <Route path="*" element={<Today />} />

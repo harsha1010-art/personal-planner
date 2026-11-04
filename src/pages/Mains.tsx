@@ -5,6 +5,7 @@ import { mainsById, mainsQuestions } from '../data/bank'
 import { formatDate } from '../lib/plan'
 import { topicMeta } from './Learn'
 import { update, useStore } from '../lib/store'
+import type { MainsQuestion } from '../lib/types'
 
 export const RUBRIC: [string, string][] = [
   ['relevance', 'Answers the question that was asked, and follows the directive word'],
@@ -20,6 +21,20 @@ export const RUBRIC: [string, string][] = [
 ]
 
 const countWords = (text: string) => (text.trim() ? text.trim().split(/\s+/).length : 0)
+
+export const sourceLabel = (q: MainsQuestion) =>
+  q.pyq
+    ? `UPSC Sociology Paper ${q.pyq.paper}, ${q.pyq.year}, Q${q.pyq.number}${q.pyq.checked ? '' : ' (wording not yet checked against the paper)'}`
+    : 'Predicted practice question, not from UPSC'
+
+function CopyButton({ text }: { text: string }) {
+  const [copied, setCopied] = useState(false)
+  return (
+    <button className="btn" onClick={() => navigator.clipboard.writeText(text).then(() => setCopied(true), () => setCopied(false))}>
+      {copied ? 'Copied: paste it into Claude' : 'Copy for marking by Claude'}
+    </button>
+  )
+}
 
 export function Mains() {
   const attempts = useStore((s) => s.mains)
@@ -47,7 +62,7 @@ export function Mains() {
               return (
                 <li key={m.id}>
                   <Link to={`/mains/${m.id}`} className="grid gap-x-4 py-3 hover:text-accent sm:grid-cols-[minmax(0,1fr)_120px]">
-                    <span className="leading-snug">{m.question}</span>
+                    <span className="leading-snug">{m.pyq && <span className="mr-2 rounded-full bg-tint px-2 py-0.5 text-[12px] font-semibold">UPSC {m.pyq.year}</span>}{m.question}</span>
                     <span className="num text-[13px] text-soft sm:text-right">
                       {m.marks} marks{mine?.score !== undefined ? `, you: ${mine.score}` : mine ? ', not marked' : ''}
                     </span>
@@ -94,11 +109,13 @@ export function MainsDesk() {
         <span>{q.marks} marks</span>
         <span>{q.words} words</span>
         <span>{q.directive}</span>
-        <span>Predicted practice question, not from UPSC</span>
+        <span>{sourceLabel(q)}</span>
       </div>
       <h1 className="text-[26px] leading-snug">{q.question}</h1>
+      {q.tests && <p className="mt-2 text-[15px] text-soft"><span className="font-semibold text-ink">What it tests:</span> {q.tests}</p>}
     </>
   )
+  const forMarking = `Please mark this like a strict UPSC examiner: marks out of ${q.marks}, strengths, weaknesses, missing perspectives, thinkers and concepts, factual corrections, a better structure, and a model answer within ${q.words} words.\n\nQuestion (${sourceLabel(q)}, ${q.marks} marks, ${q.words} words): ${q.question}\n\nMy answer:\n`
 
   if (active) {
     const allMarked = RUBRIC.every(([key]) => rubric[key] !== undefined) || active.score !== undefined
@@ -151,15 +168,26 @@ export function MainsDesk() {
             )}
           </section>
           <section className="min-w-0">
-            <h2 className="label">An answer must cover</h2>
+            <h2 className="label">{q.model ? 'An answer must cover' : 'Answer framework'}</h2>
             <ul className="mt-2 list-disc space-y-1 pl-5 text-[14.5px]">
               {q.mustCover.map((c) => <li key={c}>{c}</li>)}
             </ul>
-            <h2 className="label mt-6">Model answer</h2>
-            <div className="prose-text mt-2 card !border-0 bg-wash text-[16.5px] leading-relaxed">
-              {q.model.split('\n\n').map((para, i) => <p key={i}>{para}</p>)}
+            {q.model ? (
+              <>
+                <h2 className="label mt-6">Model answer</h2>
+                <div className="prose-text mt-2 card !border-0 bg-wash text-[16.5px] leading-relaxed">
+                  {q.model.split('\n\n').map((para, i) => <p key={i}>{para}</p>)}
+                </div>
+              </>
+            ) : (
+              <p className="mt-6 card !border-0 bg-wash text-[15px]">
+                This question has no model answer on the site. Copy your answer and paste it into your chat with Claude for strict marking, feedback and a model answer.
+              </p>
+            )}
+            <div className="mt-4 flex flex-wrap gap-2">
+              <button className="btn" onClick={() => setActiveId(null)}>Write it again</button>
+              <CopyButton text={forMarking + active.text} />
             </div>
-            <button className="btn mt-4" onClick={() => setActiveId(null)}>Write it again</button>
           </section>
         </div>
       </>
@@ -182,7 +210,7 @@ export function MainsDesk() {
           <span className={`num text-[14px] ${over ? 'text-bad' : 'text-soft'}`}>
             {words} / {q.words} words{over ? ', over the limit' : ''}
           </span>
-          <button className="btn btn-primary" disabled={words < 20} onClick={submit}>Submit and see model answer</button>
+          <button className="btn btn-primary" disabled={words < 20} onClick={submit}>{q.model ? 'Submit and see model answer' : 'Submit and see framework'}</button>
         </div>
       </div>
       {previous.length > 0 && (

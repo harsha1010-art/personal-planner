@@ -44,7 +44,12 @@ export interface MainsQuestion {
   directive: string
   question: string
   mustCover: string[]
-  model: string
+  /** Left out where the answer is to be marked in chat instead. */
+  model?: string
+  /** A real UPSC question. `checked` is true once its wording has been compared with the paper's image. */
+  pyq?: { year: number; paper: 'I' | 'II'; number: string; checked: boolean }
+  /** What the question is testing. */
+  tests?: string
 }
 
 export type DayStatus = 'Not started' | 'In progress' | 'Done' | 'Partial' | 'Skipped'

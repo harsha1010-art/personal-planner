@@ -29,6 +29,20 @@ export interface TopicBeyond {
   current: { issue: string; link: string; source: string; url?: string }[]
 }
 
+/** Extra parts of a Sociology chapter written from the textbooks. */
+export interface ChapterExtras {
+  objectives: string[]
+  /** Where each part of the chapter comes from. Pages are those printed in the edition that was read. */
+  sourceMap: { topic: string; book: string; chapter: string; section: string; pages: string }[]
+  /** Books named in the plan that were not available, so nothing here is checked against them. */
+  notVerified: string[]
+  terms: { term: string; meaning: string }[]
+  /** The one-page revision sheet. */
+  revision: string[]
+  recall: { q: string; a: string }[]
+  checklist: string[]
+}
+
 export interface TopicNote {
   day: string
   summary: string
@@ -39,6 +53,7 @@ export interface TopicNote {
   sources: { label: string; url?: string }[]
   /** What this topic needs from outside the site, and its current-affairs links. */
   beyond?: TopicBeyond
+  chapter?: ChapterExtras
 }
 
 export const pictureUrl = (pic: Picture, width = 1200) =>

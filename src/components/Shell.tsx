@@ -121,7 +121,7 @@ export function PageHead({ title, children }: { title: string; children?: React.
 }
 
 export function PlannerTabs() {
-  const tabs = [['/plan', '204-day plan'], ['/syllabus', 'Syllabus'], ['/cards', 'Issue cards'], ['/guide', 'Guide']]
+  const tabs = [['/plan', '204-day plan'], ['/sociology', 'Sociology'], ['/syllabus', 'Syllabus'], ['/cards', 'Issue cards'], ['/guide', 'Guide']]
   return (
     <nav aria-label="Planner" className="-mt-1 mb-7 flex gap-1 overflow-x-auto">
       {tabs.map(([to, label]) => (

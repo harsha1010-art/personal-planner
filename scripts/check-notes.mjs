@@ -20,9 +20,12 @@ for (const file of readdirSync(dir).filter((f) => /^n[^.]*\.ts$/.test(f) && f !=
 
 const expected = [
   ...plan.days.filter((d) => !REVISION.test(d.topic)).map((d) => d.date),
-  ...plan.sociology.map((r) => Object.values(r)[0]).filter((w) => /^Week \d+/.test(w)).map((w) => `soc-${w.replace(/\D/g, '').padStart(2, '0')}`),
   'lang-english', 'lang-kannada', 'essay',
 ]
+// Sociology chapters are written from the books in batches, so a missing one is reported, not failed.
+// The earlier week notes stay as drafts until then.
+const chapterKeys = [...readFileSync(join(root, 'src', 'lib', 'sociology.ts'), 'utf8').matchAll(/key: '(soc\d-\d\d)'/g)].map((m) => m[1])
+const drafts = plan.sociology.map((r) => Object.values(r)[0]).filter((w) => /^Week \d+/.test(w)).map((w) => `soc-${w.replace(/\D/g, '').padStart(2, '0')}`)
 const VISUAL = new Set(['table', 'timeline', 'flow', 'compare', 'strata', 'wheel', 'svg', 'img'])
 const textOf = (v) => (typeof v === 'string' ? v : Array.isArray(v) ? v.map(textOf).join(' ') : v && typeof v === 'object' ? Object.entries(v).filter(([k]) => !['t', 'id', 'kind', 'file', 'credit', 'license'].includes(k)).map(([, x]) => textOf(x)).join(' ') : '')
 
@@ -30,7 +33,17 @@ let problems = 0
 const fail = (m) => { problems++; console.log('PROBLEM', m) }
 const missing = expected.filter((k) => !notes.has(k))
 if (missing.length) fail(`no note for: ${missing.join(', ')}`)
-for (const k of notes.keys()) if (!expected.includes(k)) fail(`note not in plan: ${k}`)
+for (const k of notes.keys()) if (!expected.includes(k) && !chapterKeys.includes(k) && !drafts.includes(k)) fail(`note not in plan: ${k}`)
+for (const k of chapterKeys.filter((k) => notes.has(k))) {
+  const c = notes.get(k).note.chapter
+  if (!c) { fail(`${k}: Sociology chapter has no chapter section`); continue }
+  if (c.sourceMap.length < 2) fail(`${k}: source map too short`)
+  if (c.objectives.length < 3) fail(`${k}: needs at least 3 objectives`)
+  if (c.terms.length < 8) fail(`${k}: needs at least 8 terms`)
+  if (c.recall.length !== 10) fail(`${k}: needs 10 recall questions`)
+  if (c.revision.length < 8) fail(`${k}: revision sheet too short`)
+  if (c.checklist.length < 4) fail(`${k}: checklist too short`)
+}
 
 const stats = []
 for (const [key, { note }] of notes) {
@@ -43,7 +56,9 @@ for (const [key, { note }] of notes) {
   if (!note.blocks.some((b) => b.t === 'h')) fail(`${key}: no headings`)
 }
 const w = stats.map((s) => s.words).sort((a, b) => a - b)
-console.log(`${notes.size} of ${expected.length} topics. Words: min ${w[0]}, median ${w[w.length >> 1]}, max ${w[w.length - 1]}, total ${w.reduce((a, b) => a + b, 0)}. With hero image: ${stats.filter((s) => s.hero).length}. With own references: ${[...notes.values()].filter((n) => n.note.beyond).length}`)
+const written = chapterKeys.filter((k) => notes.has(k))
+console.log(`Sociology chapters from the books: ${written.length} of ${chapterKeys.length}${written.length < chapterKeys.length ? `. Still to write: ${chapterKeys.filter((k) => !notes.has(k)).join(', ')}` : ''}`)
+console.log(`${expected.filter((k) => notes.has(k)).length} of ${expected.length} plan topics. Words: min ${w[0]}, median ${w[w.length >> 1]}, max ${w[w.length - 1]}, total ${w.reduce((a, b) => a + b, 0)}. With hero image: ${stats.filter((s) => s.hero).length}. With own references: ${[...notes.values()].filter((n) => n.note.beyond).length}`)
 console.log('Shortest:', stats.sort((a, b) => a.words - b.words).slice(0, 6).map((s) => `${s.key} ${s.words}`).join(', '))
 console.log(problems ? `${problems} problems` : 'All checks passed')
 process.exit(problems ? 1 : 0)

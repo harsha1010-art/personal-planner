@@ -30,7 +30,7 @@ function revisionsDue(records: Record<string, DayRecord>, checks: Record<string,
     if (rec.status !== 'Done' || !rec.doneOn) continue
     for (const gap of [1, 7, 30]) {
       const key = `rev:${date}:${gap}`
-      if (addDays(rec.doneOn, gap) <= today && !checks[key]) due.push({ date, gap, key, topic: dayByDate(date)?.topic ?? date })
+      if (addDays(rec.doneOn, gap) <= today && !checks[key]) due.push({ date, gap, key, topic: dayByDate(date)?.topic ?? extraByKey.get(date)?.title ?? date })
     }
   }
   return due.sort((a, b) => a.date.localeCompare(b.date))
@@ -197,7 +197,10 @@ export function Today() {
             <h2 className="text-[20px]">Sociology</h2>
             <p className="mt-1.5 text-[14.5px] font-semibold">{sociology.title}</p>
             <p className="mt-1 text-[13.5px] text-soft">{sociology.focus} Aim for about 8-10 hours a week at first.</p>
-            {noteForDay(sociology.key) ? <Link className="mt-2 inline-block text-[14px] font-semibold underline underline-offset-4" to={`/learn/${sociology.key}`}>Read this topic</Link> : <p className="mt-1.5 text-[13.5px] text-faint">Notes for this topic are not written yet.</p>}
+            <div className="mt-2 flex flex-wrap gap-x-4 text-[14px] font-semibold">
+              <Link className="underline underline-offset-4" to={`/learn/${sociology.key}`}>{noteForDay(sociology.key) ? 'Read this chapter' : 'Read the earlier draft'}</Link>
+              <Link className="underline underline-offset-4" to="/sociology">Sociology index</Link>
+            </div>
             <h2 className="mt-5 text-[20px]">Kannada and English</h2>
             <p className="mt-1.5 text-[14.5px]">{languageFocus(day.date)}</p>
             <p className="mt-1 text-[13.5px] text-soft">Two sessions a week, 30-40 minutes each.</p>

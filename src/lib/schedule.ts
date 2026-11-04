@@ -1,5 +1,4 @@
-import { extraByKey, sociologyKeyForWeek } from './extras'
-import { daysBetween, weeks } from './plan'
+import { chapterFor } from './sociology'
 
 // The month-wise Sociology and language targets you set: first reading of Sociology by end of January.
 const SOCIOLOGY_MONTHS: Record<string, string> = {
@@ -22,17 +21,10 @@ const LANGUAGE_MONTHS: Record<string, string> = {
   '2027-05': 'Light revision.',
 }
 
-const READING_TOPICS = 14 // Weeks 1-14 of the Sociology plan are new reading.
-const READING_DAYS = 92 // 1 November to 31 January.
-
-/** The Sociology topic for a date, paced to finish the first reading by 31 January. */
+/** The Sociology chapter for a date, paced to finish the first reading by 31 January. */
 export function sociologyFor(date: string) {
-  const elapsed = daysBetween(weeks[0].from, date)
-  const index = elapsed < READING_DAYS
-    ? Math.floor((Math.max(0, elapsed) / READING_DAYS) * READING_TOPICS)
-    : Math.min(15, READING_TOPICS + Math.floor((elapsed - READING_DAYS) / 14))
-  const key = sociologyKeyForWeek(index)
-  return { key, title: extraByKey.get(key)?.title ?? '', focus: SOCIOLOGY_MONTHS[date.slice(0, 7)] ?? '' }
+  const c = chapterFor(date)
+  return { key: c.key, title: `Paper ${c.paper}, unit ${c.unit}: ${c.title}`, focus: SOCIOLOGY_MONTHS[date.slice(0, 7)] ?? '' }
 }
 
 export const languageFocus = (date: string) => LANGUAGE_MONTHS[date.slice(0, 7)] ?? ''
