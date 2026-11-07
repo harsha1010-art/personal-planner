@@ -28,7 +28,19 @@ export const note: TopicNote = {
       { topic: 'Education: a common base of ideas and sentiments', book: IS, chapter: 'Ch 3', section: 'Education', pages: '58' },
       { topic: 'Suicide and individual intentions; Durkheim\'s religion based on second-hand accounts', book: IS, chapter: 'Ch 1 and Ch 5', section: 'Sociology and psychology; fieldwork', pages: '19, 87' },
       { topic: 'Suicide rate as a social phenomenon', book: ISoc, chapter: 'Ch 2, The Demographic Structure of the Indian Society', section: 'Introduction to demography', pages: '8' },
-      { topic: 'Intellectual influences; context; rules of method; causes and abnormal forms of the division of labour; the four suicide types; religion in detail; moral education; criticisms; Merton; Indian applications', book: 'Beyond NCERT', chapter: 'Standard sociology, from memory', section: 'Marked "Beyond NCERT" in the text', pages: 'Not checked against a book' },
+      { topic: 'Biography (Epinal, Ecole Normale 1879, Bordeaux 1887, L\'Année sociologique 1898, Sorbonne 1902); influences (Comte, Montesquieu, Rousseau, Renouvier, Wundt, Fustel); Dreyfus; suicide types', book: 'IGNOU BSOC-111 Sociological Thinkers I', chapter: 'Unit 5, Philosophical Foundations of Émile Durkheim\'s Work', section: '5.2-5.3', pages: '60-74' },
+      { topic: 'Social facts; rules of method', book: 'IGNOU BSOC-111 Sociological Thinkers I', chapter: 'Unit 6, Social Fact', section: '6.2-6.5', pages: '75-90' },
+      { topic: 'Individual and collective; collective conscience; sacred and totem', book: 'IGNOU BSOC-111 Sociological Thinkers I', chapter: 'Unit 7, Individual and the Collective', section: '7.2-7.5', pages: '91-102' },
+      { topic: 'Normal and pathological; crime; anomic, forced and poorly coordinated division of labour; suicide types', book: 'IGNOU BSOC-111 Sociological Thinkers I', chapter: 'Unit 8, Normal and Pathological', section: '8.2-8.5', pages: '103-114' },
+      { topic: 'Conditions for a social science; types and marks of social facts; rules of observation, normal and pathological, classification and explanation', book: 'IGNOU ESO-13 Sociological Thought', chapter: 'Unit 10, Sociology as Science', section: '10.2-10.4', pages: '10-21' },
+      { topic: 'Comparative method; concomitant variation; Suicide as a comparative study', book: 'IGNOU ESO-13 Sociological Thought', chapter: 'Unit 11, Comparative Method', section: '11.4', pages: '27-30' },
+      { topic: 'Collective representations; categories of thought', book: 'IGNOU ESO-13 Sociological Thought', chapter: 'Unit 12, Collective Representations', section: '12.2-12.5', pages: '36-47' },
+      { topic: 'Mechanical and organic solidarity; repressive and restitutive law; volume and density', book: 'IGNOU ESO-13 Sociological Thought', chapter: 'Unit 13, Forms of Social Solidarity', section: '13.2-13.5', pages: '48-58' },
+      { topic: 'Elementary Forms: sacred and profane, totemism, collective effervescence; Durkheim and Weber compared', book: 'IGNOU ESO-13 Sociological Thought', chapter: 'Unit 19, Religion: Durkheim and Weber', section: '19.2-19.4', pages: '21-36' },
+      { topic: 'Causes and abnormal forms of the division of labour; Durkheim and Marx compared', book: 'IGNOU ESO-13 Sociological Thought', chapter: 'Unit 20, Division of Labour: Durkheim and Marx', section: 'Whole unit', pages: '37-56' },
+      { topic: 'Durkheim and functionalism in religion; rites including piacular rites; Arunta', book: 'IGNOU MSOE-003 Sociology of Religion', chapter: 'Unit 6, Durkheim and Functionalism', section: 'Whole unit', pages: 'Unit PDF pp 1-13 (printed numbers not legible)' },
+      { topic: 'Functionalist theories of religion; Evans-Pritchard\'s criticisms; Malinowski; Srinivas on Coorg religion', book: 'IGNOU ESO-15 Society and Religion', chapter: 'Unit 3, Functionalist Theories of Religion', section: '3.2-3.6', pages: 'Unit PDF pp 1-19 (printed numbers not legible)' },
+      { topic: 'Franco-Prussian War context; non-contractual element of contract; definition of suicide and rival explanations; Douglas, Atkinson; Merton\'s anomie in detail; Lévi-Strauss; civil religion; moral education; Bowles and Gintis; Popper and Coser as critics', book: 'Beyond NCERT and IGNOU', chapter: 'Standard sociology, from memory', section: 'Marked "Beyond NCERT and IGNOU" in the text', pages: 'Not checked against a book' },
     ],
     notVerified: ['Nitin Sangwan, Essential Sociology, Vol 1 (Durkheim chapter)', 'George Ritzer, Sociological Theory', 'Haralambos and Holborn, Sociology: Themes and Perspectives', 'Steven Lukes, Emile Durkheim: His Life and Work (for biographical dates)'],
     terms: [
@@ -62,7 +74,7 @@ export const note: TopicNote = {
       'Critics of Suicide: Douglas (1967) and Atkinson (1978) on socially constructed statistics; Halbwachs; ecological fallacy; meaning ignored.',
       'Anomie: Durkheim, deregulated desires in rapid change; Merton (1938), gap between cultural goals and legitimate means; five adaptations.',
       'Religion: sacred and profane; beliefs and rites; moral community (church). Arunta totem: society worships itself. Collective effervescence. Functions: discipline, cohesion, revitalisation, euphoria, categories of thought.',
-      'Critics of religion theory: Evans-Pritchard, second-hand data (NCERT IS p87), Malinowski, Marx and Weber; religion also divides.',
+      'Critics of religion theory: Evans-Pritchard, second-hand data (NCERT IS p87), Malinowski, Marx and Weber; religion also divides. Indian case: Srinivas on Coorg rituals of okka, village and region (IGNOU ESO-15 Unit 3). IGNOU slip: Dreyfus was convicted in 1894, not "during the First World War".',
       'NCERT slips: the "duties as a brother" passage is from Rules ch 1, not Division of Labour; L\'Année\'s first volume was 1898; most biographies date entry to the Ecole Normale to 1879.',
     ],
     recall: [
@@ -93,7 +105,7 @@ export const note: TopicNote = {
 
     { t: 'h', text: 'Biography and intellectual background' },
     { t: 'p', text: 'Durkheim was born on **15 April 1858 in Epinal**, in Lorraine near the German border, into an orthodox Jewish family; his father, grandfather and great-grandfather were rabbis (NCERT p72). He was sent to a rabbinical school, but broke with religion and declared himself an agnostic. His moral upbringing stayed with him: he wanted a **secular, scientific understanding of morality and religion**, and he fulfilled this in his last great book, The Elementary Forms of Religious Life (NCERT p73).' },
-    { t: 'timeline', caption: 'Durkheim\'s life and works. NCERT p72, with dates marked * from beyond NCERT.', items: [
+    { t: 'timeline', caption: 'Durkheim\'s life and works. NCERT p72 and IGNOU BSOC-111 Unit 5; dates marked * are not in NCERT.', items: [
       { when: '1858', what: 'Born in Epinal, Lorraine.' },
       { when: '1879', what: 'Enters the Ecole Normale Supérieure in Paris* (NCERT gives 1876; see the trap note).' },
       { when: '1887', what: 'Lecturer in social science and education at the University of Bordeaux.' },
@@ -107,8 +119,8 @@ export const note: TopicNote = {
       { when: '1917', what: 'Dies at 59, heartbroken by the death of his son André in the First World War.' },
       { when: '1922-25', what: 'Posthumous: Education and Sociology (1922), Sociology and Philosophy (1924), Moral Education (1925)*.' },
     ] },
-    { t: 'note', kind: 'trap', title: 'Three slips in NCERT on Durkheim', text: '(1) NCERT spells the journal "Anee Sociologique" and dates it to 1897. It is **L\'Année sociologique**, and its first volume appeared in **1898**. (2) NCERT says Durkheim entered the Ecole Normale in 1876; standard biographies, such as Steven Lukes\'s, give **1879** (he went to Paris in 1876 to prepare for the entrance exam). (3) In Understanding Society ch 1 (p5), NCERT credits the famous "when I perform my duties as a brother, a husband or a citizen" passage to The Division of Labour. It is actually the opening of chapter 1 of **The Rules of Sociological Method** (1895), where Durkheim defines the social fact. Cite it as Rules.' },
-    { t: 'h3', text: 'Intellectual influences (Beyond NCERT)' },
+    { t: 'note', kind: 'trap', title: 'Three slips in NCERT on Durkheim', text: '(1) NCERT spells the journal "Anee Sociologique" and dates it to 1897. It is **L\'Année sociologique**, and its first volume appeared in **1898**. (2) NCERT says Durkheim entered the Ecole Normale in 1876; IGNOU (BSOC-111 Unit 5) and standard biographies give **1879** (he went to Paris in 1876 to prepare for the entrance exam). (3) In Understanding Society ch 1 (p5), NCERT credits the famous "when I perform my duties as a brother, a husband or a citizen" passage to The Division of Labour. It is actually the opening of chapter 1 of **The Rules of Sociological Method** (1895), where Durkheim defines the social fact. Cite it as Rules.' },
+    { t: 'h3', text: 'Intellectual influences (IGNOU BSOC-111 Unit 5; Tönnies and Robertson Smith are beyond NCERT and IGNOU)' },
     { t: 'table', head: ['Influence', 'What Durkheim took', 'What he rejected or changed'], rows: [
       ['Auguste Comte', 'Positivism: society can be studied scientifically; the idea of consensus and order', 'Comte\'s grand speculation; Durkheim wanted careful empirical study of specific facts'],
       ['Montesquieu and Rousseau', 'Montesquieu: laws vary with the type of society (Durkheim\'s Latin thesis, 1892); Rousseau: the general will above individuals', 'Social contract theories that start from isolated individuals'],
@@ -121,15 +133,15 @@ export const note: TopicNote = {
 
     { t: 'h', text: 'Historical context: France in crisis' },
     { t: 'list', items: [
-      '**Defeat and division:** France lost the Franco-Prussian War (1870-71) and Durkheim\'s own Alsace-Lorraine region; the Paris Commune (1871) was crushed. The new Third Republic needed a basis for national unity. Beyond NCERT.',
+      '**Defeat and division:** France lost the Franco-Prussian War (1870-71) and Durkheim\'s own Alsace-Lorraine region; the Paris Commune (1871) was crushed. The new Third Republic needed a basis for national unity. Beyond NCERT and IGNOU.',
       '**Church versus Republic:** the Republic built secular state schools to replace Catholic teaching of morality. Durkheim, who trained teachers, sought a **secular morality** that schools could teach.',
       '**Industrial change:** as NCERT\'s opening section shows, industry, cities and class conflict were dissolving old communities. Durkheim saw strikes, crises and rising suicide as signs of moral disorder, **anomie**.',
-      '**The Dreyfus Affair (1894-1906):** a Jewish army officer was falsely convicted of treason. Durkheim defended him, arguing that respect for the individual (the "cult of the individual") was itself the shared moral faith of modern France. Beyond NCERT.',
+      '**The Dreyfus Affair (1894-1906):** a Jewish army officer was falsely convicted of treason. Durkheim defended him, arguing that respect for the individual (the "cult of the individual") was itself the shared moral faith of modern France (IGNOU BSOC-111 Unit 5).',
     ] },
     { t: 'p', text: 'So Durkheim\'s sociology has a practical purpose too, though a different one from Marx\'s: not revolution, but **reform of moral order**, through education, law and occupational associations.' },
 
     { t: 'h', text: 'Major works' },
-    { t: 'table', caption: 'Dates in NCERT p72; contents partly beyond NCERT.', head: ['Work', 'Date', 'Central argument'], rows: [
+    { t: 'table', caption: 'Dates in NCERT p72 and IGNOU BSOC-111 Unit 5.', head: ['Work', 'Date', 'Central argument'], rows: [
       ['The Division of Labour in Society', '1893', 'Societies move from mechanical to organic solidarity; law as an index; abnormal forms of the division of labour'],
       ['The Rules of Sociological Method', '1895', 'Defines social facts; treat them as things; rules for observation, classification, normal and pathological, explanation, and the comparative method'],
       ['Suicide', '1897', 'Even the most individual act has social causes; rates vary with integration and regulation; four types'],
@@ -146,12 +158,12 @@ export const note: TopicNote = {
       '**Moral order:** the social is found in codes of conduct imposed by collective agreement, visible in everyday practice. Moral codes vary with social conditions, so the morality of one society does not suit another (NCERT p73).',
     ] },
     { t: 'p', text: 'NCERT (pp 73-74) names **two defining features** of Durkheim\'s vision. First, sociology studies a distinct level, the **emergent level** of complex collective life. A cricket team, though made only of eleven persons, is something more than and different from them; so are parties, gangs, religious communities and nations. Second, sociology must be **empirical**, even though its objects (the Jain community, a nation) cannot be seen directly. Durkheim\'s achievement was to show that these abstract entities can be studied through **observable patterns of behaviour**.' },
-    { t: 'note', kind: 'mains', title: '"Society is more than the sum of individual acts" (2022)', text: 'Use: NCERT\'s cricket team and the room with walls and doors (US ch 1); Durkheim\'s own analogy that the hardness of bronze is in neither the copper nor the tin that make it (beyond NCERT); social facts as external and constraining; suicide rates stable though individuals change. Counter-view: Weber and Mead start from individual action and meaning; methodological individualists say "society" is only people acting. Indian example: a caste panchayat\'s authority over members.' },
+    { t: 'note', kind: 'mains', title: '"Society is more than the sum of individual acts" (2022)', text: 'Use: NCERT\'s cricket team and the room with walls and doors (US ch 1); Durkheim\'s own analogy that the hardness of bronze is in neither the copper nor the tin that make it (beyond NCERT and IGNOU); social facts as external and constraining; suicide rates stable though individuals change. Counter-view: Weber and Mead start from individual action and meaning; methodological individualists say "society" is only people acting. Indian example: a caste panchayat\'s authority over members.' },
 
     { t: 'h', text: 'Social facts' },
     { t: 'p', text: 'NCERT defines social facts simply: they are **like things**, **external** to the individual but **constrain** behaviour; institutions such as law, education and religion are social facts; they are **collective representations** that emerge from people\'s association, general rather than particular to a person (p74). The glossary adds that they are not created by individuals but exert pressure on them (p80).' },
     { t: 'p', text: 'NCERT\'s example (US ch 1, p5), from the Rules: when I do my duties as a brother, husband or citizen, these duties are defined in **law and custom**, outside me. The believer finds the beliefs of his religion ready-made at birth. The language I speak, the money I use, the practices of my profession all work **independently of my use of them**. And as with the walls of a room, social structure sets limits on where we can go.' },
-    { t: 'wheel', caption: 'The three marks of a social fact, with examples. Beyond NCERT except the examples.', center: 'Social fact', spokes: [
+    { t: 'wheel', caption: 'The marks of a social fact, with examples (IGNOU ESO-13 Unit 10; MSO-002 Unit 7).', center: 'Social fact', spokes: [
       'Externality: exists before and outside the individual (language, law)',
       'Constraint: resistance or sanction if you deviate (ridicule for odd dress, punishment for crime)',
       'Generality: spread across the group, independent of any one case (a suicide rate, a marriage rule)',
@@ -159,7 +171,7 @@ export const note: TopicNote = {
       'Non-material forms: norms, values, collective conscience, currents of opinion',
     ] },
     { t: 'h3', text: 'The rules of sociological method (1895)' },
-    { t: 'flow', caption: 'Durkheim\'s method in sequence. Beyond NCERT.', steps: [
+    { t: 'flow', caption: 'Durkheim\'s method in sequence (IGNOU ESO-13 Unit 10, pp 17-21; BSOC-111 Unit 6).', steps: [
       { title: 'Treat social facts as things', sub: 'Study them from outside, as given realities, not as ideas in our heads' },
       { title: 'Discard preconceptions', sub: 'Set aside common-sense notions (prenotions)' },
       { title: 'Define by external signs', sub: 'E.g. crime is any act that provokes punishment' },
@@ -180,7 +192,7 @@ export const note: TopicNote = {
 
     { t: 'h', text: 'The division of labour and social solidarity' },
     { t: 'p', text: 'In his first book Durkheim classified societies by the **kind of solidarity** that holds them together (NCERT pp 74-75). Primitive society rests on **mechanical solidarity**, modern society on **organic solidarity**. The labels are deliberate: in a mechanical system parts are alike and interchangeable; in an organism each organ does a different job and all depend on each other.' },
-    { t: 'table', caption: 'NCERT, Understanding Society ch 4 pp 75-76 and ch 1 pp 10-11. Rows marked * are beyond NCERT.', head: ['Feature', 'Mechanical solidarity', 'Organic solidarity'], rows: [
+    { t: 'table', caption: 'NCERT, Understanding Society ch 4 pp 75-76 and ch 1 pp 10-11. Rows marked * are from IGNOU ESO-13 Unit 13.', head: ['Feature', 'Mechanical solidarity', 'Organic solidarity'], rows: [
       ['Basis of cohesion', 'Similarity of members; shared beliefs and sentiments', 'Difference and interdependence; "interdependence is the essence"'],
       ['Society', 'Small population; self-sufficient groups doing similar work', 'Large population; groups not self-sufficient, each dependent on others'],
       ['Division of labour', 'Little, beyond age and sex', 'Highly specialised (a garment or car factory worker depends on many others)'],
@@ -192,7 +204,7 @@ export const note: TopicNote = {
       ['Example*', 'A tribal clan; an isolated village where all farm alike', 'A metropolitan city; a global supply chain'],
     ] },
     { t: 'p', text: 'Why law? Solidarity cannot be seen, so Durkheim needed a visible index. **Law** is the most organised form of social rules, so the type of law reveals the type of solidarity. Where most law is penal and aims to punish, the collective conscience is strong and an offence wounds everyone\'s feelings. Where most law is civil, commercial, procedural and administrative, aiming to restore relations, society is a web of specialised exchanges. NCERT summarises this as repressive versus restitutive law.' },
-    { t: 'h3', text: 'What causes the division of labour? (Beyond NCERT)' },
+    { t: 'h3', text: 'What causes the division of labour? (IGNOU ESO-13 Units 13, 20)' },
     { t: 'flow', steps: [
       { title: 'Population grows', sub: 'Greater volume of society' },
       { title: 'Density rises', sub: 'Material density (towns, roads) and moral or dynamic density (more interaction)' },
@@ -200,8 +212,8 @@ export const note: TopicNote = {
       { title: 'Specialisation', sub: 'People take different functions, so they can coexist instead of eliminating each other' },
       { title: 'Organic solidarity', sub: 'Interdependence creates a new moral bond' },
     ] },
-    { t: 'p', text: 'Durkheim rejected two other explanations. Economists said people divide labour to raise productivity and happiness; Durkheim replied that happiness does not clearly rise with civilisation, so it cannot be the cause. Spencer said modern society rests on free contracts between individuals; Durkheim replied that every contract depends on rules nobody negotiated, such as the law of contract and the shared belief that promises bind: the **non-contractual element of contract**. Organic solidarity is still a **moral** fact.' },
-    { t: 'h3', text: 'Abnormal forms of the division of labour (Beyond NCERT)' },
+    { t: 'p', text: 'Durkheim rejected two other explanations. Economists said people divide labour to raise productivity and happiness; Durkheim replied that happiness does not clearly rise with civilisation, so it cannot be the cause. Spencer said modern society rests on free contracts between individuals; Durkheim replied that every contract depends on rules nobody negotiated, such as the law of contract and the shared belief that promises bind: the **non-contractual element of contract**. Organic solidarity is still a **moral** fact. (The non-contractual element is beyond NCERT and IGNOU.)' },
+    { t: 'h3', text: 'Abnormal forms of the division of labour (IGNOU BSOC-111 Unit 8; ESO-13 Unit 20)' },
     { t: 'table', head: ['Form', 'What goes wrong', 'Examples', 'Remedy'], rows: [
       ['Anomic division of labour', 'Specialisation grows faster than the rules that coordinate it', 'Industrial and commercial crises; conflict between labour and capital; sciences that no longer talk to each other', 'Moral regulation: occupational groups that set rules for each trade'],
       ['Forced division of labour', 'People are placed in functions by birth or external inequality, not by talent and choice', 'Inherited class privilege; Durkheim himself cited castes; unequal contracts', 'Equality of opportunity; justice in contracts'],
@@ -212,11 +224,12 @@ export const note: TopicNote = {
 
     { t: 'h', text: 'Suicide (1897)' },
     { t: 'p', text: 'Why would a sociologist study suicide? Because it seems the **most individual act** possible. If even suicide has social causes, then sociology has its own domain. NCERT (p74) states the key move: each suicide is specific to the person, but the **average rate of suicide** in a community is a social fact. NCERT\'s Indian Society (ch 2, p8) adds that the rate, the number of suicides per 100,000 people, had to be explained by social causes. Durkheim therefore set aside individual intentions and used statistics (Introducing Sociology p19).' },
-    { t: 'p', text: 'Beyond NCERT. Durkheim defined suicide as any death resulting directly or indirectly from a positive or negative act of the victim, who knows it will produce this result. Using official statistics from several European countries, he first ruled out non-social explanations: **mental illness, race and heredity, climate and season, and imitation** (Gabriel Tarde\'s theory). Each failed to match the variation in rates. He then showed that rates varied with two social forces: **integration** (how strongly people are attached to groups) and **regulation** (how far society limits their desires).' },
-    { t: 'table', caption: 'The four types of suicide. Beyond NCERT.', head: ['', 'Too little', 'Too much'], rows: [
+    { t: 'p', text: 'Beyond NCERT and IGNOU in this detail. Durkheim defined suicide as any death resulting directly or indirectly from a positive or negative act of the victim, who knows it will produce this result. Using official statistics from several European countries, he first ruled out non-social explanations: **mental illness, race and heredity, climate and season, and imitation** (Gabriel Tarde\'s theory). Each failed to match the variation in rates. He then showed that rates varied with two social forces: **integration** (how strongly people are attached to groups) and **regulation** (how far society limits their desires).' },
+    { t: 'table', caption: 'The four types of suicide (IGNOU BSOC-111 Units 5, 8; ESO-13 Unit 11). The examples are standard readings of Suicide.', head: ['', 'Too little', 'Too much'], rows: [
       ['Integration', '**Egoistic suicide:** excessive individualism, weak ties to religious, family or political groups. Protestants (free inquiry, weaker church community) more than Catholics, Catholics more than Jews; unmarried more than married; married with children least. Rates fall during wars and political crises, when integration rises', '**Altruistic suicide:** the individual counts for little against the group. Obligatory forms such as Hindu widows (sati), which Durkheim cited, and followers dying on a chief\'s death; higher suicide among soldiers than civilians'],
       ['Regulation', '**Anomic suicide:** norms fail to limit desires. Both sudden depression and sudden prosperity raise rates; divorce (domestic anomie); chronic anomie in trade and industry where desires are unlimited', '**Fatalistic suicide:** oppressive regulation blocks the future. Slaves, very young husbands, married women without children. Durkheim mentioned it only in a footnote'],
     ] },
+    { t: 'note', kind: 'trap', title: 'Two slips in IGNOU BSOC-111 Unit 5', text: '(1) Its quoted biographical sketch says Durkheim "identified three types of suicides", while the same course lists four. Both have a basis: Suicide discusses three types in its main chapters and adds **fatalistic** suicide only in a footnote. Write **four**, noting the footnote. (2) It says Dreyfus was court-martialled "during the First World War". Wrong: he was convicted in **1894** and cleared in **1906**; Durkheim\'s essay "Individualism and the Intellectuals" appeared in **1898**.' },
     { t: 'p', text: 'Durkheim\'s basic idea about **human desire** explains anomie. Human appetites, unlike animal ones, have no natural limit. Only society, through moral rules, can set limits on what people may hope for. When a sudden boom or crash breaks these limits, people do not know what is possible or fair, and suffering follows.' },
     { t: 'h3', text: 'Why Suicide is a model of method (2017)' },
     { t: 'list', items: [
@@ -227,7 +240,7 @@ export const note: TopicNote = {
       'A **social cause for a social fact:** the rate, not the individual act, is explained.',
       'This is why Suicide is often called the first major work of empirical, multivariate sociology.',
     ] },
-    { t: 'h3', text: 'Criticisms of Suicide (Beyond NCERT)' },
+    { t: 'h3', text: 'Criticisms of Suicide (beyond NCERT and IGNOU)' },
     { t: 'compare', columns: [
       { title: 'Criticisms', items: ['**Jack Douglas, The Social Meanings of Suicide (1967):** statistics are produced by coroners and families; a well-integrated family may hide a suicide, so integration affects recording, not only rates', '**J. Maxwell Atkinson, Discovering Suicide (1978):** coroners decide what counts as suicide using common-sense theories; the data are social constructions', '**Catholic stigma:** lower recorded Catholic rates may reflect under-reporting', '**Maurice Halbwachs (1930):** urban-rural ways of life explain more than religion', '**Ecological fallacy:** group-level correlations do not show which individuals took their lives', '**Meaning ignored:** the acts\' meanings for actors are left out (interpretive critics)'] },
       { title: 'Defences', items: ['Rates remain remarkably stable and patterned across countries and decades', 'Later studies with better data still find social integration and economic shocks linked to suicide', 'The method of comparison and elimination is still taught', 'Durkheim knew his data were imperfect and used many independent comparisons', 'Fatalistic suicide has been revived to study oppression', 'The idea that social isolation harms health is now mainstream'] },
@@ -243,7 +256,7 @@ export const note: TopicNote = {
     ] },
 
     { t: 'h', text: 'Anomie: Durkheim and Merton' },
-    { t: 'compare', caption: 'Asked in 2018 (10 marks) and 2022 (20 marks). Beyond NCERT.', columns: [
+    { t: 'compare', caption: 'Asked in 2018 (10 marks) and 2022 (20 marks). Durkheim\'s anomie is in IGNOU BSOC-111 Unit 8 and ESO-13 Unit 20; Merton is in ESO-13 Units 29-30 (chapter 6).', columns: [
       { title: 'Durkheim', items: ['Anomie appears in The Division of Labour (1893) and Suicide (1897)', 'A state of **deregulation**: norms fail to limit or coordinate', 'Cause: rapid change, economic crises and booms, divorce, unrestrained industry', 'Human desires are naturally limitless; society must set limits', 'Consequences: anomic suicide, industrial conflict, malaise', 'Remedy: moral regulation, occupational groups'] },
       { title: 'Robert K. Merton, "Social Structure and Anomie" (1938)', items: ['A **disjunction** between culturally prescribed goals and institutionalised means', 'Cause: a culture (American "success") that stresses goals for all but gives legitimate means only to some', 'Desires are culturally produced, not natural', 'Five adaptations: conformity, innovation (crime), ritualism, retreatism, rebellion', 'Explains patterned deviance by class position', 'Remedy implied: open opportunity or change goals'] },
     ] },
@@ -251,11 +264,11 @@ export const note: TopicNote = {
 
     { t: 'h', text: 'Religion and society' },
     { t: 'p', text: 'NCERT (Introducing Sociology ch 3, p56) states the starting point: sociologists of religion, **following Durkheim**, study the **sacred** realm that every society distinguishes from the **profane**. The sacred usually includes something supernatural, but not always: early Buddhism and Confucianism had no idea of the supernatural yet revered sacred things and persons. This is exactly why Durkheim did not define religion by God or spirits.' },
-    { t: 'p', text: 'Beyond NCERT. In The Elementary Forms of Religious Life (1912) he defined religion as a unified system of beliefs and practices relative to sacred things, "things set apart and forbidden", which unite all who adhere to them into one **moral community**, which he called a church. Three elements follow: **beliefs** (ideas about the sacred), **rites** (rules of conduct towards it), and a **community**. The last is what separates religion from magic, which has clients rather than a church.' },
+    { t: 'p', text: 'IGNOU (ESO-13 Unit 19; MSOE-003 Unit 6; ESO-15 Unit 3) sets this out. In The Elementary Forms of Religious Life (1912) Durkheim defined religion as a unified system of beliefs and practices relative to sacred things, "things set apart and forbidden", which unite all who adhere to them into one **moral community**, which he called a church. Three elements follow: **beliefs** (ideas about the sacred), **rites** (rules of conduct towards it), and a **community**. The last is what separates religion from magic, which has clients rather than a church.' },
     { t: 'h3', text: 'Why totemism, and what it shows' },
     { t: 'p', text: 'To find the essence of religion, Durkheim looked at what he thought was its simplest form: the **totemism of the Arunta** of central Australia, known from the ethnography of Spencer and Gillen. Each clan has a **totem**, an animal or plant, represented in an emblem carved on sacred objects. The emblem is more sacred than the animal itself. Durkheim asked why, and answered that the totem is **the symbol both of the god and of the clan**. So the god and the society are the same: **in worshipping the totem, the clan worships itself**. Religion, he wrote, is "something eminently social".' },
     { t: 'p', text: 'How do people come to feel a power greater than themselves? Through **collective effervescence**. Arunta life alternates between scattered, dull daily food-gathering and periodic great gatherings with dancing, chanting and intense emotion. In these gatherings people feel carried beyond themselves by a force they cannot locate, and they attach it to the emblem. What they really feel is the power of the group. Rituals periodically recreate that experience.' },
-    { t: 'table', caption: 'Rites in The Elementary Forms. Beyond NCERT.', head: ['Rite', 'What it does', 'Example'], rows: [
+    { t: 'table', caption: 'Rites in The Elementary Forms (piacular rites: IGNOU MSOE-003 Unit 6).', head: ['Rite', 'What it does', 'Example'], rows: [
       ['Negative (ascetic) rites', 'Prohibitions and taboos that keep sacred and profane apart', 'Fasting, removing shoes in a temple, food taboos'],
       ['Positive rites', 'Bring people into contact with the sacred: sacrificial, imitative and commemorative rites', 'Offerings, festivals that re-enact myths, the Arunta Intichiuma rites for the totem\'s increase'],
       ['Piacular rites', 'Rites of mourning and atonement in times of misfortune', 'Mourning rituals that pull the group together after a death'],
@@ -268,7 +281,7 @@ export const note: TopicNote = {
       'Cognitive: categories of time, space, number and cause first took shape in religion',
     ] },
     { t: 'p', text: 'Religion as a **social fact** (2026): religious beliefs and practices exist before the individual, who finds them ready-made at birth (the Rules passage in NCERT US ch 1); they constrain through sanctions and guilt; and they are general across the moral community. Their source is society, and their function is to integrate and regulate it. Durkheim expected that the content of religion would change, but that every society would need ceremonies to renew its collective sentiments; in modern society the sacred shifts to the nation, the flag and the dignity of the individual.' },
-    { t: 'h3', text: 'Criticisms of the theory of religion (Beyond NCERT except where marked)' },
+    { t: 'h3', text: 'Criticisms of the theory of religion (Evans-Pritchard and Malinowski: IGNOU ESO-15 Unit 3; Lévi-Strauss is beyond NCERT and IGNOU)' },
     { t: 'list', items: [
       '**Weak data:** NCERT (Introducing Sociology ch 5, p87) notes that Durkheim\'s work on primitive religion was based entirely on second-hand accounts by travellers, missionaries and administrators, not his own fieldwork.',
       '**E.E. Evans-Pritchard (Theories of Primitive Religion, 1965):** the Arunta are not typical; totemism is not the oldest or simplest religion; one case cannot found a universal theory; gatherings involved several clans, not one.',
@@ -284,7 +297,7 @@ export const note: TopicNote = {
     { t: 'h', text: 'Education and moral education' },
     { t: 'p', text: 'NCERT (Introducing Sociology ch 3, p58) quotes Durkheim that no society can survive without a **"common base"** of ideas, sentiments and practices that education must instil in all children, whatever their social category. Education should also prepare each child for a particular occupation. For functionalists, education thus maintains and renews the social structure.' },
     { t: 'list', items: [
-      '**Definition (beyond NCERT):** in Education and Sociology, education is the **methodical socialisation of the young generation** by the adult generation.',
+      '**Definition (beyond NCERT and IGNOU):** in Education and Sociology, education is the **methodical socialisation of the young generation** by the adult generation.',
       '**Two tasks:** create **homogeneity** (shared values, mechanical solidarity\'s element in modern life) and **diversity** (specialised skills for organic solidarity).',
       '**Moral Education (1925):** three elements of morality to be taught in schools: the **spirit of discipline**, **attachment to social groups**, and **autonomy** (understanding why rules exist).',
       '**The school as a small society:** the classroom teaches respect for impersonal rules, preparing children for life among strangers.',
@@ -292,7 +305,7 @@ export const note: TopicNote = {
     ] },
 
     { t: 'h', text: 'Criticisms of Durkheim' },
-    { t: 'table', caption: 'Beyond NCERT.', head: ['Critic or school', 'Criticism', 'What to write in reply'], rows: [
+    { t: 'table', caption: 'Critics. IGNOU BSOC-111 Unit 8 contrasts Durkheim\'s "abnormal forms" with Marx\'s contradictions; the rest is beyond NCERT and IGNOU.', head: ['Critic or school', 'Criticism', 'What to write in reply'], rows: [
       ['Conflict theorists (Marx, Lewis Coser)', 'Conservative bias: stresses order and consensus, ignores power, class and exploitation; treats conflict as "abnormal"', 'Durkheim recognised the forced division of labour and demanded equality of opportunity'],
       ['Max Weber and interpretive sociology', 'Treats society as a thing acting on passive individuals; ignores meanings and agency', 'Durkheim\'s collective representations are themselves shared meanings'],
       ['Methodological individualists (Popper)', 'Society is only individuals and their relations; holism reifies it', 'Emergent properties exist: rates, institutions, language'],
@@ -319,7 +332,7 @@ export const note: TopicNote = {
     { t: 'list', items: [
       '**Caste as a forced division of labour:** occupations fixed by birth, such as manual scavenging, are Durkheim\'s textbook case of an abnormal form. Yet the jajmani system (studied by W.H. Wiser, 1936) bound castes through exchange of services, an interdependence inside hierarchy.',
       '**The Durkheimian school and caste:** Durkheim\'s colleague Célestin Bouglé wrote on the caste system (1908), and Louis Dumont\'s Homo Hierarchicus (1966) built caste theory on the opposition of pure and impure, a descendant of the sacred-profane opposition.',
-      '**M.N. Srinivas, Religion and Society among the Coorgs of South India (1952):** a structural-functional study of how ritual sustains social structure; it also introduced the idea of Sanskritisation. Srinivas\'s teacher Radcliffe-Brown drew directly on Durkheim.',
+      '**M.N. Srinivas, Religion and Society among the Coorgs of South India (1952):** a structural-functional study of how ritual sustains social structure; it also introduced the idea of Sanskritisation. Srinivas\'s teacher Radcliffe-Brown drew directly on Durkheim. IGNOU (ESO-15 Unit 3) shows the solidarity function at three levels: rituals of the **okka** (the patrilineal group), festivals of the village deity that mark caste differences yet bring castes together, and festivals that unite several Coorg villages.',
       '**Two solidarities side by side:** close-knit caste and village ties (mechanical) coexist with urban, market interdependence (organic). Caste panchayats still use repressive sanctions such as outcasting; consumer courts and contract law are restitutive.',
       '**Religion:** festivals, pilgrimages and rituals of nationhood show collective effervescence, while communal conflict shows the limits of an integration-only theory.',
     ] },
@@ -356,7 +369,7 @@ export const note: TopicNote = {
   ],
   beyond: {
     refer: [
-      { what: 'Nitin Sangwan, Essential Sociology Vol 1, the Emile Durkheim chapter', where: 'Your own copy', why: 'Not available here. Check the "Beyond NCERT" parts: rules of method, abnormal forms, the suicide grid and the theory of religion.' },
+      { what: 'Nitin Sangwan, Essential Sociology Vol 1, the Emile Durkheim chapter', where: 'Your own copy', why: 'Not available here. Check the "Beyond NCERT and IGNOU" parts: the Suicide criticisms, Merton\'s anomie, moral education and the critics\' table.' },
       { what: 'Durkheim, The Rules of Sociological Method (1895), chapter 1 "What is a social fact?"', where: 'Any translation; short', why: 'Ten pages that define the social fact; the source of the duties passage NCERT quotes.' },
       { what: 'Durkheim, Suicide (1897), Book II', where: 'Any translation', why: 'The chapters on egoistic, altruistic and anomic suicide, with his tables.' },
     ],
